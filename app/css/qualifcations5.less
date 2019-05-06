@@ -1,0 +1,370 @@
+@import 'base';
+.app{
+	margin: 0 auto;
+	width: 7.5rem;
+}
+
+.zhu{
+	height: 0.88rem;
+	line-height: 0.88rem;
+	background-color: #3a3a3a;
+	font-size: 0.3rem;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 0.04rem;
+}
+.nav{
+	font-size: 0.3rem;
+	text-align: center;
+	height: 0.78rem;
+	line-height: 0.78rem;
+	color: #2d78dd;
+	span{
+		margin: 0 10px;
+		vertical-align: middle;
+	}
+	a{
+		vertical-align: middle;
+	}
+}
+// banner
+.banner{
+	img{
+		width: 100%;
+		height: 6.55rem;
+	}
+	.content{
+		background-color: #fff;
+		.title_box{
+			height: 1.21rem;
+			position: relative;
+		}
+	}
+	
+}
+// 内容标题u
+.title_box{
+	position: relative;
+	height: 1rem;
+	padding-top: 0.5rem;
+	>img{
+		width: 0.6rem;
+		height: 0.47rem;
+		position: absolute;
+	}
+	>.left_img{
+		left: 0.58rem;
+		top: 0.51rem
+	}
+	>.right_img{
+		top: 0.58rem;
+		right: 0.51rem;
+	}
+	>p{
+		width: 100%;
+		height: 0.37rem;
+		font-size: 0.36rem;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 0.55rem;
+		color: #2c84de;
+		text-align: center;
+	}
+}
+
+
+.item{
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+.item>div{
+	width: 50%;
+}
+.mui-input-group{
+	font-size: 0.3rem;
+	letter-spacing: 0.04rem;
+	color: @color2;
+	padding-top: 0.42rem;
+	padding-bottom: 0.4rem;
+	padding-left:0.32rem;
+	padding-right:0.32rem; 
+
+}
+.myform{
+	
+}
+.mui-input-group>p{
+	padding-left:0.32rem;
+	padding-right:0.32rem;
+	color: @color2;
+	font-size: 0.3rem;
+}
+.mui-input-group:before,.mui-input-group:after{
+	background-color: transparent;
+}
+.mui-input-row{
+	margin-bottom: 0.2rem;
+	margin-top: 0.1rem;
+}
+.mui-input-group .mui-input-row:after{
+	background-color: transparent;
+}
+.inp-name{
+	padding-top: 0.44rem;
+	font-size: 0.3rem;
+	color: @color2;
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+}
+.inp-name>p{
+	color: @color2;
+	font-size: 0.3rem;
+	letter-spacing: @letterSpacing;
+}
+.name-line>input{
+	display: block;
+	.border-bottom();
+	height: 0.67rem;
+	line-height: 0.67rem;
+	padding: 0;
+	font-size: @fontSize30;
+	padding-top: .22rem;
+	padding-bottom: .22rem;
+	
+}
+.automatic{
+	.inline-block();
+	width: 0.32rem;
+	height: 0.32rem;
+	border-radius: 0.03rem;
+	border:1px solid #666;
+	margin-left: 0.3rem;
+	font-size: 0.3rem;
+}
+.automatic>input{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.automatic.cur{
+	background: url(../img/auto_03.png) no-repeat 50% 50%;
+	background-size: 100% 100%;
+}
+.getPensentbtn{
+	color: #1b78ce;
+}
+.person,.getPensentbtn,.automatic{
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 0.24rem;
+}
+.out-box{
+	padding-top: 0.46rem;
+	padding-bottom: 0.6rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
+}
+
+.get_stipend{
+	width: 6.9rem;
+	height: 0.88rem;
+	background-color: #da1926;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 0.36rem;
+	font-family: PingFang-SC-Regular;
+	letter-spacing: 0.04rem;
+	border-radius: .88rem;
+	margin-top: .2rem;
+}
+
+// 服务
+.Briefing{
+	height: 5.27rem;
+	background-color: #ececec;
+	background-image: url(../img/bg5_03.png);
+	background-size: 100% 100%;
+	padding-top:0.5rem;
+	box-sizing: border-box;
+	>div{
+		width: 6.17rem;
+		height: 4.53rem;
+		background-color: #ffffff;
+		opacity: 0.74;
+		margin: 0 auto;
+		>div{
+			font-size: 0.66rem;
+			text-indent: 0.6rem;
+			padding-top: 0.33rem;
+			.red{
+				color: #ff0000;
+			}
+			.liji-btn{
+				display: block;
+				width: 3.1rem;
+				height: 0.88rem;
+				background-color: #e76b20;
+				box-shadow: 0rem 0.04rem 0.08rem 0rem 
+					rgba(199, 79, 20, 0.5);
+				border-radius: 0.44rem;
+				color: #ffffff; 
+				font-size: 0.34rem;
+				margin: 0 auto;
+				letter-spacing: 0.04rem;
+			}
+		}
+		>.dingzhi{
+			text-indent: 0.57rem;
+			font-size: 0.58rem;
+		}
+		>.duijie{
+			padding-top: 0rem;
+			width: 5.55rem;
+			height: 0.56rem;
+			line-height: 0.55rem;
+			background-color: #326fec;
+			border-radius: 0.05rem;
+			margin: 0 auto;
+			text-align: center;
+			text-indent: 0rem;
+			font-size: 0.26rem;
+			color: #fff;
+			margin-top: 0.3rem;
+		}
+	}
+}
+// 报名免费
+.benke{
+	height: 3.09rem;
+	background-color: #409df3;
+	>.mian{
+		padding-top: 0.8rem;
+		text-align: center;
+		font-size: 0.3rem;
+		span{
+			display: inline-block;
+			width: 0.62rem;
+			height: 0.62rem;
+			line-height: 0.62rem;
+			border: solid 0.01rem #ffffff;
+			border-radius: 50%;
+			color: #fff;
+			margin-right: 0.2rem;
+		}
+	}
+	>.btn-box{
+		padding-top: 0.31rem;
+		button{
+			display: block;
+			margin: 0 auto;
+			width: 4rem;
+			height: 0.88rem;
+			background-color: #ffffff;
+			box-shadow: 0rem 0.02rem 0.08rem 0rem 
+				rgba(255, 255, 255, 0.53);
+			border-radius: 0.44rem;
+			font-size: 0.46rem;
+			span{
+				color: #ff0000;
+			}
+		}
+	}
+}
+
+// 页面尾部
+.footer{
+	font-size: 0.36rem;
+	color: #fff;
+	.copyRight{
+		height: 0.73rem;
+		line-height: 0.73rem;
+		background-color: #5e5e5e;
+		font-family: PingFang-SC-Regular;
+		font-size: 0.2rem;
+		font-weight: normal;
+		font-stretch: normal;
+		color: #ffffff;
+		text-align: center;
+	}
+}
+
+/* 个人信息弹框 和手机验证 */
+.getResultModel{
+	padding: 0.64rem 0.2rem;
+	position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 7.2rem;
+    padding-top: 0.64rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border-radius: 0.21333333rem;
+    font-weight: bold;
+	background-color: #FFFFFF;
+	font-size: 0.18rem;
+	z-index: 10;
+	color: #333333;
+}
+.getResultModel>h2{
+	padding-bottom: 20px;
+	font-size: 0.32rem;
+	text-align: center;
+}
+.msg_box>p{
+	padding: 2px 0.3rem;
+	font-size: 0.22rem;
+	line-height: 0.5rem;
+	color: #222;
+}
+.close{
+	display: block;
+	position: absolute;
+	right: 0.15rem;
+	top: 0.15rem;
+	width: 0.3rem;
+	height:0.3rem;
+	background-image: url(../img/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* 手机验证 */
+.phoneModel{
+	padding: 0.24rem 0.2rem;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 7.0rem;
+	padding-top: 0.64rem;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #FFFFFF;
+	border-radius: 0.21333333rem;
+	font-family: PingFangSC-Regular;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 0.16px;
+	color: #999;
+	z-index: 10;
+}
+/* 手机验证 */
+.phoneModel{
+	padding: 0.24rem 0.2rem;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 7.0rem;
+	padding-top: 0.64rem;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #FFFFFF;
+	border-radius: 0.21333333rem;
+	font-family: PingFangSC-Regular;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 0.16px;
+	color: #999;
+	z-index: 10;
+}
