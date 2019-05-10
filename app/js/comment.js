@@ -1,3 +1,10 @@
+// 解决手机端输入框被键盘盖住
+setTimeout(function(){
+	document.body.scrollTop = document.body.scrollHeight;
+},300);
+
+
+
 // 设计思想 显示自定义弹框  显示和隐藏方法  Show None
 
 // 显示 ['.a','.b],['.j','.h]  Show None 为显示隐藏的class 参数可以调换用达到显示和隐藏双重应用
@@ -95,3 +102,10 @@ function MyRegExp() {
 		}
 	}
 }
+
+// 客服窗口代码
+function kefu(){
+	var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/c762816c46f81ba33560df7feac9ded1/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);
+}
+
+

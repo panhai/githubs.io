@@ -130,7 +130,7 @@
 								<span>回答问题更专业</span>
 							</div>
 							<div>
-								<button type="button" class="liji-btn">立即咨询</button>
+								<button type="button" class="liji-btn kefu">立即咨询</button>
 							</div>
 						</div>
 					</div>
@@ -152,7 +152,8 @@
 				<!-- 尾部 -->
 				<div class="footer">
 					<div class="copyRight">
-						<span>版权所有：广州博霖教育科技有限公司  粤ICP备12044692</span>
+						<p><span>广州博霖教育科技有限公司</span></p>
+						<p><span> 粤ICP备12044692</span></p>
 					</div>
 				</div>
 			</div>
@@ -201,8 +202,11 @@
 		<script src="ydui/js/ydui.js"></script>
 		<script src="js/comment.js"></script>
 		<script>
-			// 客服固定在底部
+			// 客服
 			$(function(){
+				$('.kefu').on('click',function(){
+					var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/c762816c46f81ba33560df7feac9ded1/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);
+				})
 				$(window).scroll(function(){
 					// 页面向下滚动的最小距离时客服框固定定位在底部; fied
 					//  滚动高度 + 视口高度 = 文档高度
@@ -212,7 +216,7 @@
 					var doc_scrollTop = $(document).scrollTop(); //页面滚动的高度
 					var win_height = $(window).height() //视口高度
 					var doc_height = $(document).height(); //页面高度
-
+						
 					// 如果页面滚动高度大于页面高度 减去页面高度时时,设置它为相对定位
 					if(doc_scrollTop >= (doc_height - win_height -copyRight_height - $('.customer-service').height())){
 						$('.customer-service').removeClass('fied');

@@ -461,15 +461,16 @@ table {
   font-size: 0.34rem;
 }
 .footer .copyRight {
-  height: 0.73rem;
-  line-height: 0.73rem;
+  padding: 0.25rem;
   background-color: #5e5e5e;
-  font-family: PingFang-SC-Regular;
   font-size: 0.2rem;
-  font-weight: normal;
-  font-stretch: normal;
   color: #ffffff;
   text-align: center;
+}
+.footer .copyRight p {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  color: #ffffff;
 }
 /* 个人信息弹框 和手机验证 */
 .getResultModel {

@@ -19,7 +19,7 @@
 			<div class="head">
 				<div class="m-slider" id="J_Slider">
 					<div class="slider-wrapper">
-						<div class="slider-item">
+						<div class="slider-item kefu">
 							<a href="javascript:;">
 								<img src="img/tuiguang_01.png">
 							</a>
@@ -105,14 +105,9 @@
 				</form>
 			</div>
 			<div class="footer">
-				<div class="m-slider" id="J_Slider">
-					<div class="slider-wrapper">
-						<div class="slider-item">
-							<a href="javascript:;">
-								<img src="img/footerImg_03.png">
-							</a>
-						</div>
-					</div>
+				<div class="copyRight">
+					<p><span>广州博霖教育科技有限公司</span></p>
+					<p><span> 粤ICP备12044692</span></p>
 				</div>
 			</div>
 		</div>
@@ -158,9 +153,13 @@
 		<script src="ydui/js/ydui.js"></script>
 		<script src="js/comment.js"></script>
 		<script>
+			//客服
+			$('.kefu').on('click',function(){
+				var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/c762816c46f81ba33560df7feac9ded1/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);
+			})
 			$(function() {
 				var dialog = YDUI.dialog;
-
+				
 				// 点击立即获取资料进行验证请求
 				$('.getResults').on('click', function() {
 					var msgrArr = ['最高学历未勾选', '年龄段未勾选', '户籍未勾选', '请填写的您的姓名', '请填写您的11位手机号码'];

@@ -195,7 +195,7 @@
 							</div>
 						</div>
 						<!-- 点击更多查询 -->
-						<div class="mose-btn">
+						<div class="mose-btn kefu">
 							<span>更多问题查询>></span>
 						</div>
 					</div>
@@ -206,32 +206,32 @@
 							<tbody>
 								<tr>
 									<td>低学历升专科</td>
-									<td><a href="javascript:;">报考条件</a></td>
+									<td><a href="javascript:;" class="kefu">报考条件</a></td>
 								</tr>
 								<tr>
 									<td>低学历升本科</td>
-									<td><a href="javascript:;">报考条件</a></td>
+									<td><a href="javascript:;" class="kefu">报考条件</a></td>
 								</tr>
 								<tr>
 									<td>高中升专科</td>
-									<td><a href="javascript:;">报考条件</a></td>
+									<td><a href="javascript:;" class="kefu">报考条件</a></td>
 								</tr>
 								<tr>
 									<td>高中升本科</td>
-									<td><a href="javascript:;">报考条件</a></td>
+									<td><a href="javascript:;" class="kefu">报考条件</a></td>
 								</tr>
 								<tr>
 									<td>专科升本科</td>
-									<td><a href="javascript:;">报考条件</a></td>
+									<td><a href="javascript:;" class="kefu">报考条件</a></td>
 								</tr>
 								<tr>
 									<td>其他形式</td>
-									<td><a href="javascript:;">报考条件</a></td>
+									<td><a href="javascript:;" class="kefu">报考条件</a></td>
 								</tr>
 							</tbody>
 						</table>
 						<div class="money">
-							<a href="javascript:;">免费定制专属方案</a>
+							<a href="javascript:;"  class="kefu">免费定制专属方案</a>
 						</div>
 						<div class="school">
 							<div class="one">
@@ -285,17 +285,15 @@
 								<img src="img/images/jiang_02.png" alt="这是一张图片">
 							</div>
 							<div>
-								<a href="javascript:;" class="more-btn">更多院校专业咨询>></a>
+								<a href="javascript:;" class="more-btn kefu">更多院校专业咨询>></a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- 尾部 -->
-				 <a href="tel:15989223204″ style="font-size:13px;">拨打电话</a>
 				<div class="footer">
-					
 					<div class="copyRight">
-						<span>版权所有：广州博霖教育科技有限公司  粤ICP备12044692</span>
+						<p><span>广州博霖教育科技有限公司</span></p>
+						<p><span> 粤ICP备12044692</span></p>
 					</div>
 				</div>
 			</div>
@@ -308,7 +306,7 @@
 		</div>
 		<div class="getResultModel None" >
 			<span class="close" style="font-weight: 300;"></span>
-			<h2>个人信息授权书</h2>	
+			<h2>个人信息授权书</h2>
 			<div class="msg_box">
 				<p>
 					尊敬的用户，您选择使用“自动输入历史手机号”功
@@ -342,8 +340,11 @@
 		<script src="ydui/js/ydui.js"></script>
 		<script src="js/comment.js"></script>
 		<script>
-			// 客服固定在底部
+			// 客服
 			$(function(){
+				$('.kefu').on('click',function(){
+					var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/c762816c46f81ba33560df7feac9ded1/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);
+				})
 				$(window).scroll(function(){
 					// 页面向下滚动的最小距离时客服框固定定位在底部; fied
 					//  滚动高度 + 视口高度 = 文档高度

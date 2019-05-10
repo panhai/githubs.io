@@ -19,8 +19,8 @@
 		<div id="app">
 			<div class="m-slider" id="J_Slider">
 				<div class="slider-wrapper">
-					<div class="slider-item">
-						<a href="#">
+					<div class="slider-item kefu">
+						<a href="#" class="kefu">
 							<img src="img/Test-and-extension_02.png">
 						</a>
 					</div>
@@ -28,8 +28,8 @@
 			</div>
 			<div class="m-slider" id="J_Slider">
 				<div class="slider-wrapper">
-					<div class="slider-item">
-						<a href="#">
+					<div class="slider-item kefu">
+						<a href="#" class="">
 							<img src="img/03.png">
 						</a>
 					</div>
@@ -131,13 +131,10 @@
 					</div>
 				</form>
 			</div>
-			<div class="m-slider footer" id="J_Slider">
-				<div class="slider-wrapper">
-					<div class="slider-item">
-						<a href="#">
-							<img src="img/09_footer.png">
-						</a>
-					</div>
+			<div class="footer">
+				<div class="copyRight">
+					<p><span>广州博霖教育科技有限公司</span></p>
+					<p><span> 粤ICP备12044692</span></p>
 				</div>
 			</div>
 		</div>
@@ -179,9 +176,15 @@
 		<script src="js/jquery2.01.js"></script>
 		<script src="ydui/js/ydui.js"></script>
 		<script src="mui/js/mui.min.js"></script>
-		<script src="AmazeUI/js/amazeui.min.js"></script>
+		<!-- <script src="AmazeUI/js/amazeui.min.js"></script> -->
 		<script src="js/comment.js"></script>
 		<script>
+			// 客服
+			$(function(){
+				$('.kefu').on('click',function(){
+					kefu()
+				})
+			})
 			
 			$(function(){
 				$('.p-cheack').on('click',function(){

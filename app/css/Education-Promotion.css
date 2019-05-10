@@ -172,3 +172,16 @@ img{
 	color: #999;
 	z-index: 10;
 }
+.footer .copyRight {
+  padding: 0.2rem 0 0.2rem 0;
+  background-color: #5e5e5e;
+  font-size: 0.2rem;
+  color: #ffffff;
+  text-align: center;
+}
+.footer .copyRight p {
+  height: 0.34rem;
+  line-height: 0.34rem;
+  color: #ffffff;
+  font-size: 0.18rem;
+}
