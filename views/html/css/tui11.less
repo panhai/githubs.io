@@ -1,0 +1,378 @@
+@import 'base';
+img{
+  display: inline-block;
+}
+a{
+  color: #222;
+}
+.app { 
+  margin: 0 auto;
+  width: 7.5rem;
+  background: #fefefe !important;
+}
+// banner
+.banner {
+  img {
+    width: 100%;
+  }
+}
+// f-1
+.f-1 {
+  width: 6.9rem;
+  margin: 0 auto;
+  padding: 0.4rem 0;
+  text-align: center;
+  background: #fff;
+  h2{
+    color: #ec5300;
+    font-size: 0.44rem;
+  }
+  p{
+    font-size: 0.28rem;
+    color: #626262;
+  }
+}
+// content
+.content{
+  margin-top: 0.0rem;
+}
+// 内容标题u
+
+
+.myform {
+  width: 6.5rem;
+  margin: 0 auto;
+}
+.b-f{
+  background-color: #f0f0f0;
+  padding-bottom: 0.4rem;
+}
+.mui-input-group > p {
+  padding-left: 0.32rem;
+  padding-right: 0.32rem;
+  color: @color2;
+  font-size: 0.3rem;
+}
+.mui-input-group:before,
+.mui-input-group:after {
+  background-color: transparent;
+}
+.mui-input-row {
+  margin-bottom: 0.2rem;
+  margin-top: 0.1rem;
+}
+.mui-input-group .mui-input-row:after {
+  background-color: transparent;
+}
+.inp-name {
+  padding-top: 0.44rem;
+  font-size: 0.3rem;
+  color: @color2;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.name-line > input {
+  display: inline-block;
+  padding: 0;
+  font-size: @fontSize30;
+  height: 0.72rem;
+  line-height: 0.72rem;
+  text-align: center;
+  background: #fff;
+}
+.automatic {
+  .inline-block();
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 0.03rem;
+  border: 1px solid #f7241a;
+  margin-left: 0.3rem;
+  font-size: 0.3rem;
+}
+.automatic > input {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.automatic.cur {
+  background: url(../img/father/img/bg11.jpg) no-repeat 50% 50%;
+  background-size: 100% 100%;
+}
+.getPensentbtn {
+  color: #1b78ce;
+}
+.person,
+.getPensentbtn,
+.automatic {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 0.24rem;
+}
+.out-box {
+  padding-top: 0.46rem;
+  padding-bottom: 0.6rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+}
+.phone-time{
+  height: 0.24rem;
+  overflow: hidden;
+  margin-top: 0.32rem;
+  position: relative;
+  .box{
+    height: auto;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    p{
+      height: 0.24rem;
+      line-height: 0.24rem;
+      font-size: 0.22rem;
+    }
+  }
+ 
+}
+.get_stipend {
+  width: 5.4rem;
+	height: 0.88rem;
+	background-color: #ff711b;
+	border-radius: 0.05rem;
+  color: #fff;
+  font-size: 0.34rem;
+  letter-spacing: 0.04rem;
+  margin-top: 0.2rem;
+}
+.phone-time{
+  font-size: 0.26rem;
+  text-align: center;
+}
+// 介绍报条件考情况
+.Briefing {
+  text-align: center;
+  width: 6.9rem;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+  >h2{
+    font-size: 0.5rem;
+    span{
+      display: inline-block;
+      margin-top: 0.24rem;
+    }
+  }
+  .b-box{
+    margin-top: 0.1rem;
+    display:-webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+   
+    .b-list{
+      font-size: 0.32rem;
+      width: 3.3rem;
+      height: 3.86rem;
+      background-color: #ffffff;
+      margin-top: 0.28rem;
+      box-shadow: 0.03rem 0.05rem 0.12rem 0rem 
+      rgba(172, 172, 172, 0.3);
+      img{
+        width: 3.1rem;
+      }
+      h3{
+        margin-top: 0.19rem;
+        color: #c60000;
+      }
+      h4{
+        margin-top: 0.19rem;
+        font-size: 0.3rem;
+      }
+      p{
+        margin-top: 0.15rem;
+        font-size: 0.28rem;
+        color: #222;
+      }
+    }
+  }
+}
+// 期待本科学历
+.benke {
+  padding: 0.8rem 0 0.2rem 0;
+  position: relative;
+  text-align: center;
+  img{
+    width: 100%;
+  }
+  a{
+    display: inline-block;
+    width: 5.4rem;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    background-color: #ff711b;
+    border-radius: 0.05rem;
+    color: #fff;
+    font-size: 0.32rem;
+  }
+}
+
+// 页面尾部
+.footer {
+  font-size: 0.36rem;
+  color: #fff;
+  margin-top: 0.42rem;
+  .customer-service.fied {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.88rem;
+  }
+  .customer-service {
+    display: -webkit-flex;
+    display: flex;
+    height: 0.88rem;
+    .left {
+      width: 2.8rem;
+      height: 0.88rem;
+      line-height: 0.88rem;
+      background-color: #f36e1e;
+      img {
+        width: 0.52rem;
+        height: 0.49rem;
+        margin-left: 0.34rem;
+        display: inline-block;
+        margin-right: 0.12rem;
+        vertical-align: middle;
+      }
+      span {
+        vertical-align: middle;
+        font-size: 0.34rem;
+      }
+    }
+    .right {
+      width: 4.7rem;
+      height: 0.88rem;
+      line-height: 0.88rem;
+      background-color: #e45b00;
+      img {
+        width: 0.52rem;
+        height: 0.49rem;
+        margin-left: 0.34rem;
+        display: inline-block;
+        margin-right: 0.12rem;
+        vertical-align: middle;
+      }
+      span {
+        vertical-align: middle;
+        font-size: 0.34rem;
+      }
+    }
+  }
+  .copyRight {
+    padding: 0.25rem;
+    background-color: #190900;
+    font-size: 0.2rem;
+    color: #ffffff;
+    text-align: center;
+    p {
+      height: 0.3rem;
+      line-height: 0.3rem;
+      color: #ffffff;
+    }
+  }
+}
+
+/* 个人信息弹框 和手机验证 */
+.getResultModel {
+  padding: 0.64rem 0.2rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 7.2rem;
+  padding-top: 0.64rem;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 0.21333333rem;
+  font-family: PingFangSC-Regular;
+  font-weight: bold;
+  background-color: #ffffff;
+  font-size: 0.18rem;
+  z-index: 10;
+  color: #333333;
+}
+.getResultModel > h2 {
+  padding-bottom: 20px;
+  font-size: 0.32rem;
+  text-align: center;
+}
+.msg_box > p {
+  padding: 2px 0.3rem;
+  font-size: 0.22rem;
+  line-height: 0.5rem;
+  color: #222;
+}
+.close {
+  display: block;
+  position: absolute;
+  right: 0.15rem;
+  top: 0.15rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-image: url(../img/close.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* 手机验证 */
+.phoneModel {
+  padding: 0.24rem 0.2rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 7rem;
+  padding-top: 0.64rem;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 0.21333333rem;
+  font-family: PingFangSC-Regular;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 0.16px;
+  color: #999;
+  z-index: 10;
+}
+/* 手机验证 */
+.phoneModel {
+  padding: 0.24rem 0.2rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 7rem;
+  padding-top: 0.64rem;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 0.21333333rem;
+  font-family: PingFangSC-Regular;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 0.16px;
+  color: #999;
+  z-index: 10;
+}
+// 学校
+.x-box{
+  margin-top: 0.4rem;
+  img{
+    width: 100%;
+  }
+}
+.tui-t{
+  margin-top: 0.4rem;
+  img{
+    width: 100%;
+  }
+}

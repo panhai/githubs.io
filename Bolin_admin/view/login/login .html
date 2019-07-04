@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>后台系统登录</title>
+    <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+    <meta name="author" content="Vincent Garreau" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../frame/layui/css/layui.css" />
+</head>
+
+<body>
+    <div id="particles-js">
+        <div class="login">
+            <div class="login-top">
+                客户后台管理系统
+            </div>
+            <div class="login-center clearfix">
+                <div class="login-center-img"><img src="../../img/name.png" /></div>
+                <div class="login-center-input">
+                    <input type="text" name="username" autocomplete="on" value="" maxlength="12" placeholder="请输入您的用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的用户名'" />
+                    <div class="login-center-input-text">用户名</div>
+                </div>
+            </div>
+            <div class="login-center clearfix">
+                <div class="login-center-img"><img src="../../img/password.png" /></div>
+                <div class="login-center-input">
+                    <input type="password" name="password"  autocomplete="off" maxlength="11" value="" placeholder="请输入您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'" />
+                    <div class="login-center-input-text">密码</div>
+                </div>
+            </div>
+            <div class="login-button">
+                登陆
+            </div>
+        </div>
+        <div class="sk-rotating-plane"></div>
+    </div>
+    
+    <script src="../../plugin/jquery.min.js"></script>
+    <script src="../../frame/layui/layui.all.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+        $('.login-button').on('click', function() {
+            // 点击提交数据 验证码 进入系统
+            PostData()
+        })
+    </script>
+</body>
+
+</html>

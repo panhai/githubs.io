@@ -1,0 +1,247 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+div {
+  box-sizing: border-box;
+}
+.container {
+  width: 94%;
+  margin: 0 auto;
+}
+.f_r {
+  float: right;
+}
+.f_l {
+  float: left;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+li {
+  list-style: none;
+}
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+body {
+  background: #f5f5f5;
+  font-family: 微软雅黑;
+}
+img,
+a,
+span,
+input {
+  vertical-align: middle;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.app {
+  // 头部
+  max-width: 7.5rem;
+  margin: 0 auto;
+  .logo-top {
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px 0px rgba(200, 200, 200, 0.31);
+    font-size: 0;
+    .logo-box {
+      padding: 5px 0;
+      .first {
+        margin: 0 !important;
+        margin-left: 0.01rem !important;
+      }
+      img {
+        width: 4rem;
+        display: block;
+      }
+      a,
+      img {
+        vertical-align: middle;
+      }
+      a.active {
+        background: red;
+        color: #fff;
+      }
+      a {
+        display: inline-block;
+        font-size: 0.2rem;
+        height: 100%;
+        padding: 0.04rem 0.04rem;
+        &:hover {
+          background: red;
+          text-decoration: none;
+          color: #fff;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+
+  // 中间内容
+  .content {
+    p.wei {
+      padding-top: 0.3rem;
+      color: #4c4c4c;
+      font-size: 0.24rem;
+    }
+    .page1,
+    .page2,
+    .page3 {
+      min-height: 300px;
+      ul {
+        padding-top: 0.4rem;
+      }
+      li {
+        height: 2.17rem;
+        font-size: 0;
+        margin-bottom: 0.7rem;
+        img.list-img {
+          width: 2.5rem;
+          height: 2.17rem;
+        }
+        .list {
+          font-size: 0.3rem;
+          color: #4c4c4c;
+          display: inline-block;
+          width: 4.2rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          margin-left: 0.28rem;
+          .time {
+            position: relative;
+            line-height: 0.26rem;
+            height: 0.4rem;
+            overflow: visible;
+            margin-top: 0.27rem;
+            .line {
+              position: absolute;
+              left: 0;
+              bottom: 0px;
+              width: 36px;
+              height: 2px;
+              background-color: #969696;
+            }
+          }
+          .title {
+            line-height: 21px;
+            height: 22px;
+            padding: 0.22rem 0 0.32rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            a {
+              &:hover {
+                color: red;
+              }
+            }
+          }
+          .btn {
+            a {
+              display: inline-block;
+              width: 1.5rem;
+              height: 0.5rem;
+              background-color: #0097de;
+              border-radius: 5px;
+              text-align: center;
+              line-height: 0.5rem;
+              color: #fff;
+              font-size: 0.26rem;
+              &:hover {
+                background: red;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .page-btn-box {
+      font-size: 0;
+      text-align: center;
+      padding: 0.7rem 0;
+      a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-color: #14a9e7;
+        border-radius: 3px;
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 32px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .footer {
+    height: 3.95rem;
+    background-color: #001f33;
+    color: #fff;
+    .copyRight {
+      font-size: 0;
+      > div {
+        font-size: 0.23rem;
+        float: left;
+        height: 2.75rem;
+      }
+      .left {
+        width: 2.8rem;
+        padding-top: 0.37rem;
+        img {
+          width: 100%;
+        }
+        p.r {
+          text-align: center;
+          line-height: 33px;
+          height: 33px;
+          border-bottom: 1px solid #fff;
+        }
+        p.f {
+          line-height: 20px;
+          height: 20px;
+          font-size: 0.2rem;
+        }
+      }
+      .center {
+        width: 3.1rem;
+        margin-left: 0.1rem;
+        padding-top: 0.37rem;
+        a {
+          color: #fff;
+          display: inline-block;
+          padding: 0.04rem;
+          margin-right: 0.03rem;
+        }
+        .alink {
+        }
+        p.t {
+        }
+        .copy {
+        }
+      }
+      .right {
+        width: 0.9rem;
+        float: right;
+        img {
+          padding-top: 0.37rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}

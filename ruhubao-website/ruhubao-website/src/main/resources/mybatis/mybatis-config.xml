@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+	<settings>
+		<!-- 开启驼峰自动映射 -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+
+
+	<!-- 配置插件 -->
+	<!-- 在environments标签之前添加 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<property name="dialect" value="mysql" />
+			<!-- 设置为true时，使用RowBounds分页会进行count查询 -->
+			<property name="rowBoundsWithCount" value="true"/>
+		</plugin>
+
+	</plugins>
+
+	<!-- <mappers>
+		<mapper class="cn.bolinjy.crm.mapper.UserMapper"/>
+		<mapper class="cn.bolinjy.crm.mapper.RoleMapper"/>
+		<mapper class="cn.bolinjy.crm.mapper.ResourceMapper"/>
+		以包扫描的方式，配置mapper映射文件 ，说明：
+		1.前提必须是mapper代理开发方法
+		2.mapper映射文件，必须与mapper代理接口在同一个目录
+		3.mapper映射文件的名称，必须与mapper代理接口的名称一致
+		4.如果有多个mapper包要扫描，配置多个package
+		
+		<package name="cn.bolinjy.crm.mapper"/>
+
+	</mappers> -->
+
+
+</configuration>

@@ -1,0 +1,136 @@
+// color
+@color2:#222222;
+@color58:#585858;
+
+//font-size
+@f56:56px;
+
+//  border
+.border(@w,@color){
+  border: @w solid @color;
+}
+
+// border-radius
+.border-radius(@radius:3px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// width height
+.width-height(@w:10px,@h:10px) {
+  width: @w;
+  height: @h;
+}
+// font-size
+.font-size(@f:14px) {
+  font-size: @f;
+}
+
+// clearfix
+.clearfix:after{
+  content: ".";
+  display:block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+.clearfix{
+  zoom: 1;
+}
+.inline-block{
+  display: inline-block;
+  
+}
+//
+
+html,body{
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+body{
+  font-size: 14px;
+  line-height: 24px;
+  font-family: '微软雅黑';
+}
+
+img,a,span,input,button {
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  border: 0;
+  outline: none;
+}
+li {
+  list-style: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+a{
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline: 0
+}
+button,
+input,
+optgroup,
+option,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  outline: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400
+}
+
+body,
+button,
+dd,
+div,
+dl,
+dt,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul,
+table,
+tr,
+th,
+td{
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>后台数据管理系统</title>
+		<meta name="description" content="博霖教育后台数据管理" />
+		<meta name="keywords" content="博霖教育|学历报考中心|学历提升|广东省成人学历报名中心" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="../Bolin_admin/plugin/css/easyui.css">
+		<style type="text/css">
+			.app{
+        
+      }
+      h1{
+        text-align: center;
+      }
+      
+		</style>
+	</head>
+	<body>
+    
+    <div class="app">
+      <h1>客户数据</h1>
+      <div class="data-table">
+        <table class="easyui-datagrid" width="100%" id="tt" rownumbers="true" data-options="url:'data.json', fitColumns:true,singleSelect:false,method:'get',loadMsg:'数据加载中...',
+             selectOnCheck:true,selectOnCheck:true,checkOnSelect:false,fixed:false",  
+          toolbar="#tb">
+          <thead>
+            <tr>
+              <th data-options=" field: 'ck',checkbox:true" ></th>
+              <th data-options="field: 'customerId' "  sortable="true">用户Id</th>
+              <th data-options="field: 'customerName' " >用户姓名</th>
+              <th data-options="field: 'sex' " >性别</th>
+              <th data-options="field: 'customerPhone',align: 'center' " >用户手机</th>
+              <th data-options="field: 'fromPlatform',align: 'center' " >来源平台</th>
+              <th data-options="field: 'sourceLink',align: 'center' " width="27%">来源链接</th>
+              <th data-options="field: 'ageGroups',align: 'center' " >年龄段</th>
+              <th data-options="field: 'educationNow',align: 'center' " >现有学历</th>
+              <th data-options="field: 'updateTime',align: 'center' " width="17%"  sortable="true">更新时间</th>
+              <th data-options="field: 'status',align: 'center' "  sortable="true">状态</th>
+            </tr>
+          </thead>
+        </table>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <script src="../Bolin_admin/plugin/jquery.min.js"></script>
+    <script src="../Bolin_admin/plugin/jquery.easyui.min.js"></script>
+    <script src="../Bolin_admin/plugin/easyui-lang-zh_CN.js"></script>
+    <script src="../Bolin_admin/frame/layui/layui.all.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+        setTimeout(function(){
+          var $tdTimes = $('.datagrid-btable tr');
+          
+          $tdTimes.each(function(index,item){
+           if($(item).attr('field')=='status'){
+             console.log($(item).attr('field'))
+           }
+          })
+        },1)
+      })
+      
+    </script>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+body {
+  background: #fafafa;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+.hide {
+  display: none;
+}
+.app {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.app .nav-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  background: #222;
+  color: #fff;
+}
+.app .nav-box h2.title {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+}
+.app .nav-box .layui-tree-txt {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+  max-width: 120px;
+}
+.app .nav-box input.layui-tree-editInput {
+  color: #fff;
+}
+.app .nav-box .layui-tree-entry {
+  color: #fff;
+}
+.app .nav-box .layui-tree-entry:hover {
+  background: #222;
+}
+.app .nav-box .layui-tree-entry .layui-tree-set,
+.app .nav-box .layui-tree-entry .layui-tree-setHide,
+.app .nav-box .layui-tree-entry .layui-tree-spread {
+  color: #fff;
+}
+.app .nav-box #test12 {
+  padding-left: 10px;
+}
+.app .mian {
+  margin-left: 270px;
+  height: 100%;
+}
+.setConten {
+  background: #f5f5f5;
+  min-height: 700px;
+  padding: 20px;
+}
+.setConten h3 {
+  font-size: 20px;
+  font-weight: 800;
+  padding: 20px 0 20px 10px;
+  color: #666;
+}
+.setConten .ed {
+  padding-left: 20px;
+}
+.setConten .layui-form-select dl {
+  z-index: 12000;
+}

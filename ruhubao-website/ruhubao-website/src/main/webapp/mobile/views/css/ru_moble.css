@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  border: 0;
+  display: inline-block;
+}
+input,
+button {
+  outline: none;
+  display: inline-block;
+}
+html {
+  font-size: 100px;
+}
+body {
+  max-width: 7.5rem;
+  margin: 0 auto;
+  background: #00131f;
+}
+.app {
+  font-size: 0.3rem;
+  line-height: 0.3rem;
+}
+.app .top {
+  height: 3.855rem;
+  width: 100%;
+  position: relative;
+  font-size: 0.3rem;
+  color: #fff;
+}
+.app .top img {
+  width: 100%;
+  height: 100%;
+}
+.app .top .box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  font-size: 0.3rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.3rem;
+}
+.app .top .box h2 {
+  font-size: 0.45rem;
+  line-height: 0.52rem;
+  padding: 0.46rem 0 0.11rem 0;
+}
+.app .top .box p.r {
+  font-size: 0.34rem;
+  line-height: 0.52rem;
+  margin-top: 0.12rem;
+}
+.app .top .box p.r2 {
+  font-size: 0.26rem;
+  line-height: 0.3rem;
+  margin-top: 0.1rem;
+}
+.app .top .box .btn {
+  margin-top: 0.42rem;
+}
+.app .top .box .btn .red {
+  display: inline-block;
+  width: 5.53rem;
+  height: 0.64rem;
+  background-color: #e90016;
+  line-height: 0.64rem;
+}
+.app .form {
+  margin: 0 auto;
+  background: #3d4b55;
+  font-size: 20px;
+  margin-top: 10px;
+  padding-bottom: 40px;
+}
+.app .form form {
+  width: 100%;
+  color: #fff;
+  padding: 0.3rem 0.3rem 0 0.3rem;
+  font-size: 0;
+}
+.app .form form h4 {
+  font-size: 0.3rem;
+  line-height: 32px;
+}
+.app .form form .layui-row {
+  width: 100%;
+}
+.app .form form .item {
+  display: inline-block;
+  width: 33.33%;
+  height: 0.52rem;
+  line-height: 0.42rem;
+  font-size: 0.24rem;
+}
+.app .form form .item input,
+.app .form form .item span {
+  vertical-align: middle;
+}
+.app .form form .item input {
+  width: 0.29rem;
+  height: 0.28rem;
+}
+.app .form form .big_mobel {
+  width: 45%;
+}
+.app .form form .inp {
+  width: 7rem;
+  height: 3.38rem;
+  background: #858e94;
+  padding-top: 30px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-left: 0.1rem;
+}
+.app .form form .inp input {
+  display: inline-block;
+  width: 3.3rem;
+  height: 0.56rem;
+  background-color: #ffffff;
+  border: 0;
+  vertical-align: middle;
+  padding-left: 0.1rem;
+  font-size: 0.26rem;
+}
+.app .form form .inp input.ma {
+  width: 1.6rem;
+  margin-left: 10px;
+  padding-left: 0.1rem;
+}
+.app .form form .inp span {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  height: 56px;
+  line-height: 56px;
+}
+.app .form form .inp span.ma {
+  width: 119px;
+  background-color: #ffffff;
+  margin-left: 20px;
+  font-size: 18px;
+  color: #5f5f5f;
+}
+.app .form form .inp .getMa {
+  width: 1.39rem;
+  height: 0.56rem;
+  line-height: 0.56rem;
+  margin-left: 0.1rem;
+  background-color: #f00000;
+  border-radius: 0.15rem;
+  cursor: pointer;
+  font-size: 0.2rem;
+}
+.app .form form .inp .btn {
+  text-align: center;
+  padding: 25px 0 18px 0;
+}
+.app .form form .inp .btn button {
+  width: 5.06rem;
+  height: 0.74rem;
+  line-height: 0.74rem;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 0.34rem;
+  border: 0;
+  border-radius: 0.1rem;
+}
+.app .form form .inp p.f {
+  text-align: center;
+}
+.app .footer {
+  height: 1.16rem;
+  line-height: 1.16rem;
+  font-size: 0.24rem;
+  color: #fff;
+  background: #00131f;
+  text-align: center;
+}

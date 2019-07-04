@@ -1,0 +1,32 @@
+.add-campus-box,
+.campus-box {
+  background: #fff;
+  margin: 10px;
+}
+.add-campus-box {
+  padding: 10px;
+  margin: 10px;
+  background: #fff;
+}
+.campus-box {
+  padding: 20px 10px 40px 10px;
+}
+.campus-box .campus-list {
+  text-align: center;
+}
+.campus-box .campus-list .c-box {
+  padding: 20px;
+  border: 1px solid #009688;
+  border-radius: 4px;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.campus-box .campus-list .c-box h2 {
+  padding: 20px 0;
+}
+.campus-msg {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}

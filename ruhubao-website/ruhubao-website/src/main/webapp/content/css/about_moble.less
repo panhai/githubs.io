@@ -1,0 +1,181 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+div{
+  box-sizing: border-box;
+}
+.container {
+  width: 6.9rem;
+  margin: 0 auto;
+}
+.f_r{
+  float: right;
+}
+.f_l{
+  float: left;
+}
+a{
+  text-decoration: none;
+  color: #222;
+}
+li{
+  list-style: none;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{zoom: 1}
+body {
+  background: #f5f5f5;
+  font-family: 微软雅黑;
+}
+
+img,a,span,input{
+  vertical-align: middle;
+}
+
+.app{
+   // 头部
+   max-width: 7.5rem;
+  .logo-top {
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px 0px rgba(200, 200, 200, 0.31);
+    font-size: 0;
+    .logo-box{
+      padding: 5px 0;
+      img{
+        width: 4rem;
+        display: block;
+      }
+      a,img{
+        vertical-align: middle;
+      }
+      a.active{
+        background: red;
+        color: #fff;
+      }
+      a{
+        display: inline-block;
+        font-size: 0.2rem;
+        height: 100%;
+        padding: 0.04rem 0.04rem;
+        &:hover{
+          background: red;
+          text-decoration: none;
+          color: #fff;
+          transition: all 0.3s;
+          
+        }
+      }
+    }
+  }
+  
+  // 中间内容
+  .content{
+    padding: 0.2rem 0 0.3rem;
+    background: #fff;
+    font-size: 0.23rem;
+    p.wei{
+      padding-top: 14px;
+      color: #4c4c4c;
+    }
+    h1{
+      color: #4c4c4c;
+      text-align: center;
+      font-size: 0.36rem;
+      font-weight: 400;
+      padding-top: 18px;
+    }
+    p.r{
+      text-align: center;
+      width: 2.8rem;
+      margin: 0 auto;
+      line-height: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #bababa;
+      position: relative;
+      font-size: 0.3rem;
+      color: #969696;
+      span.ab{
+        position: absolute;
+        left: 1.08rem;
+        bottom: -1.5px;
+        display: block;
+        width: 0.6rem;
+        height: 3px;
+        background-color: #1090da;
+      }
+    }
+    .box{
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      p{
+        color: #5a5a5a;
+        font-size: 0.24rem;
+        line-height: 0.4rem;
+      }
+    }
+  }
+  //footer
+  .footer {
+   height: 3.95rem;
+   background-color: #001f33;
+   color: #fff;
+    .copyRight{
+      font-size: 0;
+      >div{
+        font-size: 0.23rem;
+        float: left;
+        height: 2.75rem;
+      }
+      .left{
+        width: 2.80rem;
+        padding-top: 0.37rem;
+        img{
+          width: 100%;
+        }
+        p.r{
+          text-align: center;
+          line-height: 33px;
+          height: 33px;
+          border-bottom: 1px solid #fff;
+          padding-bottom: 0.1rem;
+        }
+        p.f{
+          line-height: 20px;
+          height: 20px;
+          font-size: 0.2rem;
+          padding-top: 0.1rem;
+          margin-top: 0.1rem;
+        }
+      }
+      .center{
+        width: 3.10rem;
+        margin-left: 0.1rem;
+        padding-top: 0.37rem;
+        a{
+          color: #fff;
+          display: inline-block;
+          padding: 0.04rem;
+          margin-right: 0.03rem;
+        }
+        .alink{
+         
+        }
+        p.t{
+          
+        }
+        .copy{
+          
+        }
+      }
+      .right{
+        width: 0.9rem;
+        float: right;
+        img{
+          padding-top: 0.37rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

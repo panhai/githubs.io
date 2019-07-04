@@ -1,0 +1,180 @@
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+}
+#main .consumer-box .usermessage .item {
+  background: #fff;
+  margin: 10px 10px 0px 0;
+}
+#main .consumer-box .usermessage .item > div {
+  padding: 40px 0;
+}
+#main .consumer-box .usermessage .item .f-name {
+  text-align: center;
+}
+#main .consumer-box .usermessage .item .f-name span {
+  display: inline-block;
+  padding: 20px 15px;
+  border-radius: 5px;
+  background: #009688;
+  color: #fff;
+  margin-top: 10px;
+}
+#main .consumer-box .usermessage .item .f-m h2 {
+  color: #2d8ff0;
+}
+#main .consumer-box .usermessage .item .f-m p {
+  padding: 3px 0;
+}
+#main .consumer-box .usermessage .item1 {
+  padding: 23px 0;
+}
+#main .consumer-box .usermessage .item2 {
+  line-height: 30px;
+  margin-top: 5px;
+}
+#main .consumer-box .usermessage .item2 .f-name {
+  text-align: left;
+  text-indent: 20px;
+}
+#main .consumer-box .usermessage .item2 .f-m p {
+  padding: 0;
+}
+#main .consumer-box .usermessage .item2 .f-m p span {
+  display: inline-block;
+  line-height: 22px;
+}
+#main .consumer-box .usermessage .item2 .f-m p .bumen {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #2d8ff0;
+  color: #fff;
+}
+#main .consumer-box .usermessage .item2 .f-m p .jiaoshe {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #ed3f14;
+  color: #fff;
+}
+#main .consumer-box .result .result-box {
+  margin: 10px 5px 10px 0;
+}
+#main .consumer-box .result .result-box > h2 {
+  margin-bottom: 2px;
+  font-size: 26px;
+  color: #009688;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #fff;
+}
+#main .consumer-box .result .result-box .r-item {
+  background: #fff;
+  padding-bottom: 20px;
+}
+#main .consumer-box .result .result-box .r-item > .list {
+  text-align: center;
+}
+#main .consumer-box .result .result-box .r-item > .list > div span {
+  display: inline-block;
+  width: 130px;
+  height: 90px;
+  line-height: 105px;
+  background: #009688;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+#main .consumer-box .result .result-box .r-item > .list > div span i {
+  color: #fff;
+}
+#main .consumer-box .result .result-box .r-item > .list .h-j h2 {
+  padding-top: 40px;
+  color: #009688;
+  font-size: 24px;
+}
+#main .consumer-box .result .result-box .r-item > .list .h-j p {
+  border-bottom: 1px solid #999;
+  padding-bottom: 14px;
+}
+#main .consumer-box .result .result-box .r-item .list:nth-child(2) span {
+  background: #19be6b;
+}
+#main .consumer-box .result .result-box .r-item .list:nth-child(3) span {
+  background: #ed3f14;
+}
+#main .consumer-box .result .result-box .r-item .list:nth-child(4) span {
+  background: #ff9900;
+}
+#main .consumer-box .result .result-box .r-item .list:nth-child(5) span {
+  background: #cc0066;
+}
+#main .consumer-box .result .result-box .r-item .list:nth-child(6) span {
+  background: #0066cc;
+}
+#main .consumer-box .result .result-box .r-item .list:nth-child(7) span {
+  background: #ff00ff;
+}
+#main .consumer-box .result .result-box .r-item .list:nth-child(8) span {
+  background: #0000FF;
+}
+#main .consumer-box .result .result-box .r-item .list:nth-child(9) span {
+  background: #9900FF;
+}
+#main .consumer-box .yue h2.y-t {
+  font-size: 30px;
+  background: #fff;
+  padding: 15px 10px 15px 20px;
+  margin-bottom: 2px;
+  color: #c00000;
+}
+#main .consumer-box .yue .y-box {
+  background: #fff;
+  text-align: center;
+}
+#main .consumer-box .yue .y-box .y-item {
+  padding: 20px 0;
+  width: 10%;
+}
+#main .consumer-box .yue .y-box .y-item span.y-span {
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  border-radius: 110px;
+  line-height: 120px;
+  background: #009688;
+}
+#main .consumer-box .yue .y-box .y-item span.y-span i {
+  color: #fff;
+}
+#main .consumer-box .yue .y-box .y-item h2 {
+  font-size: 24px;
+  color: #009688;
+  padding: 8px 0;
+}
+#main .consumer-box .yue .y-box .y-item p {
+  font-size: 18px;
+  border-bottom: 1px solid #999;
+  padding-bottom: 15px;
+  width: 88%;
+  margin: 0 auto;
+}
+#main .consumer-box .yue .y-box .y-item:nth-child(2) span {
+  background: #19be6b;
+}
+#main .consumer-box .yue .y-box .y-item:nth-child(3) span {
+  background: #ed3f14;
+}
+#main .consumer-box .yue .y-box .y-item:nth-child(4) span {
+  background: #ff9900;
+}
+#main .consumer-box .yue .y-box .y-item:nth-child(5) span {
+  background: #cc0066;
+}
+#main .consumer-box .yue .y-box .y-item:nth-child(6) span {
+  background: #0066cc;
+}
+#main .consumer-box .yue .y-box .y-item:nth-child(7) span {
+  background: #ff00ff;
+}

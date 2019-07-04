@@ -1,0 +1,453 @@
+@import 'base';
+.app{
+	margin: 0 auto;
+	width: 7.5rem;
+}
+.zhu{
+	height: 0.88rem;
+	line-height: 0.88rem;
+	background-color: #3a3a3a;
+	font-size: 0.3rem;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 0.04rem;
+}
+.nav{
+	font-size: 0.3rem;
+	text-align: center;
+	height: 0.78rem;
+	line-height: 0.78rem;
+	color: #2d78dd;
+	span{
+		margin: 0 10px;
+		vertical-align: middle;
+	}
+	a{
+		vertical-align: middle;
+	}
+}
+// banner
+.banner{
+	img{
+		width: 100%;
+		height: 6.55rem;
+	}
+	.content{
+		background-color: #fff;
+		.title_box{
+			height: 1.21rem;
+			position: relative;
+		}
+	}
+	
+}
+// 内容标题u
+.title_box{
+	position: relative;
+	height: 1rem;
+	padding-top: 0.5rem;
+	>img{
+		width: 0.6rem;
+		height: 0.47rem;
+		position: absolute;
+	}
+	>.left_img{
+		left: 0.58rem;
+		top: 0.51rem
+	}
+	>.right_img{
+		top: 0.58rem;
+		right: 0.51rem;
+	}
+	>p{
+		width: 100%;
+		height: 0.37rem;
+		font-size: 0.36rem;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 0.55rem;
+		color: #2c84de;
+		text-align: center;
+	}
+}
+
+
+.item{
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+.item>div{
+	width: 50%;
+}
+.mui-input-group{
+	font-size: 0.3rem;
+	letter-spacing: 0.04rem;
+	color: @color2;
+	padding-top: 0.42rem;
+	padding-bottom: 0.4rem;
+	padding-left:0.32rem;
+	padding-right:0.32rem; 
+
+}
+.myform{
+	
+}
+.mui-input-group>p{
+	padding-left:0.32rem;
+	padding-right:0.32rem;
+	color: @color2;
+	font-size: 0.3rem;
+}
+.mui-input-group:before,.mui-input-group:after{
+	background-color: transparent;
+}
+.mui-input-row{
+	margin-bottom: 0.2rem;
+	margin-top: 0.1rem;
+}
+.mui-input-group .mui-input-row:after{
+	background-color: transparent;
+}
+.inp-name{
+	padding-top: 0.44rem;
+	font-size: 0.3rem;
+	color: @color2;
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+}
+.inp-name>p{
+	color: @color2;
+	font-size: 0.3rem;
+	letter-spacing: @letterSpacing;
+}
+.name-line>input{
+	display: block;
+	.border-bottom();
+	height: 0.67rem;
+	line-height: 0.67rem;
+	padding: 0;
+	font-size: @fontSize30;
+	padding-top: .22rem;
+	padding-bottom: .22rem;
+	
+}
+.automatic{
+	.inline-block();
+	width: 0.32rem;
+	height: 0.32rem;
+	border-radius: 0.03rem;
+	border:1px solid #666;
+	margin-left: 0.3rem;
+	font-size: 0.3rem;
+}
+.automatic>input{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.automatic.cur{
+	background: url(../img/auto_03.png) no-repeat 50% 50%;
+	background-size: 100% 100%;
+}
+.getPensentbtn{
+	color: #1b78ce;
+}
+.person,.getPensentbtn,.automatic{
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 0.24rem;
+}
+.out-box{
+	padding-top: 0.46rem;
+	padding-bottom: 0.6rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
+}
+
+.get_stipend{
+	width: 6.9rem;
+	height: 0.88rem;
+	background-color: #f2862e;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 0.36rem;
+	font-family: PingFang-SC-Regular;
+	letter-spacing: 0.04rem;
+	border-radius: .88rem;
+	margin-top: .2rem;
+}
+
+// 专业推荐
+.Briefing{
+	background-color: #f0f0f0;
+	padding: 0.31rem 0.3rem 0.64rem 0.3rem;
+	box-sizing: border-box;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	>div{
+		width: 3.3rem;
+		height: 3.66rem;
+		background-color: #ffffff;
+		box-shadow: -0.04rem -0.01rem 0.08rem 0rem 
+			rgba(172, 172, 172, 0.5);
+			margin-bottom: 0.3rem;
+			text-align: center;
+			padding: 0.2rem;
+			box-sizing: border-box;
+			>img{
+				width: 2.9rem;
+				height: 2.04rem;
+				border-radius: 0.05rem;
+			}
+			>p{
+				height: 0.26rem;
+				font-size: 0.28rem;
+				letter-spacing: 0.03rem;
+				color: #222222;
+				padding: 0.2rem 0 0 0;
+			}
+			a.more{
+				display: inline-block;
+				width: 2.01rem;
+				height: 0.56rem;
+				line-height: 0.56rem;
+				background-color: #2e81f2;
+				border-radius: 0.28rem;
+				color: #fff;
+				font-size: 0.3rem;
+			}
+	}
+}
+// 期待本科学历
+.benke{
+	padding-top: 0.63rem;
+	.tip{
+		padding: 0;
+		width: 6.9rem;
+		height: 0.88rem;
+		line-height: 0.88rem;
+		text-align: center;
+		background-color: #eb6100;
+		border-radius: 0.05rem;
+		margin: 0 auto;
+		font-size: 0.36rem;
+		letter-spacing: 0.04rem;
+		color: #ffffff;
+	}
+	.xue-box{
+		img.f_img{
+			display: block;
+			margin: 0 auto;
+			width: 7.49rem;
+			height: 5rem;
+			margin-top: 0.42rem;
+		}
+		>.get{
+			width: 6.9rem;
+			height: 0.88rem;
+			background-color: #2c90de;
+			border-radius: 0.44rem;
+			text-align: center;
+			font-size: 0.46rem;
+			color: #ffffff;
+			line-height: 0.88rem;
+			margin: 0 auto;
+			margin-top: 0.52rem;
+		}
+		>.start{
+			text-align: center;
+			height: 0.38rem;
+			font-size: 0.36rem;
+			line-height: 0.36rem;
+			letter-spacing: 0.04rem;
+			color: #ff0000;
+			margin: 0 auto;
+			font-weight: 800;
+			margin-top: 0.6rem;
+		}
+	}
+}
+
+// 页面尾部
+.footer{
+	font-size: 0.36rem;
+	color: #fff;
+	margin-top: .42rem;
+	.customer-service.fied{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 1.28rem;
+	}
+	.customer-service{
+		display: -webkit-flex;
+		display: flex;
+		height: 1.28rem;
+		font-size: 0;
+		>div{
+			display: inline-block;
+			font-size:0.34rem;
+			letter-spacing: 0.04rem;
+			color: #666666;
+		}
+		.left{
+			background-color: #fff;
+			width: 2.2rem;
+			height: 100%;
+			text-align: center;
+			img{
+				display: inline-block;
+				margin-top: 0.26rem;
+				width: 0.32rem;
+				height: 0.32rem;
+			}
+			a{
+				display: block;
+				color: #666666;
+				margin-top: 0.1rem;
+			}
+		}
+		.center{
+			background-color: #fff;
+			width: 2.2rem;
+			height: 100%;
+			text-align: center;
+			img{
+				display: inline-block;
+				margin-top: 0.26rem;
+				width: 0.32rem;
+				height: 0.32rem;
+			}
+			a{
+				display: block;
+				color: #666666;
+				margin-top: 0.1rem;
+			}
+		}
+		.right{
+			width: 3.19rem;
+			height: 100%;
+			line-height: 1.28rem;
+			background-color: #ff002a;
+			text-align: center;
+			img{
+				display: inline-block;
+				margin-top: 0.26rem;
+				vertical-align: middle;
+				margin-bottom: 0.05rem;
+				width: 0.4rem;
+				height: 0.42rem;
+			}
+			button{
+				display: inline-block;
+				color: #666666;
+				height: 100%;
+				line-height: 1.28rem;
+				margin-top: 0.1rem;
+				background: transparent;
+				border: 0;
+				color: #fff;
+				vertical-align: middle;
+				font-size: 0.34rem;
+				letter-spacing: 0.04rem;
+			}
+		}
+	}
+	.copyRight{
+		padding: .25rem;
+		background-color: #5e5e5e;
+		font-size: 0.2rem;
+		color: #ffffff;
+		text-align: center;
+		p{
+			height: 0.30rem;
+			line-height: 0.30rem;
+			color: #ffffff;
+		}
+	}
+}
+
+/* 个人信息弹框 和手机验证 */
+.getResultModel{
+	padding: 0.64rem 0.2rem;
+	position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 7.2rem;
+    padding-top: 0.64rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border-radius: 0.21333333rem;
+    font-family: PingFangSC-Regular;
+    font-weight: bold;
+	background-color: #FFFFFF;
+	font-size: 0.18rem;
+	z-index: 10;
+	color: #333333;
+}
+.getResultModel>h2{
+	padding-bottom: 20px;
+	font-size: 0.32rem;
+	text-align: center;
+}
+.msg_box>p{
+	padding: 2px 0.3rem;
+	font-size: 0.22rem;
+	line-height: 0.5rem;
+	color: #222;
+}
+.close{
+	display: block;
+	position: absolute;
+	right: 0.15rem;
+	top: 0.15rem;
+	width: 0.3rem;
+	height:0.3rem;
+	background-image: url(../img/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* 手机验证 */
+.phoneModel{
+	padding: 0.24rem 0.2rem;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 7.0rem;
+	padding-top: 0.64rem;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #FFFFFF;
+	border-radius: 0.21333333rem;
+	font-family: PingFangSC-Regular;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 0.16px;
+	color: #999;
+	z-index: 10;
+}
+/* 手机验证 */
+.phoneModel{
+	padding: 0.24rem 0.2rem;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 7.0rem;
+	padding-top: 0.64rem;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #FFFFFF;
+	border-radius: 0.21333333rem;
+	font-family: PingFangSC-Regular;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 0.16px;
+	color: #999;
+	z-index: 10;
+}

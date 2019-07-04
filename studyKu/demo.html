@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+      // 深度克隆
+      function clone(obj) {
+        var buf;
+        if (obj instanceof Array) {
+          buf = [];
+          var i = obj.length;
+          while (i--) {
+            buf[i] = clone(obj[i]);
+          } 
+          return buf;
+        } else if (obj instanceof Object) {
+          buf = {};
+          for (var k in obj) {
+            buf[k] = clone(obj[k]);
+          }
+          return buf;
+        } else {
+          return obj;
+        }
+      }
+      
+      var onj = {
+        name:"jkjkjk",
+        age:14
+      }
+       
+       
+       function a(){
+         var ak = 111;
+         console.log('aaaaa')
+       }
+       var o2 = clone(a);
+       
+     
+       
+       console.log(onj,o2)
+      
+      
+    </script>
+  </body>
+</html>

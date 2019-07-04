@@ -1,0 +1,34 @@
+客户id
+customerId;
+客户姓名
+customerName;
+手机
+customerPhone;
+年龄段
+ageGroups;
+所在地
+customerLocal; 
+现有学历
+educationNow; 
+学历等级
+educationlLevel;
+目标
+objective;
+提升目的
+liftingMode;
+离校多久
+leavingSchoolTime;
+爱好
+likeMajor;
+来着的平台
+fromPlatform;
+链接
+sourceLink;
+更新时间
+updateTime;
+状态
+ status;
+
+
+
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%MVN_HOME%\bin;%JAVA_HOME%\bin;%CATALINA_BASE%\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin

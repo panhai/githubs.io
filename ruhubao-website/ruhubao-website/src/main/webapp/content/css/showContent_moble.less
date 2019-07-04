@@ -1,0 +1,221 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+div{
+  box-sizing: border-box;
+}
+.container {
+  width: 94%;
+  margin: 0 auto;
+}
+.f_r{
+  float: right;
+}
+.f_l{
+  float: left;
+}
+a{
+  text-decoration: none;
+  color: #222;
+}
+li{
+  list-style: none;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{zoom: 1}
+body {
+  background: #f5f5f5;
+  font-family: 微软雅黑;
+  margin: 0 auto;
+}
+img,a,span,input{
+  vertical-align: middle;
+}
+.show{
+  display: block;
+}
+.hide{
+  display:none;
+}
+.app{
+   // 头部
+   margin: 0 auto;
+  .logo-top {
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px 0px rgba(200, 200, 200, 0.31);
+    font-size: 0;
+    .logo-box {
+      padding: 5px 0;
+      .first {
+        margin: 0 !important;
+        margin-left: 0.01rem !important;
+      }
+      img {
+        width: 4rem;
+        display: block;
+      }
+      a,
+      img {
+        vertical-align: middle;
+      }
+      a.active {
+        background: red;
+        color: #fff;
+      }
+      a {
+        display: inline-block;
+        font-size: 0.2rem;
+        height: 100%;
+        padding: 0.04rem 0.04rem;
+        &:hover {
+          background: red;
+          text-decoration: none;
+          color: #fff;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+  
+  // 中间内容
+  .content{
+    p.wei{
+      padding-top: 34px;
+      color: #4c4c4c;
+      font-size: 0.28rem;
+    }
+   .pagecontent{
+     min-height: 5rem;
+     min-height: 7rem;
+     .img-box{
+       text-align: center;
+       img{
+         max-width: 80%;
+       }
+     }
+     .time,.title{
+       text-align: center;
+     }
+     .title{
+       color: #4c4c4c;
+       font-size: 28px;
+       line-height: 36px;
+       padding: 90px 0 28px;
+     }
+     .time{
+       color: #6b6b6b;
+       font-size: 18px;
+       line-height: 24px;
+       padding-bottom: 62px;
+     }
+     .text-box{
+       padding-top: 68px;
+       line-height: 41px;
+       color: #6a6a6a;
+       font-size: 16px;
+       p{
+        
+         margin: 0 auto;
+       }
+     }
+     .recommend{
+       margin: 0 auto;
+       margin-top: 30px;
+       line-height: 23px;
+       font-size: 16px;
+       padding: 33px 0 54px 0;
+       border-top: 1px solid #bababa;
+       span{
+         font-size: 18px;
+       }
+       a{
+         font-size: 16px;
+         &:hover{
+           color: red;
+           text-decoration: underline;
+         }
+       }
+       .btn{
+         padding: 0 0 20px 0;
+         .layui-btn{
+           display: inline-block;
+           width: 100px;
+           line-height: 44px;
+           border: 0;
+           outline: none;
+           background: #009688;
+           color: #fff;
+           font-size: 16px;
+           cursor: pointer;
+           letter-spacing: 4px;
+         }
+       }
+     }
+   }
+  
+  }
+  //footer
+  .footer {
+    height: 3.95rem;
+    background-color: #001f33;
+    color: #fff;
+    .copyRight {
+      font-size: 0;
+      > div {
+        font-size: 0.23rem;
+        float: left;
+        height: 2.75rem;
+      }
+      .left {
+        width: 2.8rem;
+        padding-top: 0.37rem;
+        img {
+          width: 100%;
+        }
+        p.r {
+          text-align: center;
+          line-height: 33px;
+          height: 33px;
+          border-bottom: 1px solid #fff;
+           padding-top: 0.1rem;
+        }
+        p.f {
+          line-height: 20px;
+          height: 20px;
+          font-size: 0.2rem;
+           padding-top: 0.1rem;
+        }
+      }
+      .center {
+        width: 3.1rem;
+        margin-left: 0.1rem;
+        padding-top: 0.37rem;
+        a {
+          color: #fff;
+          display: inline-block;
+          padding: 0.04rem;
+          margin-right: 0.03rem;
+        }
+        .alink {
+          padding-top: 0.1rem;
+        }
+        p.t {
+           padding-top: 0.1rem;
+        }
+        .copy {
+           padding-top: 0.1rem;
+        }
+      }
+      .right {
+        width: 0.9rem;
+        float: right;
+        img {
+          padding-top: 0.37rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+}

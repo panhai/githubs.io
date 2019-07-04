@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>系统管理-公司信息</title>
+    <meta name="description" content="博霖教育后台数据管理" />
+    <meta name="keywords" content="博霖教育|学历报考中心|学历提升|广东省成人学历报名中心" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="images/x-icon" href="../../img/bolinglink.png">
+    <link rel="stylesheet" type="text/css" href="../../frame/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../frame/layui/css/layui.css" />
+    <link rel="stylesheet" href="../../plugin/css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../css/index/index.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/company.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/areaStyle.css" />
+
+  </head>
+  <body>
+    <div class="app">
+      <!-- 左侧导航 -->
+      <div class="nav-left">
+        <div class="logon">
+          <img src="../../img/logo.png" alt="">
+        </div>
+        <div class="left-box">
+          <!-- 左侧导航 -->
+          <ul class="nav-box">
+            <li>
+              <div class="list-title cur">
+                <i class="fa fa-cog q" style="font-size:18px"></i>
+                <span style="margin-left: 5px;">系统管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list list-active">
+                  <i class="fa fa-comment" style="font-size:18px"></i>
+                  <a href="../system/company.html">公司信息</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-comment-o" style="font-size:18px"></i>
+                  <a href="../system/section.html">部门信息</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-deafness" style="font-size:18px"></i>
+                  <a href="../system/position.html">职位授权</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-key" style="font-size:18px"></i>
+                  <a href="../system/custom.html">自定义授权</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-s15 q" style="font-size:18px"></i>
+                <span style="margin-left: 3px;">导入管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-map" style="font-size:18px"></i>
+                  <a href="../import/batch.html">批量导入</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-map-o" style="font-size:18px"></i>
+                  <a href="../import/single.html">单个录入</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-wifi q" style="font-size:18px"></i>
+                <span style="margin-left: 2px;">分配管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-tags" style="font-size:18px"></i>
+                  <a href="../allocation/jurisdiction.html">分配权重设置</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-tag" style="font-size:18px"></i>
+                  <a href="../allocation/assign.html">指定人员设置</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-sticky-note q" style="font-size:18px"></i>
+                <span style="margin-left: 6px;">推广管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-podcast" style="font-size:18px"></i>
+                  <a href="../generalize/source-from.html" style="margin-left: 5px;">来源平台</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-power-off" style="font-size:18px"></i>
+                  <a href="../generalize/allocation.html" style="margin-left: 5px;">推广分配</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-pencil-square-o" style="font-size:18px"></i>
+                  <a href="../generalize/contract.html" style="margin-left: 3px;">合同管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-pencil-square" style="font-size:18px"></i>
+                  <a href="../generalize/data.html" style="margin-left: 5px;">数据管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-plug" style="font-size:18px"></i>
+                  <a href="../generalize/linksouce.html" style="margin-left: 2px;">链接管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-mortar-board" style="font-size:18px"></i>
+                  <a href="../generalize/account.html" style="margin-left: -1px;">账号管理</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-phone-square q" style="font-size:18px"></i>
+                <span style="margin-left: 6px;">客服管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-address-book" style="font-size:18px"></i>
+                  <a href="../service/client.html">客户管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-address-card" style="font-size:18px"></i>
+                  <a href="../service/map.html">校区映射</a>
+                </div>
+              </div>
+            </li>
+            <li class="">
+              <div class="list-title">
+                <i class="fa fa-user q" style="font-size:18px"></i>
+                <span style="margin-left: 8px;">客户管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <!--  active选项激活类 list-active子选项激活类  -->
+              <div class="box ">
+                <div class="list padding">
+                  <i class="fa fa-user-circle" style="font-size:18px"></i>
+                  <a href="../customer/customer-list.html" style="margin-left: 5px;">客户列表</a>
+                </div>
+                <div class="list padding">
+                  <i class="fa fa-address-card" style="font-size:18px"></i>
+                  <a href="../customer/private.html" style="margin-left: 4px;">私海客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-male" style="font-size:18px"></i>
+                  <a href="../customer/commonality.html" style="margin-left: 12px;">公海客户</a>
+                </div>
+                <div class="list padding">
+                  <i class="fa fa-street-view" style="font-size:18px"></i>
+                  <a href="../customer/subscribe.html" style="margin-left: 9px;">预约客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-user-circle-o" style="font-size:18px"></i>
+                  <a href="../customer/visit.html" style="margin-left: 5px;">上门客户</a>
+                </div>
+                <div class="list padding">
+                  <i class="fa fa-user-o" style="font-size:18px"></i>
+                  <a href="../customer/earnest.html" style="margin-left: 9px;">定金客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-user-secret" style="font-size:18px"></i>
+                  <a href="../customer/make.html" style="margin-left: 9px;">成交客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-database" style="font-size:18px"></i>
+                  <a href="../customer/return-money.html" style="margin-left: 9px;">退费客户</a>
+                </div>
+                <div class="list padding">
+                  <i class="fa fa-wheelchair-alt" style="font-size:18px"></i>
+                  <a href="../customer/invalid.html" style="margin-left: 8px;">无效客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-vcard-o" style="font-size:18px"></i>
+                  <a href="../customer/path.html" style="margin-left: 3px;">客户轨迹</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-tv q" style="font-size:18px"></i>
+                <span style="margin-left: 2px;">报表管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-sticky-note-o" style="font-size:18px"></i>
+                  <a href="../statement/marketing.html">营销报表</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-sticky-note" style="font-size:18px"></i>
+                  <a href="../statement/service.html">客服报表</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-pencil-square-o" style="font-size:18px"></i>
+                  <a href="../statement/school.html">校区销售报表</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-pencil-square" style="font-size:18px"></i>
+                  <a href="../statement/personage.html">个人销售报表</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-folder-open" style="font-size:18px"></i>
+                  <a href="../statement/outbound.html">外呼报表</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-sign-language q" style="font-size:18px"></i>
+                <span style="margin-left: 5px;">排班管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-tachometer" style="font-size:18px"></i>
+                  <a href="../minClass/classes.html">班次管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-suitcase" style="font-size:18px"></i>
+                  <a href="../minClass/personnel.html">人员排班</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-universal-access q" style="font-size:18px"></i>
+                <span style="margin-left: 5px;">人员映射</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-window-restore" style="font-size:18px"></i>
+                  <a href="../personMap/TQ.html">TQ管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-building" style="font-size:18px"></i>
+                  <a href="../personMap/phone.html">手机管理</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-pencil-square q" style="font-size:18px"></i>
+                <span style="margin-left: 7px;">统计分析</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-gift" style="font-size:18px"></i>
+                  <a href="../count/customer-analyze.html">客户数据漏斗分析</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-picture-o" style="font-size:18px"></i>
+                  <a href="../count/generalize-analyze.html">推广数据漏斗分析</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-industry" style="font-size:18px"></i>
+                  <a href="../count/service-analyze.html">客服数据漏斗分析</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-pie-chart" style="font-size:18px"></i>
+                  <a href="../count/link-analyze.html">链接来源分析</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-paw" style="font-size:18px"></i>
+                  <a href="../count/keyword-analyze.html">关键词来源分析</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- 右侧内容 -->
+      <div class="mian-content">
+        <div class="right-box">
+          <!-- 右侧内容头部面包屑导航 -->
+          <div class="topNav">
+            <!-- <i class="layui-icon layui-icon-align-left " title=""></i> -->
+            <img src="../../img/shensuo.png" title="点击收缩左侧导航" class="toggle-nav" alt="" style="cursor: pointer;width: 54px">
+            <span class="layui-breadcrumb">
+              <a href="../index/index.html">首页</a>
+              <a href="#">系统管理</a>
+              <a href="#">公司信息</a>
+            </span>
+            <div class="box-right" style="float: right;height: 100%;padding-right: 20px">
+              <span class="userSet" style="margin-right: 0px;display: inline-block;position: relative;text-align: center;">
+                小飞侠<i class="layui-icon layui-icon-triangle-d" style="font-size: 16px;margin-left: 10px;"></i>
+                <div class="ul-set">
+                  <ul>
+                    <li><span>个人设置</span></li>
+                    <li><a href="../login/login .html" style="color: #fff;">退出</a></li>
+                  </ul>
+                </div>
+              </span>
+            </div>
+          </div>
+
+          <!-- 公司校区的怎删改查 -->
+          <!-- 右侧内容 -- 表单查询 -->
+          <div class="search-box">
+            <form action="" method="post" class="myform layui-form" layui-form>
+              <div class="layui-form-item layui-inline">
+                <div class="layui-input-inline">
+                  <select name="campus" lay-verify="required">
+                    <option value="">请选择校区</option>
+                    <option value="天河校区">天河校区</option>
+                    <option value="天河校区">天河校区</option>
+                  </select>
+                </div>
+              </div>
+              <div class="layui-form-item layui-inline">
+                <button type="button" class="layui-btn search searchBtn">查询</button>
+                <button type="reset" class="layui-btn search">重置</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- 校区的增加按钮 -->
+          <div class="add-campus-box">
+            <button type="button" class="layui-btn add-campus">添加校区<i class="layui-icon layui-icon-add-1"></i></button>
+          </div>
+          <!-- 校区列表 -->
+          <div class="campus-box">
+            <div class="layui-row">
+              <div class="campus-list layui-col-md2">
+                <div class="c-box">
+                  <h2>天河校区</h2>
+                  <div>
+                    <button type="button" class="layui-btn">查看</button>
+                  </div>
+                </div>
+              </div>
+              <div class="campus-list layui-col-md2">
+                <div class="c-box">
+                  <h2>天河校区</h2>
+                  <div>
+                    <button type="button" class="layui-btn">查看</button>
+                  </div>
+                </div>
+              </div>
+              <div class="campus-list layui-col-md2">
+                <div class="c-box">
+                  <h2>天河校区</h2>
+                  <div>
+                    <button type="button" class="layui-btn">查看</button>
+                  </div>
+                </div>
+              </div>
+              <div class="campus-list layui-col-md2">
+                <div class="c-box">
+                  <h2>天河校区</h2>
+                  <div>
+                    <button type="button" class="layui-btn">查看</button>
+                  </div>
+                </div>
+              </div>
+              <div class="campus-list layui-col-md2">
+                <div class="c-box">
+                  <h2>天河校区</h2>
+                  <div>
+                    <button type="button" class="layui-btn">查看</button>
+                  </div>
+                </div>
+              </div>
+              <div class="campus-list layui-col-md2">
+                <div class="c-box">
+                  <h2>天河校区</h2>
+                  <div>
+                    <button type="button" class="layui-btn">查看</button>
+                  </div>
+                </div>
+              </div>
+              <div class="campus-list layui-col-md2">
+                <div class="c-box">
+                  <h2>天河校区</h2>
+                  <div>
+                    <button type="button" class="layui-btn">查看</button>
+                  </div>
+                </div>
+              </div>
+              <div class="campus-list layui-col-md2">
+                <div class="c-box">
+                  <h2>天河校区</h2>
+                  <div>
+                    <button type="button" class="layui-btn">查看</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- 添加校区 -->
+    <div class="campus-msg hide" id="campus-msg">
+      <form action="" method="post" class="layui-form campus-msg-from" layui-form>
+        <div class="layui-form-item layui-block">
+          <div class="layui-input-inline">
+            <span>公司logo:</span>
+            <button type="button" class="layui-btn" id="test2"><i class="layui-icon"></i>上传图片</button>
+          </div>
+        </div>
+        <div class="layui-form-item layui-block">
+          
+          <div class="layui-input-inline">
+            <span>所在地区:</span>
+            <input type="text" name="area" id="area" lay-verify="" placeholder="请输入所在地区" autocomplete="off" class="layui-input area_input">
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+
+
+    
+    <script src="../../plugin/jquery.min.js "></script>
+    <script src="../../plugin/jquery.easyui.min.js "></script>
+    <script src="../../plugin/easyui-lang-zh_CN.js "></script>
+    <script src="../../frame/layui/layui.all.js "></script>
+    <script src="../../js/publlic.js"></script>
+    <script src="../../plugin/area.js"></script>
+    <script src="../../plugin/areapyin.js"></script>
+    <script src="../../plugin/json_to_Excel.js"></script>
+    <script type="text/javascript">
+      upload = layui.upload;
+      //多图片上传
+      upload.render({
+        elem: '#test2',
+        url: '/upload/',
+        accept:"images",
+        number:1,
+        before: function(obj) {
+          //预读本地文件示例，不支持ie8
+         console.log(obj)
+        },
+        done: function(res) {
+          //上传完毕
+          console.log(res)
+        }
+      });
+      // 选择地区
+      $('#area').areaSelector();
+      
+      // 添加校区
+      $('.add-campus').on('click', function() {
+        layer.open({
+          type: 1,
+          title: '添加校区',
+          area: ['700px', '640px'],
+          btn: ['确定', '取消', ],
+          content: $('#campus-msg'),
+          yes: function(index, layero) {
+            //按钮【按钮一】的回调
+            console.log(index, layero)
+          },
+          btn2: function(index, layero) {
+            //按钮【按钮二】的回调
+            $('.campus-msg-from')[0].reset();
+            //return false 开启该代码可禁止点击该按钮关闭
+          }
+        });
+      })
+
+      // 查询校区
+    </script>
+  </body>
+</html>

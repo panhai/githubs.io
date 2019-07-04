@@ -1,0 +1,1014 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.inline-block {
+  display: inline-block;
+}
+div,
+p,
+span,
+ul,
+li,
+table,
+form,
+td,
+th,
+tr,
+input,
+button,
+label,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: '微软雅黑';
+  color: #222;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.inline-block {
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+body {
+  font-size: 14px;
+  font-family: '微软雅黑';
+}
+img,
+span,
+a,
+i,
+b,
+input,
+select,
+textarea {
+  vertical-align: middle;
+}
+.motai {
+  position: fixed;
+  z-index: 10000;
+  width: 592px;
+  height: 394px;
+  background-color: #3587e2;
+  border-radius: 15px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  display: none;
+}
+.motai .f_close {
+  position: absolute;
+  top: -35px;
+  right: -35px;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  line-height: 35px;
+  padding-top: 7.5px;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+.motai h2 {
+  font-size: 60px;
+  color: #fff;
+  line-height: 50px;
+  padding-top: 31px;
+}
+.motai .f-btn {
+  margin-top: 20px;
+}
+.motai .f-btn a {
+  display: inline-block;
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  font-size: 24px;
+  margin-left: 10px;
+}
+.motai .f-btn a:hover {
+  background-color: #ffae12;
+  color: #fff;
+}
+.section1 .content,
+.section2 .content,
+.section3 .content,
+.section4 .content,
+.section5 .content,
+.section6 .content,
+.section7 .content,
+.section8 .content,
+.section9 .content,
+.section10 .content {
+  width: 1200px;
+  margin: 0 auto;
+}
+.app {
+  background: #fff;
+}
+.app .section1 .top {
+  height: 156px;
+  background: #fff;
+}
+.app .section1 .top .t-mian {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  font-size: 36px;
+}
+.app .section1 .top .t-mian img {
+  margin-top: 29px;
+}
+.app .section1 .top .t-mian span {
+  display: inline-block;
+  line-height: 36px;
+}
+.app .section1 .top .t-mian span.right {
+  float: right;
+  margin-top: 46px;
+  color: #fe0000;
+}
+.app .section1 .top .t-mian img,
+.app .section1 .top .t-mian span {
+  vertical-align: middle;
+}
+.app .section1 .content-box {
+  height: 892px;
+  text-align: center;
+}
+.app .section1 .content-box .m {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #222;
+  z-index: 0;
+  filter: alpha(opacity=20);
+  /* IE */
+  -moz-opacity: 0.2;
+  /* 老版Mozilla */
+  -khtml-opacity: 0.2;
+  /* 老版Safari */
+  opacity: 0.2;
+}
+.app .section1 .content-box .box {
+  position: relative;
+  z-index: 10;
+}
+.app .section1 .content-box .slide1 {
+  background: url(../img/1.jpg) no-repeat;
+  padding-top: 180px;
+  position: relative;
+  background-size: 100% 100%;
+}
+.app .section1 .content-box .slide1 p {
+  font-size: 78px;
+  color: #ffd6a0;
+}
+.app .section1 .content-box .slide1 h2 {
+  font-size: 124px;
+  color: #ffffff;
+  text-shadow: 5px 5px 5px #ffd6a0;
+}
+.app .section1 .content-box .slide1 h2 span.big {
+  font-size: 217px;
+  position: relative;
+  top: -18px;
+}
+.app .section1 .content-box .slide1 .bth {
+  width: 524px;
+  height: 127px;
+  margin: 0 auto;
+  background: url(../img/jx.png) no-repeat 50% 50%;
+  line-height: 127px;
+  font-size: 60px;
+}
+.app .section1 .content-box .slide1 .bth a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.app .section1 .content-box .slide2 {
+  background: url(../img/2.jpg) no-repeat;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 230px;
+  position: relative;
+  background-size: 100% 100%;
+}
+.app .section1 .content-box .slide2 .m {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #222;
+  z-index: 0;
+  filter: alpha(opacity=20);
+  /* IE */
+  -moz-opacity: 0.2;
+  /* 老版Mozilla */
+  -khtml-opacity: 0.2;
+  /* 老版Safari */
+  opacity: 0.2;
+}
+.app .section1 .content-box .slide2 .box {
+  position: relative;
+  z-index: 10;
+}
+.app .section1 .content-box .slide2 h2 {
+  font-size: 70px;
+  color: #fff;
+  letter-spacing: 3px;
+}
+.app .section1 .content-box .slide2 h2 .red {
+  color: #fb0000;
+  margin: 0 11px 0 4px;
+  font-size: 100px;
+  font-family: '微软雅黑';
+  font-style: italic;
+  position: relative;
+  top: -10px;
+}
+.app .section1 .content-box .slide2 p {
+  color: #fff;
+  padding-bottom: 181px;
+  padding-top: 20px;
+}
+.app .section1 .content-box .slide2 .btn a {
+  display: inline-block;
+  width: 280px;
+  height: 64px;
+  line-height: 64px;
+  color: #fff;
+  background: #e48f15;
+  font-size: 28px;
+  margin-right: 40px;
+  border-radius: 5px;
+}
+.app .section1 .content-box .slide2 .btn a:hover {
+  background: red;
+}
+.app .section1 .content-box .slide3 {
+  background: url(../img/3.jpg) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  color: #fff;
+}
+.app .section1 .content-box .slide3 .box {
+  padding-top: 110px;
+}
+.app .section1 .content-box .slide3 .box h1 {
+  font-size: 108px;
+  width: 1039px;
+  border-bottom: 1px solid #fff;
+  margin: 0 auto;
+  padding-bottom: 23px;
+  color: #fff;
+}
+.app .section1 .content-box .slide3 .box p.p {
+  font-size: 56px;
+  line-height: 90px;
+  font-weight: 600;
+}
+.app .section1 .content-box .slide3 .box p {
+  font-size: 26px;
+  line-height: 40px;
+}
+.app .section1 .content-box .slide3 .box .btn {
+  margin-top: 180px;
+}
+.app .section1 .content-box .slide3 .box .btn a {
+  display: inline-block;
+  width: 280px;
+  height: 64px;
+  line-height: 64px;
+  color: #fff;
+  background: #e48f15;
+  font-size: 28px;
+  margin-right: 40px;
+  border-radius: 5px;
+}
+.app .section1 .content-box .slide3 .box .btn a:hover {
+  background: red;
+}
+.app #nav.fiexd {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  z-index: 100;
+}
+.app #nav {
+  width: 100%;
+  height: 64px;
+  background-color: #01163c;
+}
+.app #nav .nav-box {
+  height: 64px;
+  line-height: 64px;
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 0;
+  text-align: left;
+}
+.app #nav .nav-box a {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  width: 140px;
+  height: 64px;
+}
+.app #nav .nav-box a:hover {
+  background: #19275f;
+  color: #fffc20;
+}
+.app .section2 {
+  text-align: center;
+  height: 664px;
+}
+.app .section2 h2 {
+  width: 774px;
+  margin: 0 auto;
+  font-size: 50px;
+  padding: 80px 0 23px 0;
+  border-bottom: 1px solid #222;
+}
+.app .section2 p {
+  font-size: 18px;
+  line-height: 52px;
+}
+.app .section2 .box {
+  padding-top: 40px;
+}
+.app .section2 .box .layui-col-md3 {
+  width: 25%;
+  float: left;
+}
+.app .section2 .box .layui-col-md3 > div {
+  width: 285px;
+  height: 320px;
+  box-shadow: 4px 4px 15px #ccc;
+  padding-top: 30px;
+}
+.app .section2 .box .layui-col-md3 > div p.b {
+  font-size: 20px;
+  color: #d54107;
+  line-height: 32px;
+  padding: 20px 0 22px 0;
+}
+.app .section2 .box .layui-col-md3 > div p.c {
+  width: 246px;
+  height: 56px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+}
+.app .section2 .box .layui-col-md3 > div .btn {
+  padding-top: 30px;
+}
+.app .section2 .box .layui-col-md3 > div .btn a {
+  display: inline-block;
+  width: 225px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #fba746;
+  line-height: 44px;
+  font-size: 18px;
+  color: #fba746;
+}
+.app .section2 .box .layui-col-md3 > div .btn a:hover {
+  background: #fba746;
+  color: #fff;
+}
+.app .section3 {
+  background: #f3f3f3;
+  height: 757px;
+  text-align: center;
+}
+.app .section3 h2 {
+  width: 874px;
+  margin: 0 auto ;
+  padding-top: 61px;
+  font-size: 50px;
+  line-height: 52px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #222;
+}
+.app .section3 h2 span.r {
+  color: #ff0000;
+}
+.app .section3 p {
+  font-size: 18px;
+  color: #666;
+  line-height: 52px;
+}
+.app .section3 .box {
+  height: 460px;
+  margin-top: 50px;
+}
+.app .section3 .box > div {
+  width: 224px;
+  height: 458px;
+  background-color: #ffffff;
+  border: solid 1px #0972d4;
+  margin-right: 20px;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.app .section3 .box > div img {
+  margin-top: 18px;
+  width: 102px;
+}
+.app .section3 .box > div h3 {
+  font-size: 24px;
+  color: #ef0000;
+  margin-top: 17px;
+}
+.app .section3 .box > div p {
+  line-height: 25px;
+  text-align: left;
+  font-size: 12px;
+  width: 182px;
+  height: 196px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+.app .section3 .box > div .btn {
+  margin-top: 10px;
+}
+.app .section3 .box > div .btn a {
+  display: inline-block;
+  width: 106px;
+  height: 44px;
+  line-height: 44px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #fba746;
+  font-size: 16px;
+  color: #fba746;
+}
+.app .section3 .box > div .btn a:hover {
+  background: #fba746;
+  color: #fff;
+}
+.app .section4 {
+  text-align: center;
+  height: 882px;
+}
+.app .section4 h2 {
+  font-size: 50px;
+  padding: 80px 0;
+}
+.app .section5 {
+  text-align: center;
+  background: #f9f9f9;
+  height: 936px;
+}
+.app .section6 {
+  height: 561px;
+  background: #fff;
+  text-align: center;
+}
+.app .section6 h2 {
+  width: 900px;
+  font-size: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #222;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+.app .section6 p {
+  font-size: 18px;
+  line-height: 52px;
+  color: #666;
+}
+.app .section6 .box {
+  height: 250px;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
+}
+.app .section6 .box > div {
+  width: 224px;
+  height: 238px;
+  background-color: #ffffff;
+  border: solid 1px #ff0000;
+  float: left;
+  margin-right: 20px;
+}
+.app .section6 .box > div h3 {
+  width: 204px;
+  margin: 0 auto;
+  line-height: 60px;
+  font-size: 20px;
+  color: #ff0000;
+  height: 60px;
+  border-bottom: 1px dashed #bfbfbf;
+}
+.app .section6 .box > div p {
+  line-height: 25px;
+  width: 195px;
+  height: 43px;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 16px;
+  margin-top: 30px;
+}
+.app .section6 .box > div .btn {
+  padding-top: 36px;
+}
+.app .section6 .box > div .btn a {
+  display: inline-block;
+  width: 159px;
+  height: 44px;
+  line-height: 44px;
+  color: #ff0000;
+  background-color: #ffffff;
+  border: solid 1px #ff0000;
+  font-size: 16px;
+}
+.app .section6 .box > div .btn a:hover {
+  background: #ff0000;
+  color: #fff;
+}
+.app .section7 {
+  height: 1020px;
+  background: #fff;
+  text-align: center;
+}
+.app .section7 h2 {
+  width: 589px;
+  margin: 0 auto;
+  padding: 80px 0 20px 0;
+  border-bottom: 1px solid #222;
+  font-size: 50px;
+}
+.app .section7 h2 span.r {
+  color: #fa0000;
+}
+.app .section7 p {
+  line-height: 52px;
+  height: 43px;
+  font-size: 18px;
+}
+.app .section7 .box {
+  height: 690px;
+  padding-top: 53px;
+}
+.app .section7 .box > div {
+  float: left;
+}
+.app .section7 .box .left {
+  width: 632px;
+  height: 690px;
+}
+.app .section7 .box .right {
+  width: 512px;
+  height: 690px;
+  margin-left: 50px;
+  text-align: left;
+}
+.app .section7 .box .right .swiper {
+  height: 374px;
+  width: 100%;
+}
+.app .section7 .box .right .swiper p {
+  height: 54px;
+  line-height: 54px;
+  background: #ff8610;
+  color: #fff;
+  font-size: 18px;
+}
+.app .section7 .box .right .swiper .swiper-container {
+  border: solid 2px #d2d2d2;
+  height: 320px;
+  width: 100%;
+  border-top: none;
+}
+.app .section7 .box .right .swiper .swiper-container .swiper-slide {
+  height: 40px;
+  line-height: 40px;
+  color: #01163c;
+  font-size: 18px;
+}
+.app .section7 .box .right .gs h3 {
+  color: #ffa914;
+  font-size: 20px;
+  padding: 20px 0 10px 0;
+  border-bottom: 1px solid #222;
+}
+.app .section7 .box .right .gs p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #666666;
+  height: 48px;
+  width: 503px;
+  margin-top: 10px;
+}
+.app .section7 .box .right .gs .img {
+  margin-top: 20px;
+  height: 155px;
+}
+.app .section7 .box .right .gs .img img {
+  width: 512px;
+  border: 0;
+}
+.app .section8 {
+  height: 722px;
+  background-color: #e3f6ff;
+  text-align: center;
+}
+.app .section8 h2 {
+  font-size: 50px;
+  line-height: 52px;
+  padding: 80px 0 20px 0;
+  border-bottom: 1px solid #222;
+  width: 788px;
+  margin: 0 auto;
+}
+.app .section8 p {
+  font-size: 18px;
+  line-height: 52px;
+  color: #666666;
+}
+.app .section8 .box {
+  height: 201px;
+  font-size: 0;
+  margin-top: 39px;
+}
+.app .section8 .box a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.app .section8 .box > div {
+  display: inline-block;
+  font-size: 18px;
+  width: 200px;
+  height: 200px;
+}
+.app .section8 .box .bx1 {
+  background: url(../img/b1.jpg) no-repeat;
+}
+.app .section8 .box .bx1:hover {
+  background: url(../img/a1.jpg) no-repeat;
+}
+.app .section8 .box .bx2 {
+  background: url(../img/b2.jpg) no-repeat;
+}
+.app .section8 .box .bx2:hover {
+  background: url(../img/a2.jpg) no-repeat;
+}
+.app .section8 .box .bx3 {
+  background: url(../img/b3.jpg) no-repeat;
+}
+.app .section8 .box .bx3:hover {
+  background: url(../img/a3.jpg) no-repeat;
+}
+.app .section8 .box .bx4 {
+  background: url(../img/b4.jpg) no-repeat;
+}
+.app .section8 .box .bx4:hover {
+  background: url(../img/a4.jpg) no-repeat;
+}
+.app .section8 .box .bx5 {
+  background: url(../img/b5.jpg) no-repeat;
+}
+.app .section8 .box .bx5:hover {
+  background: url(../img/a5.jpg) no-repeat;
+}
+.app .section8 .box .bx6 {
+  background: url(../img/b6.jpg) no-repeat;
+}
+.app .section8 .box .bx6:hover {
+  background: url(../img/a6.jpg) no-repeat;
+}
+.app .section8 h4 {
+  font-size: 22px;
+  padding: 67px 0 48px 0;
+  font-weight: 400;
+}
+.app .section8 .btn a {
+  display: inline-block;
+  width: 238px;
+  height: 72px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  line-height: 72px;
+  font-size: 24px;
+  color: #fff;
+}
+.app .section9 {
+  height: 740px;
+  background: #fff;
+  text-align: center;
+}
+.app .section9 h2 {
+  font-size: 50px;
+  padding: 80px 0 85px 0;
+}
+.app .section9 .box {
+  position: relative;
+  height: 304px;
+  font-size: 0;
+}
+.app .section9 .box > div {
+  float: left;
+  font-size: 16px;
+  width: 278px;
+  height: 302px;
+  background-color: #ffffff;
+  border: solid 1px #ff0000;
+  margin-right: 29px;
+  position: relative;
+}
+.app .section9 .box > div span.fix {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border: 1px solid red;
+  border-radius: 64px;
+  left: 50%;
+  top: -32px;
+  margin-left: -32px;
+  font-size: 30px;
+  color: red;
+  font-style: italic;
+  font-weight: 800;
+  background: #fff;
+  line-height: 60px;
+}
+.app .section9 .box > div h3 {
+  font-size: 24px;
+  color: red;
+  padding-top: 60px;
+}
+.app .section9 .box > div p {
+  width: 181px;
+  height: 92px;
+  text-align: left;
+  color: #808080;
+  margin: 0 auto;
+  margin-top: 18px;
+  line-height: 23px;
+}
+.app .section9 .box > div p.a1 {
+  width: 154px;
+}
+.app .section9 .box > div p.a2 {
+  width: 181px;
+}
+.app .section9 .box > div p.a3 {
+  width: 139px;
+}
+.app .section9 .box > div p.a4 {
+  width: 149px;
+}
+.app .section9 .box > div .b {
+  padding-top: 30px;
+}
+.app .section9 .box > div .b a {
+  display: inline-block;
+  width: 172px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #ff0000;
+  line-height: 44px;
+  color: red;
+}
+.app .section9 .box > div .b a:hover {
+  background-color: red;
+  color: #fff;
+}
+.app .section9 .btn {
+  padding-top: 60px;
+}
+.app .section9 .btn a {
+  display: inline-block;
+  width: 238px;
+  height: 72px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  line-height: 72px;
+  color: #fff;
+  font-size: 24px;
+}
+.app .section10 {
+  height: 500px;
+  background: #fff;
+  text-align: center;
+}
+.app .section10 h2 {
+  font-size: 50px;
+  width: 774px;
+  padding: 10px 0 20px 0;
+  margin: 0 auto;
+  line-height: 52px;
+  border-bottom: 1px solid #222;
+}
+.app .section10 p.p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 9px;
+}
+.app .section10 .box {
+  font-size: 0;
+  width: 660px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+.app .section10 .box a {
+  display: inline-block;
+  width: 110px;
+  height: 36px;
+  line-height: 36px;
+  background-color: #04315b;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #ffffff;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.app .section10 .box2 p {
+  font-size: 16px;
+  color: red;
+}
+.app .section10 .box2 p.b2 {
+  font-size: 18px;
+  margin-top: 19px;
+}
+.app .section10 p.p2 {
+  margin-top: 39px;
+  font-size: 22px;
+}
+.section11 {
+  text-align: center;
+  height: 1091px;
+  background: #d3d1d1 url(../img/fg.png) no-repeat;
+}
+.section11 h2 {
+  font-size: 50px;
+  padding: 90px 0 20px 0;
+  width: 930px;
+  margin: 0 auto;
+  border-bottom: 1px solid #222;
+}
+.section11 p.a1 {
+  line-height: 26px;
+  font-size: 16px;
+  color: #222;
+}
+.section11 form {
+  width: 791px;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: left;
+  font-size: 18px;
+}
+.section11 form .f-box {
+  width: 791px;
+  height: 538px;
+  background: #fff;
+  opacity: 0.7;
+  padding-top: 60px;
+  padding-left: 72px;
+}
+.section11 form h3 {
+  margin-bottom: 18px;
+  font-size: 23px;
+}
+.section11 form .item {
+  margin-bottom: 38px;
+}
+.section11 form .item input {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+.section11 form .item input,
+.section11 form .item span {
+  vertical-align: middle;
+}
+.section11 form .inp {
+  margin-top: 20px;
+}
+.section11 form .inp input {
+  display: inline-block;
+  width: 620px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #bfbfbf;
+  font-size: 18px;
+  padding-left: 10px;
+  line-height: 44px;
+}
+.section11 form .btn {
+  text-align: center;
+  padding: 51px 0 45px 0;
+}
+.section11 form .btn button {
+  width: 238px;
+  height: 72px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  color: #fff;
+  border: 0;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
+.section11 p.f {
+  font-size: 22px;
+  color: #fb0000;
+}
+.footer .w {
+  height: 92px;
+  background: #fff;
+}
+.footer .copyRight {
+  height: 309px;
+  background-color: #000e2b;
+}
+.footer .copyRight .content {
+  margin: 0 auto;
+  width: 1200px;
+  height: 309px;
+  position: relative;
+  color: #fff;
+}
+.footer .copyRight .content img.er {
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+.footer .copyRight .content p.a {
+  line-height: 24px;
+  padding-top: 77px;
+}
+.footer .copyRight .content p.a a {
+  color: #fff;
+  display: inline-block;
+  margin-right: 20px;
+}
+.footer .copyRight .content p.a a:hover {
+  color: red;
+}
+.footer .copyRight .content p.copy {
+  line-height: 52px;
+}

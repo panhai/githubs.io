@@ -1,0 +1,788 @@
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>广州博霖入户服务中心</title>
+    <meta name="description" content="广州博霖教育办理入户服务中心" />
+    <meta name="keywords" content="广州入户|入户|广州入户服务中心" />
+    <link rel="shortcut icon" type="images/x-icon" href="img/bolinglink.png">
+    <link rel="stylesheet" type="text/css" href="ku/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="ku/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript">
+	function goPAGE() {
+		if ((navigator.userAgent
+				.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+			window.location.href = "mobile/index.html";
+		} else {
+			/*window.location.href="你的电脑版地址";    */
+			console.log("pc")
+		}
+	}
+	goPAGE();
+	//  onload load_close 页面进入弹框 
+	
+</script>
+  </head>
+  <body>
+    <!-- 弹框 -->
+    <div class="motai">
+      <span class="f_close"><img src="img/f_close.png"></span>
+      <h2>
+        <span>2019年</span>
+        <p style="height: 31px;"></p>
+        <span style="color: #feb62d;">广州入户</span>
+        <span>全新方案</span>
+      </h2>
+      <div style="margin-top: 28px;">
+        <img src="img/motai_03.jpg">
+      </div>
+      <div class="f-btn">
+        <a href="javascript:;">获取方案</a>
+        <a href="javascript:;">咨询详情</a>
+      </div>
+    </div>
+    
+    <div class="app">
+      <!-- 第一屏 -->
+      <div class="section1" id="setion1">
+        <div class="top">
+          <div class="t-mian">
+            <img src="img/logo2.jpg" alt="">
+            <span>
+              入户宝一站式服务
+              <br>
+              专业入户机构
+            </span>
+            <span class="right">电话：020-82526164</span>
+          </div>
+        </div>
+        <div class="swiper-container content-box">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+              <div class="m"></div>
+              <div class="box">
+                <p>[全日制本科学历]</p>
+                <h2>最快仅需 <span class="big">2</span> 个月</h2>
+                <div class="bth">
+                  <a href="javascript:;">
+                    极速入户广州
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide2">
+              <div class="m"></div>
+              <div class="box">
+                <h2>强化加分包最高可加<span class="red">130</span> 分</h2>
+                <p>多重积分套餐选择</p>
+                <div class="btn">
+                  <a href="javascript:;">了解详情>></a>
+                  <a href="javascript:;">领取技能补贴>></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide3">
+              <div class="m"></div>
+              <div class="box">
+                <h1>入户必备证书</h1>
+                <p class="p">上班族&nbsp;&nbsp;无社保&nbsp;&nbsp;零基础也能快速入户</p>
+                <p>
+                  <span>我们助您一次性高分通过考试 国家人社部授权试点培训机构</span>
+                  <br>
+                  <span>通过历年稳居全省前列</span>
+                </p>
+                <div class="btn">
+                  <a href="javascript:;">了解详情 >></a>
+                  <a href="javascript:;">领取技能补贴 >></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <!-- 导航 -->
+      <div id="nav" class="">
+        <div class="nav-box">
+          <a href="#setion1" class="nv">首页</a>
+          <a href="#setion3" class="nv">入户条件</a>
+          <a href="javascript:;">网上申报</a>
+          <a href="#setion4" class="nv">办理流程</a>
+          <a href="#setion2" class="nv">全新政策</a>
+          <a href="#setion7" class="nv">成功案例</a>
+          <a href="javascript:;" class="">联系我们</a>
+        </div>
+      </div>
+      <!-- 第二屏 -->
+      <div class="section2" id="setion2">
+        <div class="content">
+          <h2>2019年广州入户政策四大变化解读</h2>
+          <p>条件不符别担心，大机构给您支招，1对1定制入户新方案，入户快·稳妥</p>
+          <div class="box layui-row">
+            <div class="layui-col-md3">
+              <div>
+                <img data-original="img/01.jpg" >
+                <p class="b">积分入户需满100分</p>
+                <p class="c">
+                  2019年《广州市来穗人员积分制服务管理规定》，实施同一积分指标体系，积分制入户申请需满足100分
+                </p>
+                <div class="btn">
+                  <a href="javascript:;">怎么查询积分分值？</a>
+                </div>
+              </div>
+            </div>
+            <div class="layui-col-md3">
+              <div>
+                <div>
+                  <img src="img/02.jpg" >
+                  <p class="b">社保满6个月可入户</p>
+                  <p class="c">
+                    同单位连续购买社保由1年缩减至6个月(政策文件有明确规定的除外)
+                  </p>
+                  <div class="btn">
+                    <a href="javascript:;">社保单位不同怎么办？</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-col-md3">
+              <div>
+                 <div>
+                  <img data-original="img/03.jpg" >
+                  <p class="b">学历入户的年龄放宽</p>
+                  <p class="c">
+                    学历类引进人才入户年龄比之前放宽5岁，简化人才入户办理流程
+                  </p>
+                  <div class="btn">
+                    <a href="javascript:;">人才入户如何办理？</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layui-col-md3" style="margin: 0;">
+              <div>
+                <div>
+                   <div>
+                    <img data-original="img/04.jpg" >
+                    <p class="b">精简入户申报材料</p>
+                    <p class="c">
+                      大幅精简入户申报材料，取消入户申报材料达12项
+                    </p>
+                    <div class="btn">
+                      <a href="javascript:;">哪些材料不用提交？</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第三屏 -->
+      <div class="section3" id="setion3">
+        <div class="content">
+          <h2><span>2019入户广州条件，</span><span class="r">选对方式事半功倍</span></h2>
+          <p>不知道自己适合哪种入户方案，办理入户无从下手？专业解决方案，一站式入户服务</p>
+          <div class="box">
+            <div>
+              <img data-original="img/f1.jpg" >
+              <h3>学历入户</h3>
+              <p>
+                1、无需提供计生证明<br>
+                2、无犯罪记录<br>
+                3、本科(40周岁以下含40周岁)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 硕士(45周岁以下含45周岁)<br>      
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;博士(50周岁以下含50周岁）<br>
+                4、学历+学位<br>
+                5、广州社保满6个月
+              </p>
+              <div class="btn">
+                <a href="javascript:;">咨询详情</a>
+              </div>
+            </div>
+            <div>
+              <img data-original="img/f2.jpg" >
+              <h3>紧缺工种</h3>
+              <p>
+                1、无需提供计生证明<br>
+                2、无犯罪记录<br>
+                3、年龄35周岁以下含35周岁<br>
+                4、高中/中专及以上学历<br>
+                5、从事工种属紧缺工种<br>
+                6、广州连续居住2年及以上<br>
+                7、广州社保满6个月<br>
+                8、入户资质审查
+              </p>
+              <div class="btn">
+                <a href="javascript:;">咨询详情</a>
+              </div>
+            </div>
+            <div>
+              <img src="img/f3.jpg" >
+              <h3>高级技师/职称</h3>
+              <p>
+                1、无需提供计生证明<br>
+                2、无犯罪记录<br>
+                3、年龄45周岁以下含45周岁<br>
+                4、副高/高级技师<br>
+                5、广州社保满6个月<br>
+                6、所从事工作须与技能一致<br>
+                7、入户资质审查
+              </p>
+              <div class="btn">
+                <a href="javascript:;">咨询详情</a>
+              </div>
+            </div>
+            <div>
+              <img data-original="img/f4.jpg" >
+              <h3>技师入户</h3>
+              <p>
+                1、无需提供计生证明<br> 
+                2、无犯罪记录<br> 
+                3、年龄40周岁以下含40周岁<br> 
+                4、高中及以上学历（技师） <br>     无学历要求（二级技能）<br> 
+                5、广州社保满6个月<br> 
+                6、入户资质审查
+              </p>
+              <div class="btn">
+                <a href="javascript:;">咨询详情</a>
+              </div>
+            </div>
+            <div style="margin: 0;">
+              <img data-original="img/f5.jpg" >
+              <h3>积分入户</h3>
+              <p>
+                1、年龄不超过45周岁<br>
+                2、在广州有合法住所（含租房）<br>
+                3、持本市有效《广东省居住证》<br>
+                4、缴纳社会保险满4年<br>
+                5、无需提供计生证明<br>
+                6、无违法犯罪记录<br>
+                7、积分满100分
+              </p>
+              <div class="btn">
+                <a href="javascript:;">咨询详情</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第四屏 流程 -->
+      <div class="section4" id="setion4">
+        <h2>入户广州一站式服务流程</h2>
+        <div>
+          <a href="javascript:;"><img data-original="img/c3.jpg" alt=""></a>
+        </div>
+      </div>
+
+      <!-- 第五屏 -->
+      <div class="section5" id="setion5">
+        <div class="content">
+          <img data-original="img/hu1.jpg" >
+        </div>
+      </div>
+      
+      <!-- 第六屏 -->
+      <div class="section6" id="setion6">
+        <h2>入户广州您是否还有这些疑惑</h2>
+        <p>博霖教育入户根据你们的个人情况，量身定制方案轻松入户广州，选博霖教育入户，入户行业领先，入户快、稳妥</p>
+        <div class="box">
+          <div>
+            <h3>没学历能入户吗？</h3>
+            <p>学历低怎么入户？通过低学历定制方案轻松入户。</p>
+            <div class="btn">
+              <a href="javascript:;">了解详情</a>
+            </div>
+          </div>
+          <div>
+            <h3>需要准备哪些资料？</h3>
+            <p>客户通过获取资料模板轻松入户广州。</p>
+            <div class="btn">
+              <a href="javascript:;">了解详情</a>
+            </div>
+          </div>
+          <div>
+            <h3>搭户有什么要求？</h3>
+            <p>有房产如何入户，没房产如何搭户，搭户有什么规则。</p>
+            <div class="btn">
+              <a href="javascript:;">了解详情</a>
+            </div>
+          </div>
+          <div>
+            <h3>入户要多少钱？</h3>
+            <p>学通过入户广州资费详细表轻松掌握费用</p>
+            <div class="btn">
+              <a href="javascript:;">了解详情</a>
+            </div>
+          </div>
+          <div style="margin: 0;">
+            <h3>入户成功率高吗？</h3>
+            <p>通过博霖定制入户方案，轻松入户广州。</p>
+            <div class="btn">
+              <a href="javascript:;">了解详情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第七屏 -->
+      <div class="section7" id="setion7">
+        <div class="content">
+          <h2><span>已有</span> <span class="r">近万</span> <span>名客户轻松入户</span></h2>
+          <p>截止到2019年3月份通过博霖教育各种入户方式</p>
+          <div class="box">
+            <div class="left">
+              <img data-original="img/ru1.jpg" alt="">
+            </div>
+            <div class="right">
+              <div class="swiper">
+                <p>
+                  <span style="margin: 0 116px 0 54px;">姓名</span>
+                  <span style="margin-right: 95px;">学员类型</span>
+                  <span>入户阶段</span>
+                </p>
+                <div class="swiper-container swiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <span style="margin: 0 110px 0 52px;">周*光</span>
+                      <span style="margin-right: 95px;">没有房产</span>
+                      <span>成功入户</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 110px 0 52px;">林*明</span>
+                      <span style="margin-right: 95px;">社保不足</span>
+                      <span>成功入户</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 101px 0 52px;">张*雨</span>
+                      <span style="margin-right: 75px;">低学历户口</span>
+                      <span>入户第二阶段</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 109px 0 52px;">曾*诚</span>
+                      <span style="margin-right: 85px;">社保不足</span>
+                      <span>入户第一阶段</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 94px 0 52px;">阳*云</span>
+                      <span style="margin-right: 60px;">年龄40岁以上</span>
+                      <span>入户第一阶段</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 110px 0 52px;">杨*青</span>
+                      <span style="margin-right: 95px;">需要搭户</span>
+                      <span>成功入户</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 110px 0 52px;">李*梅</span>
+                      <span style="margin-right: 95px;">需要搭户</span>
+                      <span>成功入户</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 110px 0 52px;">黄*飞</span>
+                      <span style="margin-right: 95px;">社保不足</span>
+                      <span>成功入户</span>
+                    </div>
+                     <div class="swiper-slide">
+                      <span style="margin: 0 110px 0 52px;">王*利</span>
+                      <span style="margin-right: 95px;">没有房产</span>
+                      <span>成功入户</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 110px 0 52px;">王*东</span>
+                      <span style="margin-right: 95px;">社保不足</span>
+                      <span>成功入户</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 101px 0 52px;">张*云</span>
+                      <span style="margin-right: 75px;">低学历户口</span>
+                      <span>入户第二阶段</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 109px 0 52px;">曾*红</span>
+                      <span style="margin-right: 85px;">社保不足</span>
+                      <span>入户第一阶段</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 94px 0 52px;">利*云</span>
+                      <span style="margin-right: 60px;">年龄40岁以上</span>
+                      <span>入户第一阶段</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 110px 0 52px;">杨*红</span>
+                      <span style="margin-right: 95px;">需要搭户</span>
+                      <span>成功入户</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 110px 0 52px;">离*梅</span>
+                      <span style="margin-right: 95px;">需要搭户</span>
+                      <span>成功入户</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span style="margin: 0 110px 0 52px;">黄*非</span>
+                      <span style="margin-right: 95px;">社保不足</span>
+                      <span>成功入户</span>
+                    </div>
+                  </div>
+              </div>
+            
+            </div>
+              <div class="gs">
+                <h3>公司一角</h3>
+                <p>公司坐落在广州繁华地段天河车陂，以优质的服务，为11984位<br>顾客提供了优质的服务。</p>
+                <div class="img"><img data-original="img/ru2.png" alt=""></div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+     <!-- 第八屏 -->
+    <div class="section8" id="setion8">
+      <div class="content">
+        <h2>低门槛！提供最优方式入户广州！</h2>
+        <p>通过专业设计，选择绿色通道，打破所有入户门槛</p>
+        <div class="box">
+          <div class="bx1"><a href="javascript:;"></a></div>
+          <div class="bx2"><a href="javascript:;"></a></div>
+          <div class="bx3"><a href="javascript:;"></a></div>
+          <div class="bx4"><a href="javascript:;"></a></div>
+          <div class="bx5"><a href="javascript:;"></a></div>
+          <div class="bx6"><a href="javascript:;"></a></div>
+        </div>
+        <h4>还有更多不符合入户广州条件情况，均可由专业入户团队完美解决</h4>
+        <div class="btn">
+          <a href="javascript:;">立即咨询</a>
+        </div>
+      </div>
+    </div>
+    <!-- 第九屏 -->
+    <div class="section9"  id="setion9"> 
+      <div class="content">
+        <h2>入户广州申请资料一览</h2>
+        <div class="box">
+          <div>
+            <span class="fix">01</span>
+            <h3>基本资料</h3>
+            <p class="a1">身份证 户口本 居住证<br>
+              学历证书 学位证书<br>
+              职业资格证 职称证书<br>
+              ... ...
+            </p>
+            <div class="b">
+              <a href="javascript:;">基本资料模板下载</a>
+            </div>
+          </div>
+          <div>
+            <span class="fix">02</span>
+            <h3>婚姻资料</h3>
+            <p class="a2">
+              结婚证 配偶身份证<br>
+              配偶户口本 子女出生证明<br>
+              子女户口本<br>
+              ... ...
+            </p>
+            <div class="b">
+              <a href="javascript:;">婚姻资料模板下载</a>
+            </div>
+          </div>
+          <div>
+            <span class="fix">03</span>
+            <h3>社保资料</h3>
+            <p class="a3">
+              社保卡 参保证明<br>
+              社保明细 代缴证明<br>
+              代缴单位资格证明<br>
+              ... ...
+            </p>
+            <div class="b">
+              <a href="javascript:;">社保资料模板下载</a>
+            </div>
+          </div>
+          <div style="margin: 0;">
+            <span class="fix">04</span>
+            <h3>单位资料</h3>
+            <p class="a4">
+              营业执照 机构代码证<br>
+              人才引进申报表<br>
+              人才引进报表<br>
+              ... ...
+            </p>
+            <div class="b">
+              <a href="javascript:;">单位资料模板下载</a>
+            </div>
+          </div>
+        </div>
+        <div class="btn">
+          <a href="javascript:;">全部下载资料</a>
+        </div>
+      </div>
+    </div>
+    <div class="section10" id="setion10">
+      <div class="content">
+        <h2>2019年广州各区入户办理流程查询</h2>
+        <p class="p">以社保单位注册地为准</p>
+        <div class="box">
+          <a href="javascript:;">天河区>></a>
+          <a href="javascript:;">越秀区>></a>
+          <a href="javascript:;">海珠区>></a>
+          <a href="javascript:;">荔湾区>></a>
+          <a href="javascript:;">白云区>></a>
+          <a href="javascript:;">南沙区>></a>
+          <a href="javascript:;">番禺区>></a>
+          <a href="javascript:;">黄埔区>></a>
+          <a href="javascript:;">花都区>></a>
+          <a href="javascript:;">从化区>></a>
+        </div>
+        <div class="box2">
+          <p>提醒：目前咨询人员较多，通过电话快速查询</p>
+          <p class="b2">咨询热线：020-82526164</p>
+        </div>
+        <p class="p2">北上广深，广州作为全国排名第三的城市是无数人追求一生的栖居地</p>
+      </div>
+    </div>
+    <!-- 第十一屏 -->
+    <div class="section11" id="setion11">
+      <h2>不确定适合那种方式入户？30秒测试下！</h2>
+      <p class="a1">
+        对入户成功率没把握？对哪种方试入户更适合您不清楚？<br>
+        博霖专业点评轻松提高成功率，免费定制合适您的入户方式
+      </p>
+      <form action="" method="post">
+        <div class="f-box">
+          <h3>1、您的年龄？</h3>
+          <div class="item">
+            <label style="margin-right: 40px;">
+              <input type="radio" name="age" id="" value="不超过35岁" />
+              <span style="margin-left: 0px;">不超过35岁</span>
+            </label>
+            <label style="margin-right: 40px;">
+              <input type="radio" name="age" id="" value="不超过40岁" />
+              <span>不超过40岁</span>
+            </label>
+            <label>
+              <input type="radio" name="age" id="" value="不超过45岁" />
+              <span>不超过45岁</span>
+            </label>
+          </div>
+          <h3>2、您的最高学历？</h3>
+          <div class="item">
+            <label style="margin-right: 43px;">
+              <input type="radio" name="xue" id="" value="高中及以下" />
+              <span>高中及以下</span>
+            </label>
+            <label style="margin-right: 85px;">
+              <input type="radio" name="xue" id="" value="大专" />
+              <span>大专</span>
+            </label>
+            <label style="margin-right: 80px;">
+              <input type="radio" name="xue" id="" value="本科" />
+              <span>本科</span>
+            </label>
+            <label>
+              <input type="radio" name="xue" id="" value="硕士及以上" />
+              <span>硕士及以上</span>
+            </label>
+          </div>
+          <h3>3、您在广州的社保？</h3>
+          <div class="item">
+            <label style="margin-right: 65px;">
+              <input type="radio" name="she" id="" value="不满1年" />
+              <span>不满1年</span>
+            </label>
+            <label style="margin-right: 64px;">
+              <input type="radio" name="she" id="" value="不满4年" />
+              <span>不满4年</span>
+            </label>
+            <label style="margin-right: 57px;">
+              <input type="radio" name="she" id="" value="不满8年" />
+              <span>不满8年</span>
+            </label>
+            <label>
+              <input type="radio" name="she" id="" value="8年以上" />
+              <span>8年以上</span>
+            </label>
+          </div>
+          <div class="inp">
+            <input type="text" name="username" id="" maxlength="11" value="" placeholder="请输入您的姓名" />
+          </div>
+          <div class="inp">
+            <input type="text" name="userphone" maxlength="11" id="" value="" placeholder="请输入您的手机" />
+          </div>
+        </div>
+      	
+      	<div class="btn">
+          <button type="button" class="getResult">获取测评结果</button>
+        </div>
+      </form>
+      <p class="f">系统将在30分钟内以短信或语音回复测评结果请注意查收</p>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer">
+      <!-- <div class="w"></div> -->
+      <div class="copyRight">
+        <div class="content">
+          <img src="img/erweima.jpg" alt="" class="er">
+          <p class="a">
+            <a href="#setion1" class="nv">首页</a>
+            <a href="#setion3" class="nv">入户条件</a>
+            <a href="javascript:;" class="">网上申报</a>
+            <a href="#setion4" class="nv">办理流程</a>
+            <a href="#setion2" class="nv">全新政策</a>
+            <a href="#setion7" class="nv">成功案例</a>
+            <a href="javascript:;" class="">联系我们</a>
+          </p> 
+          <p class="copy">
+            <span>©Copyright 版权所有：广州博霖教育科技有限公司版权所有 粤ICP备19060809号-3</span>
+          </p>
+        </div>
+      </div>
+    </div>
+   
+
+
+
+
+
+    <script src="js/jquery2.01.js"></script>
+    <script src="ku/layui/layui.all.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/lazyimg.js"></script>
+
+    <script>  
+      
+      //固定导航
+      var navH = $('#nav').offset().top;
+      var naxH2 = $('#nav').height();
+      $(window).scroll(function(){
+        var docScrolltop = $(document).scrollTop();
+        
+        console.log(docScrolltop)
+        if(docScrolltop>navH+naxH2+50){
+          $('#nav').addClass('fiexd');
+        }else{
+          $('#nav').removeClass('fiexd');
+        }
+      })
+      
+      //图片懒加载
+      $(function() {
+        $("img").lazyload();
+      })
+      //接入客服
+      $('a').not('.link,.nv').on('click', function() {
+        layer.open({
+          type: 2,
+          area: ['800px', '500px'],
+          content: 'https://www16.53kf.com/webCompany.php?arg=10187673&kf_sign=DY5MTMTU1OU4ODExMDc3NTgxNTg4MDA4NzIxODc2NzM%253D&style=1' //这里content是一
+        })
+      })
+      
+      // 关闭弹框
+      $('.f_close').on('click', function() {
+        $('.motai').hide();
+      })
+      // 开启轮播图 content-box  .swiper-container
+      var swiper = new Swiper('.content-box ', {
+        speed: 900,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        loop: true,
+      });
+      var swiper2 = new Swiper('.swiper2', {
+        speed: 900,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        direction:'vertical',
+        loop: true,
+        slidesPerView: 8,
+        spaceBetween: 0,
+      });
+      
+      
+      
+      
+      
+      // 提交表单
+      $('.getResult').on('click',function(){
+        
+        var age = $.trim($('input[name=age]:checked').val()) ;
+        var xue = $.trim($('input[name=xue]:checked').val()) ;
+        var she = $.trim($('input[name=she]:checked').val()) ;
+        var username = $.trim($('input[name=username]').val()) ;
+        var userphone = $.trim($('input[name=userphone]').val()) ;
+		 var sourceLink = document.referrer ? document.referrer : window.location.href;
+        
+        var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/
+        
+        if(!age){
+          layer.msg('请选择您的年龄段！');
+          return false;
+        }
+        if(!xue){
+          layer.msg('请选择您的最高学历！');
+          return false;
+        }
+        if(!she){
+          layer.msg('请选择您的社保年限！');
+          return false;
+        }
+        if(!username){
+          layer.msg('请输入您的姓名！');
+          return false;
+        }
+        if(!userphone){
+          layer.msg('请输入您的手机！');
+          return false;
+        }
+        if (!phoneReg.test(userphone)) {
+          layer.msg('请输入有效的11位手机号码！');
+          return false;
+        }
+        
+        var data = {
+          name:username,
+          telPhone:userphone,
+          ageGroups:age,
+          education:xue,
+          yearsSocial:she,
+		  sourceLink: sourceLink,
+          fromPlatform: "入户宝官网"
+        }
+        
+        console.log(data)
+        $('form')[0].reset();
+        $.ajax({
+          url: "http://120.79.160.22:9092/ruhubao-web-1.0.0-SNAPSHOT/data/customer/addCustomer",
+          data: data,
+          type: "POST",
+          success: function(res) {
+            layer.msg('提交成功！');
+          },
+          error: function() {
+            layer.msg('提交失败！');
+          }
+        })
+               
+        return false;
+        
+      })
+      
+      
+    </script>
+  </body>
+</html>

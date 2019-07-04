@@ -1,0 +1,177 @@
+@import "../base.less";
+
+
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+
+.app{
+  padding: 0;
+  margin: 0; 
+  height: 100%;
+  position: relative;
+}
+[v-cloak]{
+    display: none;
+}
+
+
+
+// 选择提交表单
+.search-box{
+  padding: 20px 10px 10px 10px;
+  .layui-form-item{
+    line-height: 30px;
+    select{
+      height: 30px;
+      padding: 0 15px;
+      margin-right: 25px;
+    }
+    input{
+      height: 30px;
+      padding: 0 5px;
+    }
+    button.search{
+      width: 80px;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+
+//右侧内容
+.mian-content{
+  padding-left: 235px;
+  min-height: 100%;
+  background: #f5f5f5;
+  padding-bottom: 60px;
+  .topNav{
+    line-height: 60px;
+    background: #fff;
+    i.layui-icon{
+      cursor: pointer;
+      width: 60px;
+      font-size: 28px;
+      margin-right: 20px;
+    }
+    span{
+      a{
+        font-size: 16px;
+        color: #222;
+      }
+    }
+    i,span,a{
+      vertical-align: middle;
+    }
+    .ul-set{
+      background: #222;
+      color: #fff;
+      li{
+        &:hover{
+          background: #009688;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+  .right-box{
+    .data-table{
+      padding: 20px 20px;
+    }
+  }
+ }
+
+// 操作表格
+.operate-table{
+  margin: 10px 10px;
+  background: #fff;
+  padding: 10px 10px;
+}
+
+// 右侧内容表格数据 fa fa-child  fa fa-male 	fa fa-street-view 	fa fa-user 	fa fa-user-circle 	fa fa-user-circle-o
+.search-box{
+  background: #fff;
+  margin: 10px 10px;
+  input{
+    margin-right: 18px;
+  }
+ 
+  
+}
+.page{
+  text-align: center;
+  padding: 10px 0;
+  button{
+    margin-right: 5px;
+  }
+}
+.data-table{
+  background: #fff;
+  margin: 10px 10px;
+  .qx{
+    width: 50px;
+    height: 32px;
+    border: none;
+    color: #fff;
+    background: #009688;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  table,th{
+    text-align: center !important;
+  }
+  th{
+    font-weight: 800 !important;
+  }
+  td{
+    input{
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+    }
+    img.person-img{
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+}
+
+// 用户信息
+.userinfo{
+  position: fixed;
+  right: -602px;
+  top: 100px;
+  width: 600px;
+  padding-bottom: 40px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid brown;
+  h2{
+    text-align: center;
+    font-size: 25px;
+    line-height: 65px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    position: relative;
+    i{
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+  li{
+    line-height:34px;
+    padding-left: 30px;
+    font-size: 18px;
+    span.y{
+      display: inline-block;
+      min-width: 130px;
+      text-align: right;
+      margin-right: 5px;
+    }
+  }
+}

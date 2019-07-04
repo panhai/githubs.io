@@ -1,0 +1,25 @@
+[{
+  "created": 1561793476000,
+  "updated": 1561805399000,
+  "id": 1,
+  "parentId": 0,
+  "name": " 类型管理",
+  "status": 1,
+  "sortOrder": 1,
+  "isParent": true,
+  "state": "closed",
+  "text": " 类型管理",
+  "title": " 类型管理"
+},{
+  "created": 1561793476000,
+  "updated": 1561805399000,
+  "id": 2,
+  "parentId": 1,
+  "name": " 类型管理",
+  "status": 1,
+  "sortOrder": 1,
+  "isParent": true,
+  "state": "closed",
+  "text": " 类型管理",
+  "title": " 类型管理"
+}]

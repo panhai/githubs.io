@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>KindEditor JSP</title>
+	<link rel="stylesheet" href="../../ku/kindeditor/themes/default/default.css" />
+	<link rel="stylesheet" href="../../ku/kindeditor/plugins/code/prettify.css" />
+	
+</head>
+<body>
+  
+	<form name="example" method="post" action="">
+		<textarea id="editor_id" name="content" style="width:700px;height:300px;">
+    1111
+    </textarea>
+		<input type="submit" name="button" value="提交内容" /> 
+	</form>
+  
+  <div class="pp pagecontent">
+    <h3>dghajgdjagdjga导航和健康大河健康</h3>
+    <!-- <img src="../img/about.jpg" > -->
+    <p>
+      <img src="http://img02.tooopen.com/images/20151105/tooopen_sy_147680527419.jpg" >
+    </p>
+    <h5 style="text-align: center;color: red;">党大会，卡kljd打回到家看到的哈健康活动空间啊哈</h5>
+    <img src="http://pic44.nipic.com/20140727/18179070_152408117000_2.jpg"   alt="">
+    <!-- https://img04.sogoucdn.com/net/a/04/link?url=http%3A%2F%2Fimg01.sogoucdn.com%2Fapp%2Fa%2F100520024%2F3c058db218a32597aff89de103064709&appid=122 -->
+    <p> dhajkhjka搭建和登记卡还记得哈空间大扩大空间很大框架按活动就看会</p>
+  </div>
+  
+  <button class="ld">下载</button>
+  
+  <script charset="utf-8" src="../../ku/kindeditor/kindeditor-all.js"></script>
+  <script charset="utf-8" src="../../ku/kindeditor/lang/zh-CN.js"></script>
+  
+  
+  <script src="../../js/jquery2.01.js"></script>
+  <script src="../../js/FileSave.js"></script>
+  <script src="../../js/export_world.js"></script>
+  <script type="text/javascript">
+    
+  	 KindEditor.ready(function(K) {
+        window.editor = K.create('#editor_id');
+     });
+     $('img').attr('crossOrigin','anonymous')
+     $('.ld').on('click',function(){
+       $(".pagecontent").wordExport("new");
+     })
+  </script>
+</body>
+</html>
+
+
+

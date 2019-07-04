@@ -1,0 +1,187 @@
+img{
+	display: block;
+}
+.slider-item img{
+	width: 100%;
+}
+.app{
+	margin: 0 auto;
+	font-family:'宋体';
+}
+.mui_card{
+	font-size: 0;
+}
+.mui_card>div{
+	width: 50%;
+	display: inline-block;
+	font-size: 0.3rem;
+}
+.main_form{
+	padding: 60px 30px 30px 30px;
+	color: #222222;
+	background-color: #fff;
+}
+.main_form>p{
+	font-size: 0.3rem;
+	color: #222222;
+	padding-top: 0.15rem;
+}
+.mui-input-row{
+	margin-top: 0.1rem;
+	margin-bottom:  0.01rem;
+}
+.mui-input-row>label{
+	vertical-align: middle;
+	display: inline-block;
+	font-weight: 400;
+}
+.mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{
+	font-size: 0.3rem;
+}
+.mui-input-row label{
+	/*padding: 10px 15px !important;*/
+}
+.mui-input-row input{
+
+}
+.mui-input-group .mui-input-row:after,.mui-input-group:before,.mui-input-group:after{
+	background: transparent !important;
+}
+
+.mui-checkbox.mui-left label, .mui-radio.mui-left label{
+	/*padding-left: 56px !important;*/
+	font-size: 0.3rem !important;
+}
+.personName,.phone{
+	font-size: 0.3rem;
+	border: 0 !important;
+	height: 0.3rem;
+	padding: 4px 0;
+	border-bottom: 1px solid #333333 !important;
+}
+
+.item{
+	margin-bottom: 0.67rem;
+	line-height: 0.32rem;
+}
+.item input{
+	border: 0 !important;
+	border: none !important;
+
+}
+.item>div.p-cheack{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 3px;
+	border:1px solid #ccc;
+	padding: 0;
+	position: relative;
+	border:1px solid #ccc;
+}
+
+.citem{
+	line-height:0.42rem;
+}
+.citem>span,.citem>a,.item>div.p-cheack{
+	display:inline-block;
+	vertical-align:middle;
+}
+.item input.check{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.item input.cur{
+	background: url(../img/06.png) no-repeat 50% 50%;
+	background-size:100%;
+}
+
+.getResults{
+	background-color: #0062CC;
+	color:#FFFFFF;
+	width: 90%;
+	line-height: 0.8rem;
+	border-radius: 44px;
+	font-size: 0.3rem;
+	letter-spacing: 3px;
+	font-weight: 400;
+}
+
+/* 个人信息弹框 和手机验证 */
+.getResultModel{
+	padding: 0.64rem 0.2rem;
+	position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 7.2rem;
+    padding-top: 0.64rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border-radius: 0.21333333rem;
+    font-family: PingFangSC-Regular;
+    font-weight: bold;
+	background-color: #FFFFFF;
+	font-size: 0.18rem;
+	z-index: 10;
+	color: #333333;
+}
+.getResultModel>h2{
+	padding-bottom: 20px;
+	font-size: 0.32rem;
+	text-align: center;
+}
+.msg_box>p{
+	padding: 2px 0.3rem;
+	font-size: 0.22rem;
+	line-height: 0.5rem;
+	color: #222;
+}
+.close{
+	display: block;
+	position: absolute;
+	right: 0.15rem;
+	top: 0.15rem;
+	width: 0.3rem;
+	height:0.3rem;
+	background-image: url(../img/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* 手机验证 */
+.phoneModel{
+	padding: 0.24rem 0.2rem;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 7.0rem;
+	padding-top: 0.64rem;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #FFFFFF;
+	border-radius: 0.21333333rem;
+	font-family: PingFangSC-Regular;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 0.16px;
+	color: #999;
+	z-index: 10;
+}
+.footer .copyRight {
+  padding: 0.2rem 0 0.2rem 0;
+  background-color: #5e5e5e;
+  font-size: 0.2rem;
+  color: #ffffff;
+  text-align: center;
+}
+.footer .copyRight p {
+  height: 0.34rem;
+  line-height: 0.34rem;
+  color: #ffffff;
+  font-size: 0.18rem;
+}

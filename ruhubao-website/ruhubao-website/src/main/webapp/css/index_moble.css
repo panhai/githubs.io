@@ -1,0 +1,457 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+div {
+  box-sizing: border-box;
+}
+.container {
+  width: 7rem;
+  margin: 0 auto;
+}
+.f_r {
+  float: right;
+}
+.f_l {
+  float: left;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+img,
+a,
+span,
+input {
+  vertical-align: middle;
+}
+.layui-layer .layui-layer-iframe {
+  width: 5rem;
+}
+li {
+  list-style: none;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+body {
+  background: #f5f5f5;
+  font-family: 微软雅黑;
+  font-size: 0.22rem;
+}
+.app {
+  max-width: 7.5rem;
+  margin: 0 auto;
+}
+.app .logo-top {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px 0px rgba(200, 200, 200, 0.31);
+  font-size: 0;
+}
+.app .logo-top .logo-box {
+  padding: 5px 0;
+}
+.app .logo-top .logo-box img {
+  width: 4rem;
+  display: block;
+}
+.app .logo-top .logo-box a,
+.app .logo-top .logo-box img {
+  vertical-align: middle;
+}
+.app .logo-top .logo-box a.active {
+  background: red;
+  color: #fff;
+}
+.app .logo-top .logo-box a.first {
+  margin: 0 !important;
+}
+.app .logo-top .logo-box a {
+  display: inline-block;
+  font-size: 0.2rem;
+  height: 100%;
+  padding: 0.04rem 0.04rem;
+}
+.app .logo-top .logo-box a:hover {
+  background: red;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+.app .content {
+  padding-top: 0.1rem;
+}
+.app .content .page1 {
+  height: 4.61rem;
+  position: relative;
+}
+.app .content .page1 img {
+  width: 100%;
+  height: 4.8rem;
+}
+.app .content .page1 .box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.app .content .page1 .slide1 h2 {
+  color: #ff7c1c;
+  font-size: 0.6rem;
+  line-height: 0.52rem;
+  font-weight: 800;
+  margin-top: 1.04rem;
+}
+.app .content .page1 .slide1 p {
+  font-size: 0.4rem;
+  line-height: 0.52rem;
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+.app .content .page1 .slide1 .btn {
+  margin-top: 0.5rem;
+}
+.app .content .page1 .slide1 .btn a {
+  display: inline-block;
+  width: 2.6rem;
+  height: 0.64rem;
+  background-color: #3789ee;
+  border-radius: 0.05rem;
+  color: #fff;
+  line-height: 0.64rem;
+  font-size: 0.3rem;
+}
+.app .content .page1 .slide2 h2 {
+  color: #ff7c1c;
+  font-size: 0.5rem;
+  line-height: 52px;
+  font-weight: 800;
+  margin-top: 0.84rem;
+}
+.app .content .page1 .slide2 p.s {
+  font-size: 0.32rem;
+  line-height: 0.99rem;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  width: 6rem;
+  height: 0.99rem;
+  background: url(../img/bg5.png) no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+.app .content .page1 .slide2 p.r {
+  margin-top: 0.23rem;
+  background: none;
+  font-size: 0.23rem;
+  color: #fff;
+  line-height: 0.42rem;
+}
+.app .content .page1 .slide2 p.r a {
+  color: #fff;
+}
+.app .content .page1 .slide2 p.r img {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+.app .content .page1 .slide3 h2 {
+  color: #fff;
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  font-weight: 800;
+  width: 6rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #fff;
+}
+.app .content .page1 .slide3 p {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  margin-top: 0.3rem;
+  color: #fff;
+}
+.app .content .page1 .slide3 .btn {
+  margin-top: 0.44rem;
+}
+.app .content .page1 .slide3 .btn a {
+  display: inline-block;
+  width: 2.62rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  color: #fff;
+  background: #ff7c1c;
+  font-size: 0.28rem;
+  border-radius: 0.05rem;
+}
+.app .content .page2 {
+  padding-top: 0.34rem;
+}
+.app .content .page2 .page-box {
+  font-size: 0;
+  text-align: center;
+}
+.app .content .page2 .page-box > div {
+  display: inline-block;
+  width: 2.78rem;
+  margin-right: 0.3rem;
+  margin-top: 0.3rem;
+}
+.app .content .page2 .page-box > div img {
+  width: 100%;
+}
+.app .content .page3 .page3-box {
+  min-height: 445px;
+  background: #fff;
+  padding-top: 0.4rem;
+  zoom: 1;
+}
+.app .content .page3 .page3-box > div {
+  display: inline-block;
+  width: 50%;
+  height: 5.25rem;
+  float: left;
+  padding-left: 0.2rem;
+}
+.app .content .page3 .page3-box > div img {
+  width: 0.38rem;
+}
+.app .content .page3 .page3-box > div h3 {
+  font-size: 0.3rem;
+}
+.app .content .page3 .page3-box > div li {
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-bottom: 1px solid #7e7e7e;
+  margin-top: 21px;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.app .content .page3 .page3-box > div li .dian {
+  display: inline-block;
+  width: 0.09rem;
+  height: 0.09rem;
+  border-radius: 0.09rem;
+  background: red;
+}
+.app .content .page3 .page3-box > div li a {
+  color: #7e7e7e;
+  font-size: 0.22rem;
+  display: inline-block;
+  height: 100%;
+  width: 92%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.app .content .page3 .page3-box > div li a:hover {
+  color: #e90000;
+}
+.app .content .page4 {
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+.app .content .page4 img.page4-img {
+  width: 100%;
+}
+.app .content .page4 h2 {
+  font-size: 0.5rem;
+  line-height: 0.6rem;
+  padding-bottom: 0.21rem;
+  border-bottom: 1px solid #222;
+  text-align: center;
+  width: 6.2rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  font-weight: 800;
+}
+.app .content .page4 p.r {
+  font-size: 0.34rem;
+  font-weight: 800;
+  margin-top: 0.2rem;
+}
+.app .content .page4 p.s {
+  font-size: 0.23rem;
+  color: #787878;
+  line-height: 0.33rem;
+  width: 6.6rem;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+  text-align: left;
+}
+.app .content .page4 .myform {
+  width: 6.4rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin: 0 auto;
+  background-color: #ffffff;
+  margin-top: 0.6rem;
+  position: relative;
+  text-align: left;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 3px #b6c5da;
+  font-size: 16px;
+}
+.app .content .page4 .myform img.person {
+  position: absolute;
+  right: -0.88rem;
+  top: 0px;
+  width: 2.7rem;
+  z-index: 10;
+}
+.app .content .page4 .myform input,
+.app .content .page4 .myform select,
+.app .content .page4 .myform layui-input-inline {
+  width: 2.75rem;
+  border: solid 1px #b5b5b5;
+  height: 0.54rem;
+  font-size: 0.25rem;
+}
+.app .content .page4 .myform .layui-form-select .layui-edge {
+  right: -1.4rem;
+}
+.app .content .page4 .myform .btn {
+  text-align: center;
+}
+.app .content .page4 .myform .btn button {
+  display: inline-block;
+  width: 3.55rem;
+  height: 0.63rem;
+  background-color: #f20000;
+  color: #fff;
+  outline: none;
+  border: 0;
+  font-size: 0.3rem;
+  cursor: pointer;
+}
+.app .content .page5 {
+  padding-top: 0.8rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  background: #fff;
+}
+.app .content .page5 h2 {
+  font-size: 0.5rem;
+  color: #222;
+  line-height: 0.5rem;
+  padding-bottom: 0.79rem;
+}
+.app .content .page5 img {
+  width: 100%;
+}
+.app .content .page6 {
+  position: relative;
+}
+.app .content .page6 img {
+  width: 100%;
+  height: 5rem;
+}
+.app .content .page6 .m {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  filter: alpha(opacity=19);
+  -moz-opacity: 0.19;
+  -khtml-opacity: 0.19;
+  opacity: 0.19;
+}
+.app .content .page6 .box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  font-size: 0.24rem;
+  color: #fff;
+  text-align: center;
+}
+.app .content .page6 .box h2 {
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  margin-top: 0.6rem;
+}
+.app .content .page6 .box p {
+  width: 6rem;
+  line-height: 0.4rem;
+  margin: 0 auto;
+  margin-top: 0.3rem;
+}
+.app .content .page6 .box .btn {
+  padding-top: 0.2rem;
+}
+.app .content .page6 .box .btn a {
+  display: inline-block;
+  color: #fff;
+  width: 2.45rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  background-color: #ff5d0e;
+  border-radius: 3px;
+  font-size: 0.28rem;
+}
+.app .footer {
+  height: 3.95rem;
+  background-color: #001f33;
+  color: #fff;
+}
+.app .footer .copyRight {
+  font-size: 0;
+}
+.app .footer .copyRight > div {
+  font-size: 0.23rem;
+  float: left;
+  height: 2.75rem;
+}
+.app .footer .copyRight .left {
+  width: 2.8rem;
+  padding-top: 0.37rem;
+}
+.app .footer .copyRight .left img {
+  width: 100%;
+}
+.app .footer .copyRight .left p.r {
+  text-align: center;
+  line-height: 33px;
+  height: 33px;
+  border-bottom: 1px solid #fff;
+}
+.app .footer .copyRight .left p.f {
+  line-height: 20px;
+  height: 20px;
+  font-size: 0.2rem;
+}
+.app .footer .copyRight .center {
+  width: 3.1rem;
+  margin-left: 0.1rem;
+  padding-top: 0.37rem;
+}
+.app .footer .copyRight .center a {
+  color: #fff;
+  display: inline-block;
+  padding: 0.04rem;
+  margin-right: 0.03rem;
+}
+.app .footer .copyRight .right {
+  width: 0.9rem;
+  float: right;
+}
+.app .footer .copyRight .right img {
+  padding-top: 0.37rem;
+  width: 100%;
+}

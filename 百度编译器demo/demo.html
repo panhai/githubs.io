@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ueditor demo</title>
+    <style type="text/css">
+    	.app{
+        width: 800px;
+        height: 600px;
+        margin: 0 auto;
+        margin-top: 50px;
+        border: 1px solid red;
+      }
+    </style>
+	</head>
+	<body>
+    
+    <div class="app">
+      <span>编译器使用</span>
+       <!-- 加载编辑器的容器 -->
+        <script id="container" name="content" type="text/plain" style="width: 99%;height: 50%;">
+          
+        </script>
+        <span>编译器使用</span>
+    </div>
+    
+    
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="ueditor/utf8-jsp/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="ueditor/utf8-jsp/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container',{
+           toolbars: [
+                ['fullscreen', 'source', 'undo', 'redo', 'bold']
+            ],
+            autoHeightEnabled: true,
+            autoFloatEnabled: true
+          });
+    </script>
+	</body>
+</html>

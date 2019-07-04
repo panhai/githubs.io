@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+div {
+  box-sizing: border-box;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.f_r {
+  float: right;
+}
+.f_l {
+  float: left;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+li {
+  list-style: none;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+body {
+  background: #f5f5f5;
+  font-family: 微软雅黑;
+}
+img,
+a,
+span,
+input {
+  vertical-align: middle;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.app .logo-top {
+  height: 93px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px 0px rgba(200, 200, 200, 0.31);
+  font-size: 0;
+}
+.app .logo-top .logo-box {
+  height: 100%;
+}
+.app .logo-top .logo-box a,
+.app .logo-top .logo-box img {
+  vertical-align: middle;
+}
+.app .logo-top .logo-box a.active {
+  background: red;
+  color: #fff;
+}
+.app .logo-top .logo-box a {
+  display: inline-block;
+  font-size: 18px;
+  padding: 0 21px;
+  height: 100%;
+  line-height: 93px;
+}
+.app .logo-top .logo-box a:hover {
+  background: red;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+.app .content p.wei {
+  padding-top: 34px;
+  color: #4c4c4c;
+  font-size: 16px;
+}
+.app .content h1 {
+  color: #4c4c4c;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  padding-top: 48px;
+}
+.app .content p.r {
+  text-align: center;
+  width: 279px;
+  margin: 0 auto;
+  line-height: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #bababa;
+  position: relative;
+  font-size: 22px;
+  color: #969696;
+}
+.app .content p.r span.ab {
+  position: absolute;
+  left: 108px;
+  bottom: -1.5px;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #1090da;
+}
+.app .content .box {
+  font-size: 0px;
+  padding: 62px 0 80px 0;
+  text-align: center;
+}
+.app .content .box > div {
+  float: left;
+  font-size: 28px;
+  width: 358px;
+  height: 264px;
+  background-color: #ffffff;
+  box-shadow: -1px 6px 11px 0px rgba(200, 200, 200, 0.41);
+  margin-left: 32px;
+}
+.app .content .box img {
+  display: inline-block;
+  margin-top: 45px;
+}
+.app .content .map {
+  height: 436px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.app .footer {
+  height: 275px;
+  background-color: #001f33;
+  color: #fff;
+}
+.app .footer .copyRight {
+  font-size: 0;
+}
+.app .footer .copyRight > div {
+  font-size: 18px;
+  float: left;
+  height: 275px;
+}
+.app .footer .copyRight .left {
+  width: 280px;
+  padding-top: 47px;
+}
+.app .footer .copyRight .left img {
+  width: 100%;
+}
+.app .footer .copyRight .left p.r {
+  text-align: center;
+  line-height: 33px;
+  height: 33px;
+  border-bottom: 1px solid #fff;
+}
+.app .footer .copyRight .left p.f {
+  line-height: 40px;
+  height: 40px;
+  text-indent: 20px;
+}
+.app .footer .copyRight .center {
+  width: 699px;
+  margin-left: 60px;
+}
+.app .footer .copyRight .center a {
+  color: #fff;
+  display: inline-block;
+  padding: 2 5px;
+  margin-right: 30px;
+}
+.app .footer .copyRight .center .alink {
+  padding-top: 70px;
+  padding-left: 42px;
+}
+.app .footer .copyRight .center p.t {
+  padding-top: 39px;
+  padding-left: 42px;
+}
+.app .footer .copyRight .center .copy {
+  padding-top: 60px;
+}
+.app .footer .copyRight .right {
+  width: 103px;
+  float: right;
+}
+.app .footer .copyRight .right img {
+  padding-top: 58px;
+  width: 100%;
+}
