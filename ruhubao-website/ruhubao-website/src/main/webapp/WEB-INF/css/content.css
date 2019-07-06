@@ -1,0 +1,23 @@
+
+.tree-node-selected{
+  background: #009688 !important;
+  color: #fff !important;
+}
+.datagrid-row-selected{
+  background: #009688 !important;
+  color: #fff !important;
+}
+.datagrid-cell a, .datagrid-cell-c2-url a{
+  color: #fff !important;
+}
+td a{
+  color: #222 !important;
+}
+.datagrid-header-row, .datagrid-row{
+  height: 30px !important;
+}
+.datagrid-row-over{
+  background: ;
+}
+
+

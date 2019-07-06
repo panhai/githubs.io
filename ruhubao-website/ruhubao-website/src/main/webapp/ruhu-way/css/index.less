@@ -114,7 +114,9 @@ img,span,a,i,b,input,select,textarea{
     }
   }
 }
-
+img,span,a{
+  vertical-align: middle;
+}
 .section1,.section2,.section3,.section4,.section5,.section6,.section7,.section8,.section9,.section10{
   .content{
     width: 1200px;
@@ -127,7 +129,8 @@ img,span,a,i,b,input,select,textarea{
   // 第一屏
   .section1{
     .top{
-      height: 156px;
+      height: 100px;
+      line-height: 110px;
       background: #fff;
       .t-mian{
         width: 1200px;
@@ -135,16 +138,21 @@ img,span,a,i,b,input,select,textarea{
         height: 100%;
         font-size: 36px;
         img{
-          margin-top: 29px;
+          margin-top: 0px;
+          height: 60px;
         }
         span{
           display: inline-block;
-          line-height: 36px;
+          line-height: 26px;
+          font-size: 18px;
+          position: relative;
+          top: -6px;
         }
         span.right{
           float: right;
           margin-top: 46px;
           color: #fe0000;
+          font-size: 20px;
         }
         img,span{
           vertical-align: middle;
@@ -152,7 +160,7 @@ img,span,a,i,b,input,select,textarea{
       }
     }
     .content-box{
-      height: 892px;
+      height: 700px;
       text-align: center;
       .m{
         width: 100%;
@@ -173,7 +181,7 @@ img,span,a,i,b,input,select,textarea{
       }
       .slide1{
         background: url(../img/1.jpg) no-repeat;
-        padding-top: 180px;
+        padding-top: 110px;
         position: relative;
         background-size:100% 100%; 
         p{
@@ -181,7 +189,7 @@ img,span,a,i,b,input,select,textarea{
           color: #ffd6a0;
         }
         h2{
-          font-size: 124px;
+          font-size: 104px;
           color: #ffffff;
           text-shadow: 5px 5px 5px #ffd6a0;
           span.big{
@@ -210,7 +218,7 @@ img,span,a,i,b,input,select,textarea{
         background: url(../img/2.jpg) no-repeat;
         font-size: 50px;
         text-align: center;
-        padding-top: 230px;
+        padding-top: 180px;
         position: relative;
         background-size:100% 100%; 
         .m{
@@ -246,7 +254,7 @@ img,span,a,i,b,input,select,textarea{
         }
         p{
           color: #fff;
-          padding-bottom: 181px;
+          padding-bottom: 121px;
           padding-top: 20px;
         }
         .btn{
@@ -291,7 +299,7 @@ img,span,a,i,b,input,select,textarea{
             line-height: 40px;
           }
           .btn{
-            margin-top:180px; 
+            margin-top:100px; 
             a{
               display: inline-block;
               width: 280px;

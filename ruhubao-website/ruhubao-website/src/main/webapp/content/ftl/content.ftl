@@ -8,7 +8,30 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" type="images/x-icon" href="../../img/bolinglink.png">
-    <link rel="stylesheet" type="text/css" href="../css/showContent.css"/>
+    
+    <script type="text/javascript" src="../js/changHtmlFontSize.js"></script>
+    
+    <script type="text/javascript">
+    	function goPAGE() {
+    		if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+    			var link = document.createElement('link');
+    			link.href = '../css/showContent_moble.css';
+    			link.rel = 'stylesheet';
+    			link.type = 'text/css';
+    			document.getElementsByTagName('head').item(0).appendChild(link);
+          
+    		} else {
+    			var link = document.createElement('link');
+    			link.href = '../css/showContent.css';
+    			link.rel = 'stylesheet';
+    			link.type = 'text/css';
+    			document.getElementsByTagName('head').item(0).appendChild(link);
+    			console.log("pc")
+    		}
+    	}
+    	goPAGE();
+      
+    </script>  
     
 	</head>
 	<body>
@@ -18,35 +41,39 @@
         <img src="../img/logo.jpg" alt="">
         <a href="../../index.html" style="margin-left: 45px;" class="nv">首页</a>
         <a href="../../ruhu-way/index.html" class="nv">入户方式 </a>
-        <a href="policy.html"  class="nv active">入户政策</a>
+        <a href="../views/policy.html"  class="nv active">入户政策</a>
         <a href="http://www.ruhubao.net/mobile/views/ru.html" class="nv">积分计算</a>
         <a href="https://www.bolinjy.cn/" class="nv">学历提升</a>
-        <a href="about.html" class="nv">关于我们</a>
-        <a href="contact.html" class="nv">联系我们</a>
+        <a href="../views/about.html" class="nv">关于我们</a>
+        <a href="../views/contact.html" class="nv">联系我们</a>
       </div>
     </div>
     <div class="content">
       <div class="container">
         <p class="wei">
-          <span>您当前所在的位置： 首页 > 入户政策>${title}</span>
+          <span>您当前所在的位置： 首页 > ${contentCategory}>${title}</span>
         </p>
         <!-- 发布内容 -->
         <div class="pagecontent">
           <h2 class="title">${title}</h2>
           <p class="time">${created}</p>
-          <div class="img-box"><img src=${pic} ></div>
+          <!-- <div class="img-box"><img src=${pic} ></div> -->
+          <!-- <div class="img-box"><img src=${pic} ></div> -->
           <div class="text-box">
         	 ${content}
           </div>
           
           <div class="recommend">
-            <div class="btn">
-              <button type="button" title="点击下载" class="layui-btn download">下载</button>
+            <div class="btn" id="hide" >
+           		<p hidden="hidden" id ="filename">${file}</p>
+              <a href="+${file}" download="${file}"  class="nv">
+                <button type="button"  title="点击下载"  class="layui-btn download" id="butt">下载</button>
+              </a>
             </div>
-            <div>
+            <!-- <div>
               <span style="color: #e60000;font-size: 26px;font-weight: 800;margin-right: 6px;">推荐阅读:</span>
-              <a href="#">广州市积分制入户管理办法实施细则</a>
-            </div>
+              <a href="#" class="nv">广州市积分制入户管理办法实施细则</a>
+            </div> -->
           </div>
           
         </div>
@@ -80,7 +107,7 @@
     </div>
   </div>
   
-  
+    
     
     <script src="../../js/jquery2.01.js"></script>
     <script src="../../ku/layui/layui.all.js "></script>
@@ -102,6 +129,20 @@
     	  $("button.download").click(function(event) {
             $(".pagecontent").wordExport("new");
         });
+        
+        
+        
+    </script>
+    <script type="text/javascript">
+    
+    $(function(){
+    	
+    	var filename=$("#filename").html();
+    	if (filename=="kong") {
+    		 $("#hide").hide();		
+		}
+    	
+    })
     </script>
 	</body>
 </html>

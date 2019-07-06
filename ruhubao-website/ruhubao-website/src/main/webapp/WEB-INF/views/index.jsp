@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>后台管理系统</title>
 <jsp:include page="/commons/common-js.jsp"></jsp:include>
+<link rel="stylesheet" type="text/css" href="../content.css"/>
 <style type="text/css">
 	.content {
 		padding: 10px 10px 10px 10px;
@@ -12,15 +13,8 @@
 </style>
 </head>
 <body class="easyui-layout">
-    <div data-options="region:'west',title:'菜单',split:true" style="width:180px;">
-    	<ul id="menu" class="easyui-tree" style="margin-top: 10px;margin-left: 5px;">
-         	<!-- <li>
-         		<span>商品管理</span>
-         		<ul>
-	         		<li data-options="attributes:{'url':'/page/item-add'}">新增商品</li>
-	         		<li data-options="attributes:{'url':'/page/item-list'}">查询商品</li>
-	         	</ul>
-         	</li> -->
+    <div data-options="region:'west',title:'菜单',split:true" style="width:180px;background: :#333;color: #fff;">
+    	<ul id="menu" class="easyui-tree" style="margin-top: 10px;margin-left: 5px;">       	
          	<li>
          		<span>网站内容管理</span>
          		<ul>
@@ -33,7 +27,7 @@
     <div data-options="region:'center',title:''">
     	<div id="tabs" class="easyui-tabs">
 		    <div title="首页" style="padding:20px;">
-		        	
+		       
 		    </div>
 		</div>
     </div>

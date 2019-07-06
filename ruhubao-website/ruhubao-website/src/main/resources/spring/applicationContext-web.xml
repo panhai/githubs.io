@@ -57,8 +57,13 @@
         		1.拦截单个url：/interceptor.do，拦截请求/interceptor.do
         		2.拦截多个url：/inter/**，拦截以/inter开头的所有请求 -->
         		<mvc:mapping path="/page/index"/>
+        		<mvc:mapping path="/page/index.html"/>
+        		
+        	<!-- 	<mvc:exclude-mapping path="/page/login"/> -->
+        	
+        		
         		<!-- 拦截器处理类 -->
-        		<bean class="cn.ruhubao.website.interceptor.FirstInterceptor"></bean>
+        		<bean class="cn.ruhubao.website.controller.interceptor.FirstInterceptor"></bean>
         	</mvc:interceptor>
         	
         </mvc:interceptors>

@@ -86,11 +86,14 @@ input {
 .app .content .pagecontent {
   min-height: 500px;
 }
+.app .content .pagecontent img {
+  max-width: 1200px;
+}
 .app .content .pagecontent .img-box {
   text-align: center;
 }
 .app .content .pagecontent .img-box img {
-  max-width: 1200px;
+  max-width: 1100px;
 }
 .app .content .pagecontent .time,
 .app .content .pagecontent .title {
@@ -106,10 +109,10 @@ input {
   color: #6b6b6b;
   font-size: 18px;
   line-height: 24px;
-  padding-bottom: 62px;
+  padding-bottom: 52px;
 }
 .app .content .pagecontent .text-box {
-  padding-top: 68px;
+  padding-top: 1px;
   line-height: 41px;
   color: #6a6a6a;
   font-size: 16px;

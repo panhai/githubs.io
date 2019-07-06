@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>内容管理系统</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="shortcut icon" type="images/x-icon" href="../layuiadmin/style/res/bolinglink.png">
+  <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../../css/admin.css" media="all">
+  
+  <script>
+  /^http(s*):\/\//.test(location.href) || alert('请先部署到 localhost 下再访问');
+  </script>
+  <style type="text/css">
+  	html,body{
+      padding: 20px;
+      position: relative;
+    }
+    .layui-side{
+      margin-left: 15px;
+    }
+    
+    .layui-side,.layui-side-menu{
+      height: 650px !important; 
+    }
+    #LAY_app_body{
+      position: relative;
+      top: -50px;
+      left: 190px;
+      padding: 20px 0 50px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body class="layui-layout-body" style="margin: 20px;">
+  
+  <div id="LAY_app">
+    <div class="layui-layout layui-layout-admin">
+      <!-- 侧边菜单 -->
+      <div class="layui-side layui-side-menu">
+        <div class="layui-side-scroll">
+          <div class="layui-logo" style="margin-left: 15px;" lay-href="home/console.html">
+            <span>类型管理</span>
+          </div>
+          <!-- 内容分类管理 -->
+          <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
+            <li data-name="home" class="layui-nav-item layui-nav-itemed">
+              <a href="javascript:;" lay-tips="主页" lay-direction="2">
+                <i class="layui-icon layui-icon-home"></i>
+                <cite>内容分类管理</cite>
+              </a>
+              <dl class="layui-nav-child">
+                <!-- class="layui-this" -->
+                <dd data-name="console"  class="layui-this">
+                  <a>最新政策</a>
+                </dd>
+                <dd data-name="console">
+                  <a >办事指南</a>
+                </dd>
+                <dd data-name="console">
+                  <a >服务窗口</a>
+                </dd>
+                <dd data-name="console">
+                  <a >常见问题</a>
+                </dd>
+                <dd data-name="console">
+                  <a >新闻资讯</a>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      
+      <!-- 主体内容 -->
+      <div class="layui-body" id="LAY_app_body">
+        <div class="layadmin-tabsbody-item layui-show">
+          <!-- setContent/setContent2.html -->
+          <div class="conten-box">
+            <div class="editBtn">
+              <button type="button" class="layui-btn">添加</button>
+              <button type="button" class="layui-btn">编辑</button>
+              <button type="button" class="layui-btn">删除</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 辅助元素，一般用于移动设备下遮罩 -->
+      <div class="layadmin-body-shade" layadmin-event="shade"></div>
+    </div>
+  </div>
+  
+  
+  
+  <script src="../../../js/jquery2.01.js"></script>
+  <script src="../../js/jquery.easyui.min.js"></script>
+  <script src="../../js/easyui-lang-zh_CN.js"></script>
+  <script src="../../../ku/layui/layui.all.js"></script>
+  
+  <script>
+  layui.config({
+    base: '../../layuiadmin/' //静态资源所在路径
+  }).extend({
+    index: 'lib/index' //主入口模块
+  }).use('index');
+  </script>
+  
+  <!-- 百度统计 -->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?d214947968792b839fd669a4decaaffc";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  
+  
+  
+   // https://bolinjy.cn/content/category
+   //获取一级目录
+ 
+   
+   
+  
+  
+  </script>
+</body>
+</html>
+
+

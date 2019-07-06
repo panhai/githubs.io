@@ -177,11 +177,11 @@ input {
 }
 .app .content .page-btn-box a {
   display: inline-block;
-  width: 32px;
+  padding: 3px 8px;
   height: 32px;
   background-color: #14a9e7;
   border-radius: 3px;
-  font-size: 20px;
+  font-size: 16px;
   color: #ffffff;
   text-align: center;
   line-height: 32px;

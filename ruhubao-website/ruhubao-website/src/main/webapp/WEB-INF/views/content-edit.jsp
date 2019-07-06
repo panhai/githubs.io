@@ -20,10 +20,10 @@
 	            <td><input class="easyui-textbox" name="titleDesc" data-options="multiline:true,validType:'length[0,150]'" style="height:60px;width: 280px;"></input>
 	            </td>
 	        </tr>
-	         <tr>
+	         <!-- <tr>
 	            <td>URL:</td>
 	            <td><input class="easyui-textbox" type="text" name="url" style="width: 280px;"></input></td>
-	        </tr>
+	        </tr> -->
 	        
 	        <tr>
 	            <td>内容:</td>

@@ -3,6 +3,10 @@ package cn.ruhubao.website.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class BasePojo implements Serializable{
 
 	/**
@@ -19,9 +23,11 @@ public class BasePojo implements Serializable{
 		this.created = created;
 		this.updated = updated;
 	}
-
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	 @JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
 	private Date created;
-
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	@JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
     private Date updated;
 
 	public Date getCreated() {

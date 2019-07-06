@@ -39,11 +39,12 @@
     </style>
   </head>
   <body>
+    
     <div class="app" id="app" v-cloak>
       <div class="logo-top">
         <div class="container logo-box">
           <img src="../img/logo.jpg" alt="">
-          <a href="../../index.html" class="first" style="margin-left: 45px;" class="nv">首页</a>
+          <a href="../../index.html" style="margin-left: 45px;" class="nv first">首页</a>
           <a href="../../ruhu-way/index.html" class="nv">入户方式 </a>
           <a href="policy.html" class="nv active">入户政策</a>
           <a href="http://www.ruhubao.net/mobile/views/ru.html" class="nv">积分计算</a>
@@ -72,17 +73,19 @@
               </p> -->
               
             </div>
-
+            
             <div class="recommend">
               <div class="btn">
-                <button type="button" title="点击下载" v-on:click="download" class="layui-btn download">下载</button>
+                <a href="../js/w.doc" download="../js/w.doc" class="nv">
+                  <button type="button" title="点击下载" v-on:click="download" class="layui-btn download">下载</button>
+                </a>
               </div>
               <div>
                 <span style="color: #e60000;font-size: 18px;font-weight: 800;margin-right: 6px;">推荐阅读:</span>
                 <a :href="newDate.href" :title="newDate.title">{{newDate.title}}</a>
               </div>
             </div>
-
+            
           </div>
         </div>
       </div>
@@ -149,9 +152,7 @@
         },
         methods: {
           download:function(){ //下载文章
-             $("button.download").click(function(event) {
-              $(".pagecontent").wordExport("new");
-            });
+            
           }
         },
         mounted: function() {

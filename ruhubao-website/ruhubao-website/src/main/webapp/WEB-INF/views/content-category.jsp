@@ -11,7 +11,7 @@
 </div>
 <script type="text/javascript">
 $(function(){
-	$("#contentCategory").tree({
+	$("#contentCategory").tree({ //https://bolinjy.cn/content/category
 		url : '/content/category',
 		method : "GET",
 		animate: true,

@@ -19,10 +19,6 @@
 	            <td><input class="easyui-textbox" name="titleDesc" data-options="multiline:true,validType:'length[0,150]'" style="height:60px;width: 280px;"></input>
 	            </td>
 	        </tr>
-	        <!--  <tr>
-	            <td>URL:</td>
-	            <td><input class="easyui-textbox" type="text" name="url" style="width: 280px;"></input></td>
-	        </tr> -->
 	        <tr>
 	            <td>图片:</td>
 	            <td>
@@ -38,6 +34,13 @@
 	            </td>
 	        </tr> -->
 	        <tr>
+	            <td>文章对应文件附件:</td>
+	            <td>
+	            	<a href="javascript:void(0)" class="easyui-linkbutton onePicUpload">附件上传</a>
+	            	<br><input type="hidden" name="pic2" />
+	            </td>
+	        </tr>
+	        <tr>
 	            <td>内容:</td>
 	            <td>
 	                <textarea style="width:800px;height:300px;visibility:hidden;" name="content"></textarea>
@@ -50,6 +53,7 @@
 	    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">重置</a>
 	</div>
 </div>
+
 <script type="text/javascript">
 	//编辑器参数
 	kingEditorParams = {
@@ -113,7 +117,7 @@
 				});
 			});
 		});
-    }
+  }
 			
 			
 </script>

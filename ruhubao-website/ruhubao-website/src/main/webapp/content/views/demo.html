@@ -6,7 +6,11 @@
 	<title>KindEditor JSP</title>
 	<link rel="stylesheet" href="../../ku/kindeditor/themes/default/default.css" />
 	<link rel="stylesheet" href="../../ku/kindeditor/plugins/code/prettify.css" />
-	
+	<style type="text/css">
+		.ak{
+      display:block;
+    }
+	</style>
 </head>
 <body>
   
@@ -21,7 +25,7 @@
     <h3>dghajgdjagdjga导航和健康大河健康</h3>
     <!-- <img src="../img/about.jpg" > -->
     <p>
-      <img src="http://img02.tooopen.com/images/20151105/tooopen_sy_147680527419.jpg" >
+      <img src="http://pic.bolinjy.cn/0ba83d54-4b35-4585-a245-5cba7ad5e133.jpg" >
     </p>
     <h5 style="text-align: center;color: red;">党大会，卡kljd打回到家看到的哈健康活动空间啊哈</h5>
     <img src="http://pic44.nipic.com/20140727/18179070_152408117000_2.jpg"   alt="">
@@ -30,7 +34,7 @@
   </div>
   
   <button class="ld">下载</button>
-  
+  <a href="javascript:;" download="../js/world.doc" class="ak"></a>
   <script charset="utf-8" src="../../ku/kindeditor/kindeditor-all.js"></script>
   <script charset="utf-8" src="../../ku/kindeditor/lang/zh-CN.js"></script>
   
@@ -47,6 +51,22 @@
      $('.ld').on('click',function(){
        $(".pagecontent").wordExport("new");
      })
+     
+     
+     // $.ajax({
+     //   url:window.location,
+     //   type:'get',
+     //   data:{
+     //     name:encodeURI(encodeURI("小明"))
+     //   },
+     //   success:function(){
+     //     
+     //   },
+     //   error:function(){
+     //     console.log(454556)
+     //   }
+     // })
+     
   </script>
 </body>
 </html>

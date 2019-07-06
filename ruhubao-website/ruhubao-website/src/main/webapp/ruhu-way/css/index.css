@@ -132,6 +132,11 @@ textarea {
   background-color: #ffae12;
   color: #fff;
 }
+img,
+span,
+a {
+  vertical-align: middle;
+}
 .section1 .content,
 .section2 .content,
 .section3 .content,
@@ -149,7 +154,8 @@ textarea {
   background: #fff;
 }
 .app .section1 .top {
-  height: 156px;
+  height: 100px;
+  line-height: 110px;
   background: #fff;
 }
 .app .section1 .top .t-mian {
@@ -159,23 +165,28 @@ textarea {
   font-size: 36px;
 }
 .app .section1 .top .t-mian img {
-  margin-top: 29px;
+  margin-top: 0px;
+  height: 60px;
 }
 .app .section1 .top .t-mian span {
   display: inline-block;
-  line-height: 36px;
+  line-height: 26px;
+  font-size: 18px;
+  position: relative;
+  top: -6px;
 }
 .app .section1 .top .t-mian span.right {
   float: right;
   margin-top: 46px;
   color: #fe0000;
+  font-size: 20px;
 }
 .app .section1 .top .t-mian img,
 .app .section1 .top .t-mian span {
   vertical-align: middle;
 }
 .app .section1 .content-box {
-  height: 892px;
+  height: 700px;
   text-align: center;
 }
 .app .section1 .content-box .m {
@@ -200,7 +211,7 @@ textarea {
 }
 .app .section1 .content-box .slide1 {
   background: url(../img/1.jpg) no-repeat;
-  padding-top: 180px;
+  padding-top: 110px;
   position: relative;
   background-size: 100% 100%;
 }
@@ -209,7 +220,7 @@ textarea {
   color: #ffd6a0;
 }
 .app .section1 .content-box .slide1 h2 {
-  font-size: 124px;
+  font-size: 104px;
   color: #ffffff;
   text-shadow: 5px 5px 5px #ffd6a0;
 }
@@ -236,7 +247,7 @@ textarea {
   background: url(../img/2.jpg) no-repeat;
   font-size: 50px;
   text-align: center;
-  padding-top: 230px;
+  padding-top: 180px;
   position: relative;
   background-size: 100% 100%;
 }
@@ -276,7 +287,7 @@ textarea {
 }
 .app .section1 .content-box .slide2 p {
   color: #fff;
-  padding-bottom: 181px;
+  padding-bottom: 121px;
   padding-top: 20px;
 }
 .app .section1 .content-box .slide2 .btn a {
@@ -320,7 +331,7 @@ textarea {
   line-height: 40px;
 }
 .app .section1 .content-box .slide3 .box .btn {
-  margin-top: 180px;
+  margin-top: 100px;
 }
 .app .section1 .content-box .slide3 .box .btn a {
   display: inline-block;

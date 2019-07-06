@@ -6,7 +6,7 @@ div {
   box-sizing: border-box;
 }
 .container {
-  width: 7rem;
+  width: 94%;
   margin: 0 auto;
 }
 .f_r {
@@ -47,7 +47,7 @@ body {
   font-size: 0.22rem;
 }
 .app {
-  max-width: 7.5rem;
+  max-width: 7.6rem;
   margin: 0 auto;
 }
 .app .logo-top {
@@ -430,11 +430,13 @@ body {
   line-height: 33px;
   height: 33px;
   border-bottom: 1px solid #fff;
+  padding-bottom: 0.1rem;
 }
 .app .footer .copyRight .left p.f {
   line-height: 20px;
   height: 20px;
   font-size: 0.2rem;
+  margin-top: 0.1rem;
 }
 .app .footer .copyRight .center {
   width: 3.1rem;

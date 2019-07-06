@@ -112,10 +112,10 @@
         return html.replace(/\s+/g, ' ').replace(/<!--[\w\W]*?-->/g, '');
     }
     function consoleAdapter(cmd, msg) {
-        typeof console !== 'undefined' && console[cmd] && console[cmd](msg);
+        // typeof console !== 'undefined' && console[cmd] && console[cmd](msg);
     }
     function handelError(e) {
-        var message = 'template.js error\n\n';
+        // var message = 'template.js error\n\n';
 
         for (var key in e) {
             message += '<' + key + '>\n' + e[key] + '\n\n';
@@ -132,6 +132,7 @@
         }
         return error;
     }
+    
     function parse(tpl, opt) {
         var code = '';
         var sTag = opt.sTag;

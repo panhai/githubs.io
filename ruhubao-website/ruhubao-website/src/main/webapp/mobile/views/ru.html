@@ -463,7 +463,7 @@
 			//获取多少人测试显示 ajax number
 
 			$.ajax({
-				url: "http://120.79.160.22:9092/ruhubao-web-1.0.0-SNAPSHOT/data/authCode/getCountNumber",
+				url: "https://120.79.160.22:9092/ruhubao-web-1.0.0-SNAPSHOT/data/authCode/getCountNumber",
 				type: "get",
 				success: function(res) {
 					var number = res.countNumber;
@@ -481,7 +481,7 @@
 			$('.getMa').on('click', function() {
 				// 发送手机号码
 				$.ajax({
-					url: "http://crm.bolinjy.cn/data/authCode/getCode",
+					url: "https://crm.bolinjy.cn/data/authCode/getCode",
 					data: {
 						telPhone: $("#userphone").val()
 					},
@@ -595,12 +595,12 @@
 				//发送测试请求 http://localhost:9092/data/customer/addCustomer
 				$.ajax({
 					/* url: "data.json", */
-					url: "http://crm.bolinjy.cn/data/customer/addCustomer",
+					url: "https://crm.bolinjy.cn/data/customer/addCustomer",
 					data: data,
 					type: "post",
 					success: function(res) {
 						//发送一次请求到reids的缓存里面
-						$.post("http://crm.bolinjy.cn/data/authCode/addCountNumber");
+						$.post("https://crm.bolinjy.cn/data/authCode/addCountNumber");
 						var tuiguangren = getQueryString("tuiguangren");
 						if(!tuiguangren) {
 							tuiguangren = "博霖"
@@ -609,7 +609,7 @@
 								psName:tuiguangren,
 								psGetPhone:data.telPhone
 						}
-						$.post("http://crm.bolinjy.cn/data/pushSuccess/savaPushSuccess",data1);
+						$.post("https://crm.bolinjy.cn/data/pushSuccess/savaPushSuccess",data1);
 
 						/*   alert(tuiguangren); */
 						/*  layer.msg('测试请求成功,测试结果将发送到您的手机，请注意查收！'); */

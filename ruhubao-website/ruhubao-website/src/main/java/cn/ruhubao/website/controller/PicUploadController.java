@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
@@ -86,6 +87,34 @@ public class PicUploadController {
 		return ResponseEntity.ok(map);
 
 	}
+	
+	@RequestMapping("/uploadFileAndName")
+	public ResponseEntity<HashMap<String,Object>> uploadFile(@RequestParam("file")MultipartFile file,@RequestParam("szname")String szname,HttpServletRequest request,HttpServletResponse response){
+		
+		String fileName ;
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		
+		if (szname==null|szname.equals("")) {
+			fileName=file.getOriginalFilename();	
+		}else {
+			String extName = FilenameUtils.getExtension(file.getOriginalFilename());
+			fileName=szname+"."+extName;
+					
+		}
+		
+		//返回去的是相对路径
+		String url =PIC_REQUEST_URL+File.separator+fileName;
+		
+		
+		
+		map.put("error", 0);
+		map.put("url", url);
+	
+		
+		return ResponseEntity.ok(map);
+	}
+	
+	
 	@RequestMapping("/manage")
 	public ResponseEntity<HashMap<String, Object>> manage(HttpServletRequest request,HttpServletResponse response){
 		//获取uploadimg的绝对路径

@@ -14,7 +14,7 @@
 	function goPAGE() {
 		if ((navigator.userAgent
 				.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-			window.location.href = "mobile/index.html";
+			window.location.href = "../mobile/index.html";
 		} else {
 			/*window.location.href="你的电脑版地址";    */
 			console.log("pc")
@@ -51,7 +51,7 @@
           <div class="t-mian">
             <img src="img/logo2.jpg" alt="">
             <span>
-              入户宝一站式服务
+              一站式服务
               <br>
               专业入户机构
             </span>
@@ -765,7 +765,7 @@
         console.log(data)
         $('form')[0].reset();
         $.ajax({
-          url: "http://crm.bolinjy.cn/data/customer/addCustomer",
+          url: "https://crm.bolinjy.cn/data/customer/addCustomer",
           data: data,
           type: "POST",
           success: function(res) {
