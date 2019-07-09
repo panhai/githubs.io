@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>客户数据</title>
+    <link rel="stylesheet" href="../../css/easyui.css">
+    <style type="text/css">
+      .tab .show {
+        display: block;
+        opacity: 1;
+      }
+
+      .box {
+        /* display: none; */
+      }
+
+      h2 {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+
+      button {
+        width: 130px;
+        height: 45px;
+        background-color: #999;
+        color: #fff;
+        border: 0;
+        cursor: pointer;
+        outline: none;
+      }
+
+      button.active {
+        background-color: #009688;
+      }
+
+      .list {
+        padding-bottom: 30px;
+        text-align: center;
+      }
+
+      .data-table table td {
+        height: 40px;
+      }
+
+      .ruhu {
+        /* display: none; */
+      }
+    </style>
+
+
+  </head>
+  <body>
+
+    <div class="app">
+      <h2>入户客户数据</h2>
+      <div class="tab">
+        
+        <!-- 入户数据 -->
+        <div class="box ruhu">
+          <div class="data-table">
+            <table class="easyui-datagrid" width="100%" id="tt22" rownumbers="true" data-options="url:'https://crm.bolinjy.cn/data/customer/getCustomers', fitColumns:true,singleSelect:false,method:'get',loadMsg:'数据加载中...',
+                selectOnCheck:true,selectOnCheck:true,checkOnSelect:false,fixed:false"
+              ,>
+              <thead>
+                <tr>
+                  <th data-options=" field: 'ck',checkbox:true"></th>
+                  <th data-options="field: 'id' " sortable="true">用户Id</th>
+                  <th data-options="field: 'name' ">用户姓名</th>
+                  <th data-options="field: 'telPhone',align: 'center' ">用户手机</th>
+                  <th data-options="field: 'education' ">学历</th>
+                  <th data-options="field: 'yearsSocial',align: 'center' ">社保年限</th>
+                  <th data-options="field: 'livePermitYears',align: 'center' "> 居住证年限</th>
+                  <th data-options="field: 'ruhuReason',align: 'center' ">入户原因</th>
+                  <th data-options="field: 'ageGroups',align: 'center' ">年龄段</th>
+                  <th data-options="field: 'hasHours',align: 'center' ">是否有房产</th>
+                  <th data-options="field: 'sourceLink',align: 'center' ">来源链接</th>
+
+                  <th data-options="field: 'createUser',align: 'center' "> 创建人</th>
+                  <th data-options="field: 'areaId',align: 'center' ">所属区域</th>
+                  <th data-options="field: 'moveAddress',align: 'center' ">迁入地址</th>
+                  <th data-options="field: 'major',align: 'center' ">专业</th>
+                  <th data-options="field: 'nvq',align: 'center' ">职业资格证书</th>
+                  <th data-options="field: 'createTime',align: 'center' " sortable="true">创建时间</th>
+                  <th data-options="field: 'updateTime',align: 'center' " sortable="true"> 最近更新时间</th>
+                  <th data-options="field: 'status',align: 'center' " sortable="true">状态</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <script src="../../../js/jquery2.01.js"></script>
+    <script src="../../js/jquery.easyui.min.js"></script>
+    <script src="../../js/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript">
+      //tab 切换
+     // $(function(){
+     //   
+     //    $('.list button').on('click', function() {
+     //     var index = $(this).index();
+     //     $(this).addClass('active').siblings('button').removeClass('active');
+     //     $('.tab .box').eq(index).show().siblings('.box').hide();
+     //   })
+     // })
+    </script>
+  </body>
+</html>

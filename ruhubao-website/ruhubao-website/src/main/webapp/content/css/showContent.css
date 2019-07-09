@@ -68,7 +68,7 @@ input {
 .app .logo-top .logo-box a {
   display: inline-block;
   font-size: 18px;
-  padding: 0 21px;
+  padding: 0 14px;
   height: 100%;
   line-height: 93px;
 }
@@ -193,7 +193,7 @@ input {
 .app .footer .copyRight .center a {
   color: #fff;
   display: inline-block;
-  padding: 2 5px;
+  padding: 0 15px;
   margin-right: 30px;
 }
 .app .footer .copyRight .center .alink {

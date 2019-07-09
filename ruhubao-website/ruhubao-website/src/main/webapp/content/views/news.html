@@ -51,8 +51,8 @@
           <img src="../img/logo.jpg" alt="">
           <a href="../../index.html" style="margin-left: 45px;" class="first nv">首页</a>
           <a href="../../ruhu-way/index.html" class="nv">入户方式 </a>
-          <a href="policy.html" class="nv active">入户政策</a>
-          <a href="news.html" class="nv">新闻资讯</a>
+          <a href="policy.html" class="nv">入户政策</a>
+          <a href="news.html" class="nv active">新闻资讯</a>
           <a href="http://www.ruhubao.net/mobile/views/ru.html" class="nv">积分计算</a>
           <a href="http://edu.bolinjy.cn/" class="nv">学历提升</a>
           <a href="about.html" class="nv">关于我们</a>
@@ -63,7 +63,7 @@
       <div class="content">
         <div class="container">
           <p class="wei">
-            <span>您当前所在的位置： 首页 > 入户政策</span>
+            <span>您当前所在的位置： 首页 > 新闻资讯</span>
           </p>
           <div class="page1 page clearfix" id="page1">
             <ul>
@@ -144,12 +144,11 @@
             }
             
             this.$.ajax({
-              url: '../../content/queryAll', 
+              url: '../../content', 
               cache:false,
               data: {
             	  page:_this.nowNumber,
-            	  rows:10,
-                name:"入户政策"
+            	  rows:10
               },
               type: 'GET',
               success: function(res) {
@@ -167,7 +166,7 @@
             this.nowNumber = this.nowNumber + 1;
             
             this.$.ajax({
-              url: '../../content/queryAll', 
+              url: '../../content', 
               cache:false,
               data: {
             	  page:_this.nowNumber,
@@ -195,10 +194,11 @@
             var categoryId = categoryId;
            	var _this = this;
            	_this.$.ajax({
-              url: '../../content/queryAll',
+              url: '../../content',
               data: {
                 page: _this.nowNumber,
-                rows: 10
+                rows: 10,
+                name:"新闻资讯"
               },
               type: 'GET',
               success: function(res) {
@@ -206,7 +206,7 @@
                 console.log(res, _this.data_list)
               },
               error: function(res) {
-               
+                
               }
             })       
           }

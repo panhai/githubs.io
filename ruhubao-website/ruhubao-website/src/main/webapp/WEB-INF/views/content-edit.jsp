@@ -24,7 +24,20 @@
 	            <td>URL:</td>
 	            <td><input class="easyui-textbox" type="text" name="url" style="width: 280px;"></input></td>
 	        </tr> -->
-	        
+	        <tr>
+	            <td>图片:</td>
+	            <td>
+	                <a href="javascript:void(0)" class="easyui-linkbutton onePicUpload">图片上传</a>
+	                <br><input type="hidden" name="pic" />
+	            </td>
+	        </tr>
+	        <tr>
+	            <td>文章对应文件附件:</td>
+	            <td>
+	            	<a href="javascript:void(0)" class="easyui-linkbutton onePicUpload">附件上传</a>
+	            	<br><input type="hidden" name="pic2" />
+	            </td>
+	        </tr>
 	        <tr>
 	            <td>内容:</td>
 	            <td>

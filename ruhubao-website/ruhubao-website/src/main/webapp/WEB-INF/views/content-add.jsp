@@ -103,12 +103,15 @@
 	}
 	
 	function initOnePicUpload(){
+      
     	$(".onePicUpload").click(function(){
+       
 			var input = $(this).siblings("input");
 			KindEditor.editor(kingEditorParams).loadPlugin('image', function() {
 				this.plugin.imageDialog({
 					showRemote : false,
 					clickFn : function(url, title, width, height, border, align) {
+            
 						input.parent().find("img").remove();
 						input.val(url);
 						input.after("<a href='"+url+"' target='_blank'><img src='"+url+"' width='80' height='50'/></a>");

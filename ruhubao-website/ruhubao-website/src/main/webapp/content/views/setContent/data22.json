@@ -1,0 +1,13 @@
+[{
+  "created": "2019-07-02",
+  "updated": "2019-07-06",
+  "id": 6,
+  "parentId": 1,
+  "name": "新闻资讯",
+  "status": 1,
+  "sortOrder": 2,
+  "isParent": false,
+  "title": "新闻资讯",
+  "text": "新闻资讯",
+  "state": "open"
+}]

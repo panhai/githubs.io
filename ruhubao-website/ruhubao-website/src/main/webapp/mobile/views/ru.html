@@ -459,11 +459,11 @@
 				$('.time').html(m + '月' + day + '日')
 			}
 			showDate()
-
+      
 			//获取多少人测试显示 ajax number
 
 			$.ajax({
-				url: "https://120.79.160.22:9092/ruhubao-web-1.0.0-SNAPSHOT/data/authCode/getCountNumber",
+				url: "https://crm.bolinjy.cn/data/authCode/getCountNumber",
 				type: "get",
 				success: function(res) {
 					var number = res.countNumber;
