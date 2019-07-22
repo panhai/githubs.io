@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>统计分析-客户数据漏斗分析</title>
+    <meta name="description" content="博霖教育后台数据管理" />
+    <meta name="keywords" content="博霖教育|学历报考中心|学历提升|广东省成人学历报名中心" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="../../layuiadmin/layui/css/layui.css" />
+    
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <span style="font-size: 50px;">统计分析-客户数据漏斗分析</span>
+    </div>
+    
+    <div id="main" style="width: 600px;height:400px;margin: 0 auto;padding-top: 50px;"></div>
+      
+     
+     
+    
+     <script src="../../layuiadmin/js/jquery.js"></script>
+     <script src="../../layuiadmin/layui/layui.all.js"></script>
+     <script src="../../layuiadmin/js/common.js"></script>
+     <script src="../../layuiadmin/js/echart.js"></script>
+     <script type="text/javascript">
+      
+      
+       // 基于准备好的dom，初始化echarts实例
+       var myChart = echarts.init(document.getElementById('main'));
+       
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例',
+                textStyle:{
+                  color:'red',
+                  fontSize:27,
+                  width:12,
+                  textShadowOffsetY:20,
+                  // padding:[2,4,8,10]
+                }
+            },
+            tooltip: {},
+            legend: {
+                data:['销量'],
+                borderWidth:45
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
+                position:'bottom',
+                show:true,
+                type:'value',
+                name:'名称',
+                nameGap:5,
+                min:1,
+                axisLine:{
+                  lineStyle:{
+                    color:'blue'
+                  }
+                }
+                  
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+        
+        
+         // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+      
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>系统管理-公司信息</title>
+    <meta name="description" content="博霖教育后台数据管理" />
+    <meta name="keywords" content="博霖教育|学历报考中心|学历提升|广东省成人学历报名中心" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="../../layuiadmin/layui/css/layui.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/company.css" />
+    
+  </head>
+  <body style="height: 2500px;">
+    <div class="app">
+      <!-- 条件搜索 -->
+      <div class="layui-form search">
+        <div class="layui-form-item layui-card">
+          <div class="layui-inline">
+            <label class="layui-form-label">校区查询</label>
+            <div class="layui-input-block">
+              <input type="text" name="school" id="school" placeholder="请输入查询的校区" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-inline">
+            <button class="layui-btn layuiadmin-btn-admin" lay-submit="" lay-filter="formSearch">
+              <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- add -->
+      <div class="paddings">
+        <button type="button" style="margin-left: 25px;" class="layui-btn layui-add">添加校区</button>
+      </div>
+      <!-- 校区列表table -->
+      <table class="layui-table" id="mytable" lay-filter="mytable"></table>
+      
+      <!-- 添加校区 -->
+      <div class="add-school">
+        <form action="" id="addschool" class="layui-form" method="post" lay-filter="addSchool">
+          <div class="layui-form-item">
+            <label class="layui-form-label">校区名称:</label>
+            <div class="layui-input-block">
+              <input type="" name="companyName" lay-verify="required" id="" value="" class="layui-input" />
+            </div>
+          </div>
+          <!-- <div class="layui-form-item layui-upload">
+            <label class="layui-form-label">校区logo:</label>
+            <button type="button" class="layui-btn" id="test1">上传logo</button>
+            <div class="layui-upload-list layui-inline" style="vertical-align: top;">
+              <img class="layui-upload-img" width="80" style="margin-top:-10px;" id="demo1">
+              <p id="demoText"></p>
+            </div>
+          </div> -->
+          <div class="layui-form-item">
+            <label class="layui-form-label">所在省份:</label>
+            <div class="layui-input-block">
+              <select name="province" lay-filter="province" id="province" lay-verify="required">
+                <option value="">请输入省份</option>
+                
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">所在城市:</label>
+            <div class="layui-input-block">
+              <select name="city" lay-filter="city" id="city" lay-verify="required">
+                <option value="">请输入城市</option>
+                
+              </select>
+            </div>
+          </div>
+          <!-- <div class="layui-form-item">
+            <label class="layui-form-label">校区规模:</label>
+            <div class="layui-input-block">
+              <select name="scale" lay-filter="aihao" id="scale" lay-verify="required">
+                <option value="">请输入校区规模</option>
+                <option value="0-50人">0-50人</option>
+                <option value="50-150人">50-150人</option>
+                <option value="150-300人">150-300人</option>
+                <option value="500-1000人">500-1000人</option>
+                <option value="1000以上">1000以上</option>
+                
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">成立时间:</label>
+            <div class="layui-inline">
+              <input type="" name="createTime" lay-verify="required" id="createTime" value="" placeholder="请输入时间" class="layui-input" />
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">学校官网:</label>
+            <div class="layui-input-block">
+              <input type="" name="website" lay-verify="required|url" id="" value="" placeholder="请输入时间" class="layui-input" />
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">学校介绍:</label>
+            <div class="layui-input-block">
+              <textarea placeholder="请输入内容" name="introduce" lay-verify="required" class="layui-textarea"></textarea>
+            </div>
+          </div> -->
+          <div class="layui-form-item">
+            <label class="layui-form-label">联系地址:</label>
+            <div class="layui-input-block">
+              <input type="" name="address" lay-verify="required" id="" value="" placeholder="请输入地址" class="layui-input" />
+            </div>
+          </div>
+         <!-- <div class="layui-form-item">
+            <label class="layui-form-label">联系电话:</label>
+            <div class="layui-input-block">
+              <input type="" name="telPhone" id="" lay-verify="required" value="" placeholder="请输入联系电话" class="layui-input" />
+            </div>
+          </div> -->
+          <div class="layui-form-item">
+            <div class="layui-input-block"  style="text-align: center;margin: 0;padding-top: 30px;">
+              <button class="layui-btn" lay-submit="" lay-filter="addSchool">保存</button>
+              <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+              
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- 行数据操作 -->
+    <script type="text/html" id="barDemo">
+      <a class="layui-btn layui-bg-green layui-btn-primary layui-btn-xs" lay-event="detail">
+         <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+         查看
+      </a>
+      <a class="layui-btn layui-btn-xs" lay-event="edit">
+        <i class="layui-icon layui-icon-edit"></i>
+         编辑
+      </a>
+      <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">
+         <i class="layui-icon layui-icon-delete"></i>删除
+      </a>
+    </script>
+
+
+
+
+    <script src="../../layuiadmin/js/jquery.js"></script>
+    <script src="../../layuiadmin/layui/layui.all.js"></script>
+    <script src="../../layuiadmin/js/common.js"></script>
+   
+    <script type="text/javascript">
+      var laydate = layui.laydate;
+      var form = layui.form;
+      var table = layui.table;
+      var element = layui.element //元素操作
+      var laypage = layui.laypage //分页
+      var upload = layui.upload;
+      var laytpl = layui.laytpl;
+
+  
+
+      baseUrl = "https://www.easy-mock.com/mock/5d27f8f02d663532e5cdb43d/pan";
+
+      
+      // 添加校区
+      var provinceData = null; //省份数据
+      var cityData = [];
+      
+      $('.layui-add').on('click', function() {
+        //获取省份
+        
+        //清除表单 layui-form layui-upload-img
+        clearForm('#addschool', '.layui-upload-img')
+        layer.open({
+          title: '添加校区',
+          type: 1,
+          content: $('.add-school'),
+          area: ['640px', '400px']
+        })
+      })
+
+      //获取省份
+      getShengfen()
+      function getShengfen(){
+        $.get('js/province.json',function(data){
+            var data = data.data;
+            provinceData = data;
+            
+            for(var i=0;i<provinceData.length;i++){
+              for(var j=0;j<provinceData[i].child.length;j++){
+                console.log(provinceData[i].child[j].name);
+                cityData.push(provinceData[i].child[j].name);
+              }
+            }
+            
+            // console.log(cityData)
+            //渲染 option 省份
+            showOption2(provinceData, '#province');
+           
+            console.log(provinceData)
+          })
+          
+        //根据选择省份渲染城市
+        form.on('select(province)', function(data){
+          console.log(data.value); //得到被选中的值
+          var index = 0;
+          var value = data.value;
+          var arr = [];
+          for(var i=0;i<provinceData.length;i++){
+            if(value==provinceData[i].name){
+              index = i;
+              console.log(provinceData[i].child)
+              for(var j=0;j<provinceData[i].child.length;j++){
+                arr.push(provinceData[i].child[j].name);
+              }
+              console.log(arr);
+              cityData = arr;
+              
+              //渲染city option
+              showOption(cityData, '#city');
+            }
+          }
+          
+        }); 
+      }
+      
+      
+
+      //选择时间 createTime
+      selectDate('#createTime');
+
+      //普通图片上传
+      var uploadInst = upload.render({
+        elem: '#test1',
+        url: '/upload/',
+        size: 60,
+        exts: 'png|jpg',
+        before: function(obj) {
+          obj.preview(function(index, file, result) {
+            $('#demo1').attr('src', result); //图片链接（base64）
+          });
+        },
+        done: function(res) {
+          //如果上传失败
+          if (res.code > 0) {
+            return layer.msg('上传失败');
+          }
+          //上传成功
+        },
+        error: function() {
+          //演示失败状态，并实现重传
+          var demoText = $('#demoText');
+          demoText.html(
+            '<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+          demoText.find('.demo-reload').on('click', function() {
+            uploadInst.upload();
+          });
+        }
+      });
+      
+
+      //监听搜索表单提交
+      form.on('submit(formSearch)', function(data) {
+        // layer.msg(JSON.stringify(data.field));
+        // alert(JSON.stringify(data.field))
+        //ajax 发送数据
+        $.ajax({
+          type: 'post',
+          url: baseUrl,
+          data: {
+            data: JSON.stringify(data.field)
+          },
+          success: function(data) {
+            console.log(data)
+            layer.alert('提交成功', {
+              icon: 1
+            }, function() {
+              layer.closeAll();
+            });
+            //重新渲染表格
+            // mytable.reload()
+            //清空表单
+          }
+        });
+
+        return false;
+      });
+
+      //监听添加校区表单提交
+      form.on('submit(addSchool)', function(data) {
+      
+        console.log(data)
+
+        sendAjax('data', baseUrl, addschollSuccess)
+        return false;
+      })
+
+
+      // 添加学校成功的回调操作
+      function addschollSuccess() {
+        //隐藏add 弹框
+        layer.closeAll()
+      }
+
+      var a = Object(undefined);
+
+      console.log(a)
+
+      //执行一个 table 实例
+      var option = {
+        elem: '#mytable',
+        height: 600,
+        id: "mytableId",
+        defaultToolbar: [],
+        url: 'school.json', //数据接口
+        title: '客户列表',
+        totalRow: true, //开启合计行
+        page: true, //开启分页
+        toolbar: '#toolbarDemo', //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+        totalRow: true, //开启合计行
+        event: 'tool',
+        cols: [
+          [ //表头
+            {
+              field: 'companyName',
+              title: '校区名称',
+              align: 'center',
+              width: 280
+            }, {
+              field: 'province',
+              title: '所在省份',
+              align: 'center',
+              width: 200,
+            }, {
+              field: 'city',
+              title: '所在城市',
+              align: 'center',
+              width: 200,
+            },{
+              field: 'address',
+              title: '联系地址',
+              align: 'center',
+              width: 300,
+            },{
+              fixed: 'right',
+              width: 215,
+              align: 'center',
+              toolbar: '#barDemo',
+            }
+          ]
+        ]
+      }
+
+      var mytable = table.render(option);
+
+
+      //监听行工具事件
+      table.on('tool(mytable)', function(obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+        var data = obj.data; //获得当前行数据
+        var layEvent = obj.event; //获得 lay-event 对应的值
+        if (layEvent === 'detail') {
+          layer.msg('查看');
+          console.log(data)
+          //查看
+          showSchool(data)
+        } else if (layEvent === 'del') {
+          layer.confirm('真的删除行么', function(index) {
+            obj.del(); //删除对应行（tr）的DOM结构
+            layer.close(index);
+            //向服务端发送删除指令
+            delRow([1, 2], baseUrl)
+          });
+        } else if (layEvent === 'edit') {
+          layer.msg('编辑操作');
+          //编辑学校
+          showSchool(data);
+        }
+      });
+
+      //显示学校和编辑学校
+      function showSchool(data) {
+        // 对表单赋值
+        form.val("addSchool", {
+          "companyName": data.companyName,
+          "address": data.address,
+          "area": data.area,
+          "province":data.province,
+          "city":data.city
+        })
+        
+        console.log(data.province)
+        
+        //显示
+        layer.open({
+          title: '添加校区',
+          type: 1,
+          content: $('.add-school'),
+          area: ['640px', '400px']
+        })
+
+      }
+    </script>
+  </body>
+</html>

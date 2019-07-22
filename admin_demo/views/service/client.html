@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>客服管理-客户管理</title>
+    <meta name="description" content="博霖教育后台数据管理" />
+    <meta name="keywords" content="博霖教育|学历报考中心|学历提升|广东省成人学历报名中心" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="stylesheet" type="text/css" href="../../layuiadmin/ku/font-awesome47/css/font-awesome.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../../layuiadmin/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="css/client.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- 条件搜索 -->
+      <div class="layui-form search">
+        <div class="layui-form-item">
+          <div class="layui-inline">
+            <label class="layui-form-label">校区</label>
+            <div class="layui-input-block">
+              <select name="areaId">
+                <option value="">请选择校区</option>
+                <option value="天河校区">天河校区</option>
+                <option value="天河校区2">天河校区2</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-inline">
+            <label class="layui-form-label">时间</label>
+            <div class="layui-input-block">
+              <input type="text" name="time" id="time" placeholder="请输入" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-inline">
+            <button class="layui-btn layuiadmin-btn-admin" lay-submit="" lay-filter="formSearch">
+              <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 显示客户列表 -->
+      <table class="layui-table" id="mytable" lay-filter="mytable"></table>
+
+    </div>
+
+
+    <!-- 客户信息框 -->
+    <div class="client-box">
+      <form action="" method="post" class="layui-form" lay-filter="client">
+        <div class="layui-form-item">
+          <label class="layui-form-label">姓名</label>
+          <div class="layui-input-block">
+            <input type="text" name="name" id="" placeholder="请输入姓名" value="" class="layui-input"/>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">性别</label>
+          <div class="layui-input-block">
+            <input type="radio" name="sex" value="男" title="男">
+            <input type="radio" name="sex" value="女" title="女">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">手机</label>
+          <div class="layui-input-block">
+             <input type="text" name="telPhone" maxlength="11" id="" placeholder="请输入手机" value="" class="layui-input"/>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">学历</label>
+          <div class="layui-input-block">
+             <input type="text" name="education" maxlength="11" id="" placeholder="请输入学历" value="" class="layui-input"/>
+          </div> 
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">年龄</label>
+          <div class="layui-input-block">
+             <input type="text" name="ageGroups" id="" placeholder="请输入年龄" value="" class="layui-input"/>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">专业</label>
+          <div class="layui-input-block">
+             <input type="text" name="major" id="" placeholder="请输入" value="" class="layui-input"/>
+          </div>
+        </div>  
+        <div class="layui-form-item">
+          <label class="layui-form-label">房产</label>
+          <div class="layui-input-block">
+            <input type="radio" name="hasHours" value="有" title="有">
+            <input type="radio" name="hasHours" value="无" title="无">
+          </div> 
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">婚姻</label>
+          <div class="layui-input-block">
+            <input type="radio" name="marriage" value="已婚" title="已婚">
+            <input type="radio" name="marriage" value="未婚" title="未婚">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">社保年限</label>
+          <div class="layui-input-block">
+             <input type="text" name="yearsSocial" id="" placeholder="请输入" value="" class="layui-input"/>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">居住证年限</label>
+          <div class="layui-input-block">
+             <input type="text" name="livePermitYears" id="" placeholder="请输入" value="" class="layui-input"/>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">指定分配</label>
+          <div class="layui-input-block">
+            <select name="telemarketing" class="layui-form-select">
+              <option value ="">请指定分配的电销员</option>
+            	<option value ="电销员一">电销员一</option>
+              <option value ="电销员二">电销员二</option>
+            	<option value ="电销员三">电销员三</option>
+            </select>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">入户原因</label>
+          <div class="layui-input-block">
+             <input type="text" name="ruhuReason" id="" placeholder="请输入" value="" class="layui-input"/>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">所在地区</label>
+          <div class="layui-input-block">
+             <input type="text" name="area" id="" placeholder="请输入" value="" class="layui-input"/>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">迁入地区</label>
+          <div class="layui-input-block">
+             <input type="text" name="moveAddress" id="" placeholder="请输入" value="" class="layui-input"/>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">资格证书</label>
+          <div class="layui-input-block">
+             <input type="text" name="nvq" id="" placeholder="请输入" value="" class="layui-input"/>
+          </div>
+        </div>
+        <div class="layui-form-item" style="text-align: center;">
+          <button class="layui-btn" lay-submit="" lay-filter="clientForm">保存</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>            
+        </div>
+      </form>
+    </div>
+
+
+
+    <!-- 表头数据操作 -->
+    <script type="text/html" id="toolbarDemo">
+      <div class="layui-btn-container">
+       <!-- <button class="layui-btn layui-icon layui-icon-add-1 layui-btn-sm " lay-event="add">添加</button> -->
+        <button class="layui-btn layui-btn-danger layui-icon layui-icon-delete layui-btn-sm " lay-event="delete">删除</button>
+        <!-- <button class="layui-btn layui-icon layui-icon-export layui-btn-sm " id="export" lay-event="add">导出Excel</button> -->
+        
+      </div>
+    </script>
+
+    <!-- 行数据操作 -->
+    <script type="text/html" id="barDemo">
+     <!-- <a class="layui-btn layui-bg-green layui-btn-primary layui-btn-xs" lay-event="detail">
+        <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+        查看
+      </a> -->
+      <a class="layui-btn layui-btn-xs" lay-event="edit">
+        <i class="layui-icon layui-icon-edit"></i>
+        编辑
+      </a>
+      <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">
+        <i class="layui-icon layui-icon-delete"></i>删除
+      </a>
+    </script>
+
+
+
+    <script src="../../layuiadmin/js/jquery.js"></script>
+    <script src="../../layuiadmin/layui/layui.all.js"></script>
+    <script src="../../layuiadmin/js/common.js"></script>
+    <script type="text/javascript">
+      var laydate = layui.laydate;
+      var form = layui.form;
+      var table = layui.table;
+      var element = layui.element //元素操作
+      var laypage = layui.laypage //分页
+      
+      baseUrl = "https://www.easy-mock.com/mock/5d27f8f02d663532e5cdb43d/pan";
+      
+      
+      //选择时间
+      laydate.render({
+        elem: '#time'
+      });
+      
+      
+      
+      //监听表单提交
+      form.on('submit(formSearch)', function(data) {
+        // layer.msg(JSON.stringify(data.field));
+        // alert(JSON.stringify(data.field))
+        //ajax 发送数据
+        console.log(data)
+        $.ajax({
+          type: 'post',
+          url: baseUrl,
+          data: {
+            data: JSON.stringify(data.field)
+          },
+          success: function(data) {
+            console.log(data)
+            layer.alert('提交成功', {
+              icon: 1
+            }, function() {
+              layer.closeAll();
+            });
+            //重新渲染表格
+            // mytable.reload()
+            //清空表单
+          }
+        });
+
+        return false;
+      });
+      
+      //监听编辑客户表单
+      
+      form.on('submit(clientForm)',function(data){
+        var data = data.field;
+        console.log(data)
+         layer.confirm('确定保存?', {icon: 3, title:'提示'}, function(index){
+          //do something
+          sendAjax2(data, baseUrl+'/upload', fn)
+          layer.close(index);
+        });
+        return false;
+      })
+      
+      //提交表单完成的回调函数
+      function fn(){
+        layer.alert('数据提交成功！', {
+          icon: 1
+        }, function() {
+          layer.closeAll();
+          mytable.reload(option)
+        });
+      }
+      
+      
+      //执行一个 table 实例
+      var option = {
+        elem: '#mytable',
+        height: 600,
+        id: "mytableId",
+        defaultToolbar:['filter', 'print', 'exports'],
+        url: baseUrl + '/user/', //数据接口
+        title: '客户列表',
+        totalRow: true, //开启合计行
+        page: true, //开启分页
+        toolbar: '#toolbarDemo', //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+        totalRow: true, //开启合计行
+        event: 'tool',
+        cols: [
+          [ //表头
+            {
+              type: 'checkbox',
+              fixed: 'left',
+            }, {
+              field: 'id',
+              title: 'ID',
+              width: 60,
+              sort: true,
+              align: 'center'
+            }, {
+              field: 'name',
+              title: '姓名',
+              align: 'center',
+              width: 80
+            }, {
+              field: 'telPhone',
+              title: '手机',
+              sort: true,
+              align: 'center',
+              width: 140,
+            }, {
+              field: 'sex',
+              title: '性别',
+              align: 'center',
+              width: 70,
+              sort: true
+            }, {
+              field: 'weixinQq',
+              title: '微信/QQ',
+              align: 'center',
+              width: 140
+            }, {
+              field: 'createUserId',
+              title: '创建人',
+              width: 100,
+              sort: true,
+              align: 'center'
+            }, {
+              field: 'sourceLink',
+              title: '链接',
+              width: 100,
+              sort: true,
+              align: 'center'
+            }, {
+              field: 'fromPlatform',
+              title: '来源平台',
+              width: 100,
+              sort: true,
+              align: 'center'
+            }, {
+              field: 'updateTime',
+              title: '更新时间',
+              width: 100,
+              sort: true,
+              align: 'center'
+            }, {
+              field: 'status',
+              title: '状态',
+              width: 100,
+              sort: true,
+              align: 'center'
+            }, {
+              fixed: 'right',
+              width: 215,
+              align: 'center',
+              toolbar: '#barDemo',
+            }
+          ]
+        ]
+      }
+      
+      // 判断是否显示导出按钮
+      // option.defaultToolbar = ['filter', 'print'];
+      var mytable = table.render(option);
+      
+      
+      //监听头工具栏事件
+      table.on('toolbar(mytable)', function(obj) {
+        var checkStatus = table.checkStatus(obj.config.id),
+         data = checkStatus.data; //获取选中的数据
+        switch (obj.event) {
+          case 'add':
+            if (data.length === 0) {
+              layer.msg('请选择导出数据！');
+              // table.exportFile(mytable.config.id,'xls'); 
+              console.log(data,obj)
+            }
+            break;
+          case 'update':
+            if (data.length === 0) {
+              layer.msg('请选择一行');
+            } else if (data.length > 1) {
+              layer.msg('只能同时编辑一个');
+            } else {
+              layer.alert('编辑 [id]：' + checkStatus.data[0].id);
+              console.log(data)
+            }
+            break;
+          case 'delete':
+            if (data.length === 0) {
+              layer.msg('请选择一行');
+            } else {
+              layer.msg('删除');
+            }
+            break;
+        };
+      });
+
+      //监听行工具事件
+      table.on('tool(mytable)', function(obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+        var data = obj.data; //获得当前行数据
+        var layEvent = obj.event; //获得 lay-event 对应的值
+        if (layEvent === 'detail') {
+          layer.msg('查看操作');
+        } else if (layEvent === 'del') {
+          layer.confirm('真的删除行么', function(index) {
+            obj.del(); //删除对应行（tr）的DOM结构
+            layer.close(index);
+            //向服务端发送删除指令
+            delRow([1,2],baseUrl)
+          });
+        } else if (layEvent === 'edit') {
+          layer.msg('编辑操作');
+          console.log(data)
+           //表单初始赋值 
+     //telPhone education  telemarketing ruhuReason area moveAddress nvq
+          form.val('client', {
+            "name":data.name,
+            "sex": data.sex,
+            "telPhone": data.telPhone,
+            "education": data.education,
+            "ageGroups": data.ageGroups,
+            "major": data.major,
+            "hasHours": data.hasHours,
+            "marriage": data.marriage,
+            "yearsSocial": data.yearsSocial,
+            "livePermitYears": data.livePermitYears,
+            "telemarketing": data.telemarketing,
+            "ruhuReason": data.ruhuReason,
+            "area": data.area,
+            "moveAddress": data.moveAddress,
+            "nvq": data.nvq,
+          })
+          
+          layer.open({
+            type:1,
+            content:$('.client-box'),
+            title:'编辑客户',
+            area:['800px','700px']
+          })
+        }
+      });
+    
+    
+    </script>
+  </body>
+
+</html>

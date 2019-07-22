@@ -1,0 +1,26 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 150,
+  "data": [{
+    "id": 1,
+    "name": "前端开发",
+    "isarea":"天河校区博霖教育",
+    "issection":"技术部"
+  },{
+    "id": 2,
+    "name": "后端开发",
+    "isarea":"天河校区博霖教育",
+    "issection":"技术部"
+  },{
+    "id": 3,
+    "name": "推广员",
+    "isarea":"天河校区博霖教育",
+    "issection":"推广部"
+  },{
+    "id": 4,
+    "name": "电销员",
+    "isarea":"天河校区博霖教育",
+    "issection":"电销部"
+  }]
+}

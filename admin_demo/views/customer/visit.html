@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>客户管理-上门客户</title>
+    <meta name="description" content="博霖教育后台数据管理" />
+    <meta name="keywords" content="博霖教育|学历报考中心|学历提升|广东省成人学历报名中心" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="stylesheet" type="text/css" href="../../layuiadmin/ku/font-awesome47/css/font-awesome.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../../layuiadmin/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="css/customer-list.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- 条件搜索 -->
+      <div class="layui-form search">
+        <div class="layui-form-item">
+          <div class="layui-inline">
+            <label class="layui-form-label">校区</label>
+            <div class="layui-input-block">
+              <select name="areaId" lay-search>
+                <option value="">请选择校区</option>
+                <option value="天河校区">天河校区</option>
+                <option value="天河校区2">天河校区2</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-inline">
+            <label class="layui-form-label">时间</label>
+            <div class="layui-input-block">
+              <input type="text" name="time" id="time" placeholder="请输入" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-inline">
+            <button class="layui-btn layuiadmin-btn-admin" lay-submit="" lay-filter="formSearch">
+              <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 显示客户列表 -->
+      <table class="layui-table" id="mytable" lay-filter="mytable"></table>
+
+    </div>
+
+    <!-- 客户信息框 -->
+    <div class="client-box">
+      <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+          <li class="layui-this">呼叫</li>
+          <li>基本信息</li>
+          <li>入户登记</li>
+        </ul>
+        <div class="layui-tab-content" style="padding-bottom: 60px;">
+          <div class="layui-tab-item layui-show">
+            <button type="button" class="layui-btn"><i class="layui-icon layui-icon-voice"></i>拨打</button>
+          </div>
+          <div class="layui-tab-item" style="padding-right: 50px;">
+            <!-- 基本信息 -->
+            <form action="" method="post" class="layui-form" id="basic"  lay-filter="basic">
+            	<div class="layui-form-item">
+                <label class="layui-form-label">客户ID</label>
+                <div class="layui-input-block">
+                  <input type="text" name="id" id="" readonly  value="12"class="layui-input" />
+                </div>
+              </div>
+            	<div class="layui-form-item">
+            	  <label class="layui-form-label">姓名</label>
+            	  <div class="layui-input-block">
+            	    <input type="text" name="name" id="" value=""class="layui-input" />
+            	  </div>
+            	</div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">性别</label>
+                <div class="layui-input-block">
+                  <input type="radio" name="sex" value="男" title="男" class="layui-input" />
+                  <input type="radio" name="sex" value="女" title="女" class="layui-input" />
+                  
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">手机</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">学历</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">年龄</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">所在地区</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">创建人</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">创建时间</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">来源平台</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">来源链接</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">跟进记录</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">状态</label>
+                <div class="layui-input-block">
+                  <select class="layui-form-select" lay-search>
+                  	<option value ="">请输入状态</option>
+                    <option value ="预约客户">预约客户</option>
+                    <option value ="上门客户">上门客户</option>
+                    <option value ="首款成交客户">首款成交客户</option>
+                    <option value ="尾款成交客户">尾款成交客户</option>
+                    <option value ="无效客户">无效客户</option>
+                    <option value ="公海客户">公海客户</option>
+                    <option value ="退费客户">退费客户</option>
+                  </select>
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">入户方式</label>
+                <div class="layui-input-block">
+                  <select class="layui-form-select" lay-search>
+                  	<option value ="">请输入入户方式</option>
+                    <option value ="学历入户">学历入户</option>
+                    <option value ="职称入户">职称入户</option>
+                    <option value ="技能入户">技能入户</option>
+                    <option value ="积分入户">积分入户</option>
+                    <option value ="指标卡入户">指标卡入户</option>
+                    <option value ="应届生入户">应届生入户</option>
+                  </select>
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">是否有房产</label>
+                <div class="layui-input-block">
+                  <input type="radio" name="sex" value="有" title="有" class="layui-input" />
+                  <input type="radio" name="sex" value="无" title="无" class="layui-input" />
+                  
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">社保年限</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">居住证年限</label>
+                <div class="layui-input-block">
+                  <input type="text" name="telphone" id="" value=""class="layui-input" />
+                </div>
+              </div>
+              <div class="layui-form-item" style="text-align: center;">
+               <button class="layui-btn" lay-submit="" lay-filter="saveBasic">保存</button>
+               
+              </div>
+            </form>
+          </div>
+          <div class="layui-tab-item">
+            <!-- 登记表 -->
+            <form action="" method=""  class="layui-form" id="register" lay-filter="register">
+            	<table border="1" class="mytable">
+            		<caption>入户信息登记表</caption>
+                <tr>
+                  <td width="16.66%">姓名</td>
+                  <td width="16.66%">
+                    <input type="text" name="" id="" value="" placeholder="请填写姓名" class="layui-input"/>
+                  </td>
+                  <td width="16.66%">身份证号码</td>
+                  <td colspan="3">
+                    <input type="text" name="" id="" value="" placeholder="请填写身份证号码" class="layui-input"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="16.66%">性别</td>
+                  <td width="16.66%">
+                    <input type="radio" name="sex" value="男" title="男" class="layui-input" />
+                    <input type="radio" name="sex" value="女" title="女" class="layui-input" />
+                  </td>
+                  <td width="16.66%">年龄</td>
+                  <td width="16.66%"></td>
+                  <td width="16%">联系电话</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td width="16.66%">学历层次</td>
+                  <td colspan="5">
+                    <input type="radio" name="education" value="研究生及以下" title="研究生及以下" class="layui-input layui-inline" />
+                    <input type="radio" name="education" value="本科" title="本科" class="layui-input layui-inline" />
+                    <input type="radio" name="education" value="大专" title="大专" class="layui-input  layui-inline" />
+                    <input type="radio" name="education" value="高技" title="高技" class="layui-input  layui-inline" />
+                    <input type="radio" name="education" value="高中" title="高中" class="layui-input  layui-inline" />
+                    <input type="radio" name="education" value="中专" title="中专" class="layui-input  layui-inline" />
+                    <input type="radio" name="education" value="初中及以下" title="初中及以下" class="layui-input  layui-inline" />
+                    
+                  </td>                   
+                </tr>
+                <tr>
+                  <td width="16.66%">学历层次</td>
+                  <td colspan="5" style="text-align: left;text-indent: 11px;">
+                    <input type="radio" name="education" value="博士" title="博士" class="layui-input  layui-inline" />
+                    <input type="radio" name="education" value="硕士" title="硕士" class="layui-input  layui-inline" />
+                    <input type="radio" name="education" value="学士" title="学士" class="layui-input  layui-inline" />
+                    <input type="radio" name="education" value="无" title="无" class="layui-input  layui-inline" />
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>学历类型</td>
+                  <td colspan="5">
+                    <input style="margin-left: 10px;" type="radio" name="type" value="统招" title="统招" class="layui-input  layui-inline" />
+                    <input type="radio" name="type" value="成人高考" title="成人高考" class="layui-input  layui-inline" />
+                    <input type="radio" name="type" value="自考" title="自考" class="layui-input  layui-inline" />
+                    <input type="radio" name="type" value="电大函授" title="电大函授" class="layui-input  layui-inline" />
+                    <input type="radio" name="type" value="网络教育" title="网络教育" class="layui-input  layui-inline" />
+                    <input type="radio" name="type" value="国外学历" title="国外学历" class="layui-input  layui-inline" />
+                     
+                  </td>
+                </tr>
+                <tr>
+                  <td width="16.66%">户籍地址</td>
+                  <td colspan="5">
+                    <input type="text" name="" placeholder="请填写户籍地址" class="layui-input">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="16.66%">现居住地</td>
+                  <td colspan="5">
+                    <input type="text" name="" placeholder="请填写现居住地址" class="layui-input">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="16.66%">现在参广州社保</td>
+                  <td colspan="2">
+                    <input type="radio" name="c" value="是" title="是" class="layui-input" />
+                    <input type="radio" name="c" value="否" title="否" class="layui-input" />
+                  </td>
+                  <td width="16.66%">参保年限</td>
+                  <td colspan="2">
+                    <input type="text" name="" placeholder="请填写参保年限" class="layui-input">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="16.66%">社保缴纳单位</td>
+                  <td colspan="5">
+                    <input type="text" name="" placeholder="请填写缴纳单位" class="layui-input">
+                  </td>
+                </tr>
+                <tr>
+                  <td width="16.66%">是否有车有房</td>
+                  <td colspan="2">
+                    <input type="radio" name="cc" value="是" title="是" class="layui-input" />
+                    <input type="radio" name="cc" value="否" title="否" class="layui-input" />
+                  </td>
+                  <td width="16.66%">是否有搭户地址</td>
+                  <td colspan="2">
+                   <input type="radio" name="cc0" value="是" title="是" class="layui-input" />
+                   <input type="radio" name="cc0" value="否" title="否" class="layui-input" />
+                  </td>
+                </tr>
+            	</table>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+   
+    <!-- 表头数据操作 -->
+    <script type="text/html" id="toolbarDemo">
+      <div class="layui-btn-container">
+        <!-- <button class="layui-btn layui-icon layui-icon-add-1 layui-btn-sm " lay-event="add">捞取</button> -->
+        <button class="layui-btn layui-btn-danger layui-icon layui-icon-delete layui-btn-sm " lay-event="delete">删除</button> 
+        <!-- <button class="layui-btn layui-icon layui-icon-export layui-btn-sm " id="export" lay-event="add">导出Excel</button> -->
+        
+      </div>
+    </script>
+
+    <!-- 行数据操作 -->
+    <script type="text/html" id="barDemo">
+      <!-- <a class="layui-btn layui-bg-green layui-btn-primary layui-btn-xs" lay-event="detail">
+        <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+        查看
+      </a> -->
+      <a class="layui-btn layui-btn-xs" lay-event="edit">
+        <i class="layui-icon layui-icon-edit"></i>
+        编辑
+      </a>
+      <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">
+        <i class="layui-icon layui-icon-delete"></i>删除
+      </a>
+    </script>
+
+
+
+    <script src="../../layuiadmin/js/jquery.js"></script>
+    <script src="../../layuiadmin/layui/layui.all.js"></script>
+    <script src="../../layuiadmin/js/common.js"></script>
+    <script type="text/javascript">
+      var laydate = layui.laydate;
+      var form = layui.form;
+      var table = layui.table;
+      var element = layui.element //元素操作
+      var laypage = layui.laypage //分页
+      
+      baseUrl = "https://www.easy-mock.com/mock/5d27f8f02d663532e5cdb43d/pan";
+
+
+      //选择时间
+      laydate.render({
+        elem: '#time'
+      });
+
+     
+      //监听表单提交
+      form.on('submit(formSearch)', function(data) {
+        // layer.msg(JSON.stringify(data.field));
+        // alert(JSON.stringify(data.field))
+        //ajax 发送数据
+        $.ajax({
+          type: 'post',
+          url: baseUrl,
+          data: {
+            data: JSON.stringify(data.field)
+          },
+          success: function(data) {
+            console.log(data)
+            layer.alert('提交成功', {
+              icon: 1
+            }, function() {
+              layer.closeAll();
+            });
+            //重新渲染表格
+            // mytable.reload()
+            //清空表单
+          }
+        });
+
+        return false;
+      });
+      
+      //监听基本信息表单提交 saveBasic
+      form.on('submit(saveBasic)', function(data) {
+        // layer.msg(JSON.stringify(data.field));
+        // alert(JSON.stringify(data.field))
+        //ajax 发送数据
+        $.ajax({
+          type: 'post',
+          url: baseUrl,
+          data: {
+            data: JSON.stringify(data.field)
+          },
+          success: function(data) {
+            console.log(data)
+            layer.alert('提交成功', {
+              icon: 1
+            }, function() {
+              layer.closeAll();
+            });
+            //重新渲染表格
+            // mytable.reload()
+            //清空表单
+          }
+        });
+      
+        return false;
+      });
+      
+      
+      //执行一个 table 实例
+      var option = {
+        elem: '#mytable',
+        height: 600,
+        id: "mytableId",
+        defaultToolbar: ['filter', 'print', 'exports'],
+        url: baseUrl + '/user/', //数据接口
+        title: '客户列表',
+        totalRow: true, //开启合计行
+        page: true, //开启分页
+        toolbar: '#toolbarDemo', //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+        totalRow: true, //开启合计行
+        event: 'tool',
+        cols: [
+          [ //表头
+            {
+              type: 'checkbox',
+              fixed: 'left',
+            }, {
+              field: 'id',
+              title: 'ID',
+              width: 60,
+              sort: true,
+              align: 'center'
+            }, {
+              field: 'name',
+              title: '姓名',
+              align: 'center',
+              width: 80
+            }, {
+              field: 'telPhone',
+              title: '手机',
+              align: 'center',
+              width: 140,
+            }, {
+              field: 'sex',
+              title: '性别',
+              align: 'center',
+              width: 70,
+              sort: true
+            }, {
+              field: 'createUserId',
+              title: '创建人',
+              align: 'center',
+              width: 140
+            }, {
+              field: 'createUserId',
+              title: '创建时间',
+              width: 100,
+              sort: true,
+              align: 'center'
+            },{
+              field: 'updateTime',
+              title: '更新时间',
+              width: 100,
+              sort: true,
+              align: 'center'
+            }, {
+              field: 'status',
+              title: '状态',
+              width: 100,
+              sort: true,
+              align: 'center'
+            }, {
+              fixed: 'right',
+              width: 215,
+              align: 'center',
+              toolbar: '#barDemo',
+            }
+          ]
+        ]
+      }
+
+      // 判断是否显示导出按钮
+      // option.defaultToolbar = ['filter', 'print'];
+      var mytable = table.render(option);
+
+
+      //监听头工具栏事件
+      table.on('toolbar(mytable)', function(obj) {
+        var checkStatus = table.checkStatus(obj.config.id),
+          data = checkStatus.data; //获取选中的数据
+        switch (obj.event) {
+          case 'add':
+            if (data.length === 0) {
+              layer.msg('请勾选数据');
+            } else {
+              layer.alert('编辑 [id]：' + checkStatus.data[0].id);
+              console.log(data)
+              //判断选择的数据条数是否超出自己设置的所拥有的客户量
+              
+            }
+            break;
+          case 'update':
+            if (data.length === 0) {
+              layer.msg('请选择一行');
+            } else if (data.length > 1) {
+              layer.msg('只能同时编辑一个');
+            } else {
+              layer.alert('编辑 [id]：' + checkStatus.data[0].id);
+              console.log(data)
+            }
+            break;
+          case 'delete':
+            if (data.length === 0) {
+              layer.msg('请选择一行');
+            } else {
+              layer.msg('删除');
+               //向服务端发送删除指令
+              delRow([1, 2], baseUrl)
+            }
+            break;
+        };
+      });
+
+      //监听行工具事件
+      table.on('tool(mytable)', function(obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+        var data = obj.data; //获得当前行数据
+        var layEvent = obj.event; //获得 lay-event 对应的值
+        if (layEvent === 'detail') {
+          layer.msg('查看操作');
+        } else if (layEvent === 'del') {
+          layer.confirm('真的删除行么', function(index) {
+            obj.del(); //删除对应行（tr）的DOM结构
+            layer.close(index);
+            //向服务端发送删除指令
+            delRow([1, 2], baseUrl)
+          });
+        } else if (layEvent === 'edit') {
+          layer.msg('编辑操作');
+          layer.open({
+            type: 1,
+            title: '客户信息',
+            content: $('.client-box'),
+            offset: 'r',
+            area: ['900px', '96%'],
+            anim: 2
+          })
+        }
+      });
+    </script>
+  </body>
+
+</html>

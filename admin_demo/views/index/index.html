@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>客户管理系统-首页</title>
+    <meta name="description" content="博霖教育后台数据管理" />
+    <meta name="keywords" content="博霖教育|学历报考中心|学历提升|广东省成人学历报名中心" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../layuiadmin/ku/font-awesome47/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../../layuiadmin/layui/css/layui.css" />
+    <style type="text/css">
+    	[v-block]{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+  
+   <div class="layui-fluid app" id="app">
+   	<div class="layui-row m_t layui-col-space15">
+        <div class="layui-col-md4">
+          <div class="layui-row userinfo1">
+            <div class="layui-col-md4">
+              <button type="button" class="layui-btn">闲心</button>
+            </div>
+            <div class="layui-col-md8">
+              <h3 class="name">{{person.name}}</h3>
+              <p class="name-p">{{person.jy}}</p>
+              <p class="name-p">{{person.sj}}</p>
+            </div>
+          </div>
+          <div class="user_info">
+            <div class="layui-row user2 userinfo2">
+              <div class="layui-col-md4">
+                <span>部门</span>
+              </div>
+              <div class="layui-col-md8">
+                <button type="button" class="layui-btn layui-btn-sm">{{person.bm}}</button>
+              </div>
+            </div>
+            <div class="layui-row userinfo2">
+              <div class="layui-col-md4">
+                <span>角色</span>
+              </div>
+              <div class="layui-col-md8">
+                <button type="button" class="layui-btn layui-btn-sm layui-bg-red">{{person.gw}}</button>
+              </div>
+            </div>
+            <div class="layui-row userinfo2">
+              <div class="layui-col-md4">
+                <span>上次登录地址</span>
+              </div>
+              <div class="layui-col-md8">
+                <span>{{person.dz}}</span>
+              </div>
+            </div>
+            <div class="layui-row userinfo2">
+              <div class="layui-col-md4">
+                <span>上次登录时间</span>
+              </div>
+              <div class="layui-col-md8">
+                <psan>{{person.shijian}}</psan>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="layui-col-md8 day-box layui-row layui-col-space15">
+          <h1 class="day-data">今日数据</h1>
+          <div class="layui-col-md4 item layui-row">
+            <div class="layui-col-xs6">
+              <span class="i_b"><i class="fa fa-user-plus" style="font-size:36px"></i></span>
+            </div>
+            <div class="layui-col-xs6">
+              <h2>{{day[0].num}}</h2>
+              <p>点击呼叫</p>
+            </div>
+          </div>
+          <div class="layui-col-md4 item layui-row">
+            <div class="layui-col-xs6">
+              <span class="i_b"><i class="fa fa-question" style="font-size:36px"></i></span>
+            </div>
+            <div class="layui-col-xs6">
+              <h2>{{day[1].num}}</h2>
+              <p>客户接听</p>
+            </div>
+          </div>
+          <div class="layui-col-md4 item layui-row">
+            <div class="layui-col-xs6">
+              <span class="i_b"><i class="fa fa-paper-plane" style="font-size:36px"></i></span>
+            </div>
+            <div class="layui-col-xs6">
+              <h2>{{day[2].num}}</h2>
+              <p>客户接听率</p>
+            </div>
+          </div>
+          <div class="layui-col-md4 item layui-row">
+            <div class="layui-col-xs6">
+              <span class="i_b"><i class="fa fa-phone-square" style="font-size:36px"></i></span>
+            </div>
+            <div class="layui-col-xs6">
+              <h2>{{day[3].num}}</h2>
+              <p>总通话时</p>
+            </div>
+          </div>
+          <div class="layui-col-md4 item layui-row">
+            <div class="layui-col-xs6">
+              <span class="i_b"><i class="fa fa-volume-control-phone" style="font-size:36px"></i></span>
+            </div>
+            <div class="layui-col-xs6">
+              <h2>{{day[4].num}}</h2>
+              <p>有效通时</p>
+            </div>
+          </div>
+          <div class="layui-col-md4 item layui-row">
+            <div class="layui-col-xs6">
+              <span class="i_b"><i class="fa fa-rss" style="font-size:36px"></i></span>
+            </div>
+            <div class="layui-col-xs6">
+              <h2>{{day[5].num}}</h2>
+              <p>平均通时</p>
+            </div>
+          </div>
+          <div class="layui-col-md4 item layui-row">
+            <div class="layui-col-xs6">
+              <span class="i_b"><i class="fa fa-user-circle" style="font-size:36px"></i></span>
+            </div>
+            <div class="layui-col-xs6">
+              <h2>{{day[6].num}}</h2>
+              <p>今日客户量</p>
+            </div>
+          </div>
+          <div class="layui-col-md4 item layui-row">
+            <div class="layui-col-xs6">
+              <span class="i_b"><i class="fa fa-map-signs" style="font-size:36px"></i></span>
+            </div>
+            <div class="layui-col-xs6">
+              <h2>{{day[7].num}}</h2>
+              <p>成交量</p>
+            </div>
+          </div>
+          <div class="layui-col-md4 item layui-row">
+            <div class="layui-col-xs6">
+              <span class="i_b"><i class="fa fa-database" style="font-size:36px"></i></span>
+            </div>
+            <div class="layui-col-xs6">
+              <h2>{{day[8].num}}</h2>
+              <p>汇款金额</p>
+            </div>
+          </div>
+        </div>
+   	</div>
+    <div class="layui-row">
+      <h2 class="m-data">本月数据</h2>
+      <div class="layui-row mount-data">
+        <div class="m_item">
+          <span class="i_b"><i class="fa fa-user-plus" style="font-size:36px"></i></span>
+          <h2>{{yue[0].num}}</h2>
+          <p>点击呼叫</p>
+        </div>
+        <div class="m_item">
+          <span class="i_b"><i class="fa fa-question" style="font-size:36px"></i></span>
+          <h2>{{yue[1].num}}</h2>
+          <p>客户接听</p>
+        </div>
+        <div class="m_item">
+          <span class="i_b"><i class="fa fa-paper-plane" style="font-size:36px"></i></span>
+          <h2>{{yue[2].num}}</h2>
+          <p>客户接听率</p>
+        </div>
+        <div class="m_item">
+          <span class="i_b"><i class="fa fa-phone-square" style="font-size:36px"></i></span>
+          <h2>{{yue[3].num}}</h2>
+          <p>总通话时</p>
+        </div>
+        <div class="m_item">
+          <span class="i_b"><i class="fa fa-volume-control-phone" style="font-size:36px"></i></span>
+          <h2>{{yue[4].num}}</h2>
+          <p>有效通时</p>
+        </div>
+        <div class="m_item">
+          <span class="i_b"><i class="fa fa-rss" style="font-size:36px"></i></span>
+          <h2>{{yue[5].num}}</h2>
+          <p>平均通时</p>
+        </div>
+        <div class="m_item">
+          <span class="i_b"><i class="fa fa-user-circle" style="font-size:36px"></i></span>
+          <h2>{{yue[6].num}}</h2>
+          <p>本月客户量</p>
+        </div>
+        <div class="m_item">
+          <span class="i_b"><i class="fa fa-map-signs" style="font-size:36px"></i></span>
+          <h2>{{yue[7].num}}</h2>
+          <p>成交量</p>
+        </div>
+        <div class="m_item">
+          <span class="i_b"><i class="fa fa-database" style="font-size:36px"></i></span>
+          <h2>{{yue[8].num}}</h2>
+          <p>汇款金额</p>
+        </div>
+      </div>
+    </div>
+   </div>
+   
+   	
+    <script src="../../layuiadmin/js/jquery.js"></script>
+    <script src="../../layuiadmin/layui/layui.all.js"></script>
+    <script src="../../layuiadmin/js/Vue.js"></script>
+    <script src="../../layuiadmin/js/common.js"></script>
+    <script>
+      
+      baseUrl = "https://www.easy-mock.com/mock/5d27f8f02d663532e5cdb43d/pan";
+
+      
+      var vm = new Vue({
+        el:'#app',
+        name:"index",
+        data:{
+          day:'',
+          person:{},
+          yue:''
+        },
+        methods:{
+          showData:function(data){
+            console.log(data)
+            this.day = data.day;
+            this.person = data.person;
+            this.yue = data.yue;
+            
+            // console.log(this.person)
+          }
+        },
+        mounted:function(){
+          var _this = this;
+          getdata(baseUrl+'/index',{},this.showData);
+          
+        }
+      })
+    </script>
+  </body>
+
+</html>

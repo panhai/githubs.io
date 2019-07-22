@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>客服管理-校区映射</title>
+    <meta name="description" content="博霖教育后台数据管理" />
+    <meta name="keywords" content="博霖教育|学历报考中心|学历提升|广东省成人学历报名中心" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="../../layuiadmin/layui/css/layui.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/map.css" />
+     
+  </head>
+  <body>
+    <div class="app">
+      <!-- 条件搜索 -->
+        <div class="layui-form search">
+         <div class="layui-form-item layui-card">
+           <div class="layui-inline">
+             <label class="layui-form-label">员工查询</label>
+             <div class="layui-input-block">
+               <input type="text" name="position" id="position" placeholder="请输入查询的员工" autocomplete="off" class="layui-input">
+             </div>
+           </div>
+           <div class="layui-inline">
+             <button class="layui-btn layuiadmin-btn-admin" lay-submit="" lay-filter="formSearch">
+               <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+             </button>
+           </div>
+         </div>
+       </div>
+        
+        <!-- add -->
+        <div class="paddings">
+          <button type="button" style="margin-left: 25px;" class="layui-btn layui-add">添加员工</button>
+        </div>
+      <!-- 校区列表table -->
+       <table class="layui-table" id="mytable" lay-filter="mytable"></table>
+       
+    </div>
+     
+     
+      <!-- 添加职位 -->
+     <div class="add-section">
+       <form action="" id="addposition" class="layui-form" method="post" lay-filter="addstaff">
+       	<div class="layui-form-item">
+         <label class="layui-form-label">员工姓名</label>
+         <div class="layui-input-block">
+           <input type="text" lay-verify="required" name="name" id="" class="layui-input" value="" placeholder="请输入部门名称" />
+         </div>
+        </div>
+       	<div class="layui-form-item">
+       	 <label class="layui-form-label">所属校区</label>
+       	 <div class="layui-input-block">
+            <select name="isarea" lay-filter="aihao3" id="isarea"  lay-verify="required">
+              <option value="">请输入</option>
+              <option value="天河校区博霖教育">天河校区博霖教育</option>
+              <option value="天河校区博霖教育2">天河校区博霖教育2</option>
+            </select>
+       	 </div>
+       	</div>
+        <div class="layui-form-item">
+         <label class="layui-form-label">所属部门</label>
+         <div class="layui-input-block">
+            <select name="issection" lay-filter="aihao" id="issection"  lay-verify="required">
+              <option value="">请输入</option>
+              <option value="技术部">技术部</option>
+              <option value="财务部">财务部</option>
+              <option value="推广部">推广部</option>
+              <option value="电售部">电售部</option>
+            </select>
+         </div>
+        </div>
+        <div class="layui-form-item">
+         <label class="layui-form-label">担任职位</label>
+         <div class="layui-input-block">
+            <select name="take" lay-filter="aihao2" id="take"  lay-verify="required">
+              <option value="">请输入</option>
+              <option value="职位一">职位一</option>
+              <option value="职位二">职位二</option>
+              <option value="职位三">职位三</option>
+            </select>
+         </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">权限范围</label>
+          <div class="layui-input-block">
+            <input type="checkbox" name="like1" value="权限1" lay-skin="primary" title="权限1">
+            <input type="checkbox" name="like2" value="权限2" lay-skin="primary" title="权限2">
+            <input type="checkbox" name="like3" value="权限3" lay-skin="primary" title="权限3">
+            
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <lable class="layui-form-label">员工介绍</lable>
+          <div class="layui-input-block">
+            <textarea type="text" name="descr" lay-verify="required" autocomplete="off" class="layui-textarea layui-form-danger"></textarea>
+          </div>
+        </div>
+        <div class="layui-form-item" style="text-align: center;">
+          <button class="layui-btn" lay-submit="" lay-filter="addstaff">保存</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>            
+        </div>
+       </form>
+     </div>
+     
+     
+     <!-- 表头数据操作 -->
+     <script type="text/html" id="toolbarDemo">
+       <div class="layui-btn-container">
+        <!-- <button class="layui-btn layui-icon layui-icon-add-1 layui-btn-sm " lay-event="add">添加</button> -->
+         <button class="layui-btn layui-btn-danger layui-icon layui-icon-delete layui-btn-sm " lay-event="delete">删除</button>
+         <!-- <button class="layui-btn layui-icon layui-icon-export layui-btn-sm " id="export" lay-event="add">导出Excel</button> -->
+         
+       </div>
+     </script>
+     
+      <!-- 行数据操作 -->
+     <script type="text/html" id="barDemo">
+       <!-- <a class="layui-btn layui-bg-green layui-btn-primary layui-btn-xs" lay-event="detail">
+         <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+         查看
+       </a> -->
+       <a class="layui-btn layui-btn-xs" lay-event="edit">
+         <i class="layui-icon layui-icon-edit"></i>
+         编辑
+       </a>
+       <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">
+         <i class="layui-icon layui-icon-delete"></i>删除
+       </a>
+     </script>
+     
+     
+     
+     
+     
+     
+    <script src="../../layuiadmin/js/jquery.js"></script>
+    <script src="../../layuiadmin/layui/layui.all.js"></script>
+    <script src="../../layuiadmin/js/common.js"></script>
+    <script type="text/javascript">
+      
+     var laydate = layui.laydate;
+     var form = layui.form;
+     var table = layui.table;
+     var element = layui.element //元素操作
+     var laypage = layui.laypage //分页
+     upload = layui.upload;
+     
+     baseUrl = "https://www.easy-mock.com/mock/5d27f8f02d663532e5cdb43d/pan";
+     
+      
+      // 添加员工
+      $('.layui-add').on('click',function(){
+        clearForm('#addposition')//清空表单
+        layer.open({
+          title: '添加员工',
+          type: 1,
+          content: $('.add-section'),
+          area: ['600px', '600px']
+        })
+      })
+      
+       //监听表单提交
+      form.on('submit(formSearch)', function(data) {
+        // layer.msg(JSON.stringify(data.field));
+        // alert(JSON.stringify(data.field))
+        //ajax 发送数据
+        $.ajax({
+          type: 'post',
+          url: baseUrl,
+          data: {
+            data: JSON.stringify(data.field)
+          },
+          success: function(data) {
+            console.log(data)
+            layer.alert('提交成功', {
+              icon: 1
+            }, function() {
+              layer.closeAll();
+            });
+            //重新渲染表格
+            mytable.reload()
+            //清空表单
+          }
+        });
+      
+        return false;
+      });
+      
+      
+      //监听添加表单提交
+      form.on('submit(addstaff)',function(data){
+        console.log(data)
+        //提交表单
+         layer.confirm('确定保存?', {icon: 3, title:'提示'}, function(index){
+          //do something
+          sendAjax(data, baseUrl+'/upload',suaTable)
+          layer.close(index);
+        });
+        
+        return false;
+      })
+      
+      //提交的回调函数
+      function suaTable(){
+        mytable.reload(option);
+      }
+      
+      
+       //执行一个 table 实例
+      var option = {
+        elem: '#mytable',
+        height: 600,
+        id: "mytableId",
+        defaultToolbar: [],
+        url: baseUrl+'/staff/', //数据接口
+        title: '客户列表',
+        totalRow: true, //开启合计行
+        page: true, //开启分页
+        toolbar: '#toolbarDemo', //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+        totalRow: true, //开启合计行
+        event: 'tool',
+        cols: [
+          [ //表头
+            {
+              type: 'checkbox',
+              fixed: 'center',
+            },
+            {
+              field: 'id',
+              title: 'ID',
+              width: 80,
+              sort: true,
+              align: 'center'
+            },
+            {
+              field: 'name',
+              title: '姓名',
+              align: 'center',
+              width: 280
+            },
+             {
+               field: 'isarea',
+               title: '所属校区',
+               align: 'center',
+               width: 280
+             },
+             {
+               field: 'issection',
+               title: '所属部门',
+               align: 'center',
+               width: 280
+             },
+             {
+               field: 'take',
+               title: '职位',
+               align: 'center',
+               width: 280
+             },
+             {
+               fixed: 'right',
+               width: 215,
+               align: 'center',
+               toolbar: '#barDemo',
+             }
+          ]
+        ]
+      }
+      
+      var mytable = table.render(option);
+      
+       //监听头工具栏事件
+      table.on('toolbar(mytable)', function(obj) {
+        var checkStatus = table.checkStatus(obj.config.id),
+         data = checkStatus.data; //获取选中的数据
+        switch (obj.event) {
+          case 'add':
+            if (data.length === 0) {
+              layer.msg('请选择导出数据！');
+              // table.exportFile(mytable.config.id,'xls'); 
+              console.log(data,obj)
+            }
+            break;
+          case 'update':
+            if (data.length === 0) {
+              layer.msg('请选择一行');
+            } else if (data.length > 1) {
+              layer.msg('只能同时编辑一个');
+            } else {
+              layer.alert('编辑 [id]：' + checkStatus.data[0].id);
+              console.log(data)
+            }
+            break;
+          case 'delete':
+            if (data.length === 0) {
+              layer.msg('请选择一行');
+            } else {
+              layer.msg('删除');
+              //发送请求删除
+             
+              var ids = [];
+              for(var i=0;i<data.length;i++){
+                ids.push(data[i].id);
+              }
+               console.log(data,ids)
+              delRow(ids,baseUrl+'/upload',suaTable(mytable,option))
+              
+            }
+            break;
+        };
+      });
+      
+      //监听行工具事件
+      table.on('tool(mytable)', function(obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+        var data = obj.data; //获得当前行数据
+        var layEvent = obj.event; //获得 lay-event 对应的值
+        if (layEvent === 'detail') {
+          layer.msg('查看操作');
+          
+        } else if (layEvent === 'del') {
+          layer.confirm('真的删除行么', function(index) {
+            obj.del(); //删除对应行（tr）的DOM结构
+            layer.close(index);
+            //向服务端发送删除指令
+            delRow([1,2],baseUrl)
+          });
+        } else if (layEvent === 'edit') {
+          layer.msg('编辑操作');
+          
+          console.log(data)
+          //对表单赋值
+          form.val("addstaff", {
+            "name": data.name,
+            "isarea": data.isarea,
+            "issection":data.issection,
+            "descr":data.descr,
+            "like3":data.like3,
+            "like2":data.like2,
+            "like1":data.like1,
+            "take":data.take
+          })
+          //显示弹框
+          layer.open({
+            title: '编辑员工',
+            type: 1,
+            content: $('.add-section'),
+            area: ['600px', '600px']
+          })
+          
+        }
+      });
+      
+      
+    </script>
+  </body>
+</html>
