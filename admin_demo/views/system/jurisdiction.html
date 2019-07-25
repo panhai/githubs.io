@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>系统管理-权限管理</title>
+    <meta name="description" content="博霖教育后台数据管理" />
+    <meta name="keywords" content="博霖教育|学历报考中心|学历提升|广东省成人学历报名中心" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="../../layuiadmin/layui/css/layui.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/company.css" />
+    
+  </head>
+  <body style="height: 2500px;">
+    <div class="app">
+      <!-- 条件搜索 -->
+      <div class="layui-form search">
+        <div class="layui-form-item layui-card">
+          <div class="layui-inline">
+            <label class="layui-form-label">权限查询</label>
+            <div class="layui-input-block">
+              <input type="text" name="school" id="school" placeholder="请输入" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+          <div class="layui-inline">
+            <button class="layui-btn layuiadmin-btn-admin" lay-submit="" lay-filter="formSearch">
+              <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- add -->
+      <div class="paddings">
+        <button type="button" style="margin-left: 25px;" class="layui-btn layui-add">添加权限</button>
+      </div>
+      <!-- 校区列表table -->
+      <table class="layui-table" id="mytable" lay-filter="mytable"></table>
+      
+      <!-- 添加权限 -->
+      <div class="add-school">
+        <form action="" id="addschool" class="layui-form" method="post" lay-filter="addSchool">
+          <div class="layui-form-item">
+            <label class="layui-form-label">权限名称:</label>
+            <div class="layui-input-block">
+              <input type="text" name="resourceName" lay-verify="required" placeholder="请输入" id="resourceName" value="" class="layui-input" />
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">权限码:</label>
+            <div class="layui-input-block">
+              <input type="text" name="grantKey" lay-verify="required" placeholder="请输入" id="" value="" class="layui-input" />
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">权限类型:</label>
+            <div class="layui-input-block">
+              <select name="resourceType" lay-filter="resourceType" id="resourceType" lay-verify="required">
+                <option value="">请输入</option>
+                <option value="添加">添加</option>
+                <option value="删除">删除</option>
+                <option value="修改">修改</option>
+                <option value="查看">查看</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="layui-input-block"  style="text-align: center;margin: 0;padding-top: 30px;">
+              <button class="layui-btn" lay-submit="" lay-filter="addSchool">保存</button>
+              <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+              
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- 行数据操作 -->
+    <script type="text/html" id="barDemo">
+      <a class="layui-btn layui-bg-green layui-btn-primary layui-btn-xs" lay-event="detail">
+         <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+         查看
+      </a>
+      <a class="layui-btn layui-btn-xs" lay-event="edit">
+        <i class="layui-icon layui-icon-edit"></i>
+         编辑
+      </a>
+      <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">
+         <i class="layui-icon layui-icon-delete"></i>删除
+      </a>
+    </script>
+
+
+
+
+    <script src="../../layuiadmin/js/jquery.js"></script>
+    <script src="../../layuiadmin/layui/layui.all.js"></script>
+    <script src="../../layuiadmin/js/common.js"></script>
+   
+    <script type="text/javascript">
+      var laydate = layui.laydate;
+      var form = layui.form;
+      var table = layui.table;
+      var element = layui.element //元素操作
+      var laypage = layui.laypage //分页
+      var upload = layui.upload;
+      var laytpl = layui.laytpl;
+
+      
+  
+      baseUrl = "https://www.easy-mock.com/mock/5d27f8f02d663532e5cdb43d/pan";
+      
+      
+      // 添加校区
+      var provinceData = null; //省份数据
+      var cityData = [];
+      
+      $('.layui-add').on('click', function() {
+        //获取省份
+        
+        //清除表单 layui-form layui-upload-img
+        clearForm('#addschool', '.layui-upload-img')
+        layer.open({
+          title: '添加权限',
+          type: 1,
+          content: $('.add-school'),
+          area: ['540px', '350px']
+        })
+      })
+
+     
+    
+      
+      //监听搜索表单提交
+      form.on('submit(formSearch)', function(data) {
+        // layer.msg(JSON.stringify(data.field));
+        // alert(JSON.stringify(data.field))
+        //ajax 发送数据
+        $.ajax({
+          type: 'post',
+          url: baseUrl,
+          data: {
+            data: JSON.stringify(data.field)
+          },
+          success: function(data) {
+            console.log(data)
+            layer.alert('提交成功', {
+              icon: 1
+            }, function() {
+              layer.closeAll();
+            });
+            //重新渲染表格
+            // mytable.reload()
+            //清空表单
+          }
+        });
+
+        return false;
+      });
+
+      //监听添加权限表单提交
+      form.on('submit(addSchool)', function(data) {
+      
+        console.log(data)
+
+        sendAjax('data', baseUrl, addschollSuccess)
+        return false;
+      })
+
+  
+      // 添加学校成功的回调操作
+      function addschollSuccess() {
+        //隐藏add 弹框
+        layer.closeAll()
+      }
+
+      var a = Object(undefined);
+
+      console.log(a)
+
+      //执行一个 table 实例
+      var option = {
+        elem: '#mytable',
+        height: 600,
+        id: "mytableId",
+        defaultToolbar: [],
+        url: baseUrl +'/jurisdiction/', //数据接口
+        title: '客户列表',
+        totalRow: true, //开启合计行
+        page: true, //开启分页
+        toolbar: '#toolbarDemo', //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+        totalRow: true, //开启合计行
+        event: 'tool',
+        cols: [
+          [ //表头
+            {
+              field: 'resourceName',
+              title: '权限名称',
+              align: 'center',
+              width: 280
+            }, {
+              field: 'resourceType',
+              title: '权限类型',
+              align: 'center',
+              width: 200,
+            }, {
+              field: 'grantKey',
+              title: '权限码',
+              align: 'center',
+              width: 200,
+            },{
+              fixed: 'right',
+              width: 215,
+              align: 'center',
+              toolbar: '#barDemo',
+            }
+          ]
+        ]
+      }
+
+      var mytable = table.render(option);
+
+
+      //监听行工具事件
+      table.on('tool(mytable)', function(obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+        var data = obj.data; //获得当前行数据
+        var layEvent = obj.event; //获得 lay-event 对应的值
+        if (layEvent === 'detail') {
+          layer.msg('查看');
+          console.log(data)
+          //查看
+          showSchool(data)
+        } else if (layEvent === 'del') {
+          layer.confirm('真的删除行么', function(index) {
+            obj.del(); //删除对应行（tr）的DOM结构
+            layer.close(index);
+            //向服务端发送删除指令
+            delRow([1, 2], baseUrl)
+          });
+        } else if (layEvent === 'edit') {
+          layer.msg('编辑操作');
+          //编辑学校
+          showSchool(data);
+        }
+      });
+
+
+      
+      //显示学校和编辑学校
+      function showSchool(data) {
+        // 对表单赋值
+        form.val("addSchool", {
+          "resourceName": data.resourceName,
+          "grantKey": data.grantKey,
+          "resourceType": data.resourceType,
+        })
+        
+        console.log(data)
+        
+        //显示
+        layer.open({
+          title: '编辑权限',
+          type: 1,
+          content: $('.add-school'),
+          area: ['540px', '350px']
+        })
+
+      }
+    </script>
+  </body>
+</html>

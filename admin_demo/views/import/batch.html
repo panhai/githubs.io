@@ -38,15 +38,15 @@
     <script>
       var upload = layui.upload;
       var table = layui.table;
-
+      
       //执行实例
-
+      
       baseUrl = "https://www.easy-mock.com/mock/5d27f8f02d663532e5cdb43d/pan";
       var uploadInst = upload.render({
         elem: '#test1', //绑定元素
         url: baseUrl + '/upload/', //上传接口
         accept: 'file',
-        exts: 'xlsx|xls|xltx|xlt|xlsm|xlsb|csv',
+        exts: 'xlsx|xls|xltx|xlt|xlsm|xlsb|csv',//上传文件类型
         before: function(obj) { //选择文件后
           // console.log(obj)
           // var flag = true;
@@ -87,7 +87,6 @@
         }
       });
 
-
       //执行一个 table 实例
       var mytable = table.render({
         elem: '#mytable',
@@ -104,13 +103,13 @@
                type: 'checkbox',
                fixed: 'left',
             }, {
-              field: 'id',
+              field: 'cstId',
               title: 'ID',
               width: 60,
               sort: true,
               align: 'center'
             }, {
-              field: 'name',
+              field: 'cstName',
               title: '姓名',
               align: 'center',
               width: 80
@@ -136,6 +135,11 @@
               title: '年龄',
               align: 'center',
               width: 60
+            }, {
+              field: 'companyId',
+              title: '所属校区',
+              align: 'center',
+              width: 100
             }, {
               field: 'education',
               title: '学历',
@@ -166,13 +170,6 @@
               width: 100,
               sort: true,
               align: 'center'
-            },
-            {
-              field: 'moveAddress',
-              title: '迁入地址',
-              width: 100,
-              sort: true,
-              align: 'center'
             },{
               field: 'sourceLink',
               title: '链接',
@@ -188,11 +185,11 @@
             },{
               field: 'updateTime',
               title: '更新时间',
-              width: 100,
+              width: 130,
               sort: true,
               align: 'center'
             },{
-              field: 'status',
+              field: 'cstState',
               title: '状态',
               width: 100,
               sort: true,
@@ -202,7 +199,8 @@
           ]
         ]
       });
-
+      
+      
       //监听头工具栏事件
       table.on('toolbar(mytable)', function(obj) {
         var checkStatus = table.checkStatus(obj.config.id),

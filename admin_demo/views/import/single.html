@@ -44,7 +44,7 @@
           <div class="layui-form-item">
             <label class="layui-form-label">姓名</label>
             <div class="layui-input-block">
-              <input type="text" name="name" maxlength="12" required lay-verify="required" placeholder="请输入姓名"
+              <input type="text" name="cstName" maxlength="12" required lay-verify="required" placeholder="请输入姓名"
                 autocomplete="off" class="layui-input">
             </div>
           </div>
@@ -77,7 +77,7 @@
           <div class="layui-form-item">
             <label class="layui-form-label">学历</label>
             <div class="layui-input-block">
-              <input type="text" name="major" placeholder="请输入客户最高学历" autocomplete="off" class="layui-input">
+              <input type="text" name="education" placeholder="请输入客户最高学历" autocomplete="off" class="layui-input">
             </div>
           </div>
           <div class="layui-form-item">
@@ -102,20 +102,8 @@
           <div class="layui-form-item">
             <label class="layui-form-label">所在地区</label>
             <div class="layui-input-block">
-              <select name="areaId">
-                <option value="">请选择地区</option>
-                <option value="越秀区">越秀区</option>
-                <option value="荔湾区">荔湾区</option>
-                <option value="海珠区">海珠区</option>
-                <option value="天河区">天河区</option>
-                <option value="白云区">白云区</option>
-                <option value="黄埔区">黄埔区</option>
-                <option value="番禺区">番禺区</option>
-                <option value="花都区">花都区</option>
-                <option value="南沙区">南沙区</option>
-                <option value="增城区">增城区</option>
-                <option value="从化区">从化区</option>
-              </select>
+              <input type="text" name="companyId" placeholder="请输入" autocomplete="off" class="layui-input">
+
             </div>
           </div>
           <div class="layui-form-item">
@@ -148,7 +136,7 @@
           <div class="layui-form-item">
             <label class="layui-form-label">客户类型</label>
             <div class="layui-input-block">
-              <select name="status">
+              <select name="cstState">
                 <option value="">请选择客户类型</option>
                 <option value="私海客户">私海客户</option>
                 <option value="公海客户">公海客户</option>
@@ -159,6 +147,12 @@
                 <option value="退费客户">退费客户</option>
                 <option value="无效客户">无效客户</option>
               </select>
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">迁入地址</label>
+            <div class="layui-input-block">
+              <input type="text" name="moveAddress"  placeholder="请输入来源链接" autocomplete="off" class="layui-input">
             </div>
           </div>
           <div class="layui-form-item">
@@ -181,7 +175,6 @@
                 class="layui-input">
             </div>
           </div>
-          
           
 
           <div class="layui-form-item">
@@ -257,7 +250,7 @@
         }
         
         //ajax 发送数据
-       
+        
         $.ajax({
           type: 'post',
           url: baseUrl,
@@ -297,13 +290,13 @@
                type: 'checkbox',
                fixed: 'left',
             }, {
-              field: 'id',
+              field: 'cstId',
               title: 'ID',
               width: 60,
               sort: true,
               align: 'center'
             }, {
-              field: 'name',
+              field: 'cstName',
               title: '姓名',
               align: 'center',
               width: 80
@@ -330,8 +323,8 @@
               align: 'center',
               width: 60
             }, {
-              field: 'area',
-              title: '所在地区',
+              field: 'companyId',
+              title: '所属校区',
               align: 'center',
               width: 100
             }, {
@@ -379,11 +372,11 @@
             },{
               field: 'updateTime',
               title: '更新时间',
-              width: 100,
+              width: 130,
               sort: true,
               align: 'center'
             },{
-              field: 'status',
+              field: 'cstState',
               title: '状态',
               width: 100,
               sort: true,

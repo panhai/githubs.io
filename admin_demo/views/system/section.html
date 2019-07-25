@@ -48,19 +48,32 @@
        	<div class="layui-form-item">
          <label class="layui-form-label">部门名称</label>
          <div class="layui-input-block">
-           <input type="text" lay-verify="required" name="name" id="" class="layui-input" value="" placeholder="请输入部门名称" />
+           <input type="text" lay-verify="required" name="dptName" id="dptName" class="layui-input" value="" placeholder="请输入部门名称" />
          </div>
         </div>
        	<div class="layui-form-item">
        	 <label class="layui-form-label">所属校区</label>
        	 <div class="layui-input-block">
-            <select name="isarea" lay-filter="aihao" id="scale"  lay-verify="required">
-              <option value="">请输入</option>
-              <option value="天河校区博霖教育">天河校区博霖教育</option>
-              <option value="天河校区博霖教育2">天河校区博霖教育2</option>
+            <select name="companyName" lay-filter="companyId" id="companyId"  lay-verify="required">
+              <option value="">请输入校区</option>
             </select>
        	 </div>
        	</div>
+        <div class="layui-form-item">
+         <label class="layui-form-label">部门权重</label>
+         <div class="layui-input-block">
+           <input type="text" lay-verify="required|number" name="weight" id="" class="layui-input" value="" placeholder="请输入部门名称" />
+         </div>
+        </div>
+        <div class="layui-form-item">
+         <label class="layui-form-label">部门状态</label>
+         <div class="layui-input-block">
+            <select name="status" lay-filter="status" id="status"  lay-verify="required">
+              <option value="1">正常</option>
+              <option value="0">非正常</option>
+            </select>
+         </div>
+        </div>
         <div class="layui-form-item" style="text-align: center;">
           <button class="layui-btn" lay-submit="" lay-filter="addSchool">保存</button>
           <button type="reset" class="layui-btn layui-btn-primary">重置</button>            
@@ -82,10 +95,10 @@
      
      <!-- 行数据操作 -->
      <script type="text/html" id="barDemo">
-       <a class="layui-btn layui-bg-green layui-btn-primary layui-btn-xs" lay-event="detail">
-         <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
-         查看
-       </a>
+         <!-- <a class="layui-btn layui-bg-green layui-btn-primary layui-btn-xs" lay-event="detail">
+           <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+           查看
+         </a> -->
        <a class="layui-btn layui-btn-xs" lay-event="edit">
          <i class="layui-icon layui-icon-edit"></i>
          编辑
@@ -117,11 +130,34 @@
           title: '添加部门',
           type: 1,
           content: $('.add-section'),
-          area: ['800px', '500px']
+          area: ['700px', '450px']
         })
       })
       
       
+      //获取所有校区的数据 getcompanyId	
+      getcompanyId()
+      function getcompanyId() {
+        $.ajax({
+          type: 'get',
+          url: baseUrl+'/getcompanyId',
+          success: function(data) {
+           
+            var data = data.data;
+            var arr = [];
+             
+             for(var i=0;i<data.length;i++){
+               arr.push(data[i].companyName);
+             }
+             console.log(data,arr);
+             //渲染校区 option
+             showOption(arr, '#companyId');
+             
+          }
+        });
+        
+      }
+     
       
        //监听表单提交
       form.on('submit(formSearch)', function(data) {
@@ -140,6 +176,7 @@
               icon: 1
             }, function() {
               layer.closeAll();
+              mytable.reload()
             });
             //重新渲染表格
             // mytable.reload()
@@ -164,7 +201,6 @@
       }
         
       
-      
        //执行一个 table 实例
       var option = {
         elem: '#mytable',
@@ -178,6 +214,24 @@
         toolbar: '#toolbarDemo', //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
         totalRow: true, //开启合计行
         event: 'tool',
+        parseData:function(res){
+          // console.log(res);
+          var data = res.data;
+          for(var i=0;i<data.length;i++){
+            if(data[i].status==1){
+              data[i].statusnum = '正常';
+            }else{
+              data[i].statusnum = '非正常';
+            }
+          }
+          console.log(data)
+          return {
+              "code": 0, //解析接口状态
+              "msg": '', //解析提示文本
+              "count": res.total, //解析数据长度
+              "data": data //解析数据列表
+            };
+        },
         cols: [
           [ //表头
             {
@@ -185,23 +239,41 @@
               fixed: 'center',
             },
             {
-              field: 'id',
+              field: 'dptId',
               title: 'ID',
               width: 80,
               sort: true,
               align: 'center'
             },
             {
-              field: 'name',
+              field: 'dptName',
               title: '部门名称',
               align: 'center',
               width: 280
             },
              {
-               field: 'isarea',
+               field: 'companyName',
                title: '所属校区',
                align: 'center',
-               width: 280
+               width: 200
+             },
+             {
+               field: 'weight',
+               title: '部门权重',
+               align: 'center',
+               width: 100
+             },
+             {
+               field: 'createTime',
+               title: '创建时间',
+               align: 'center',
+               width: 150
+             },
+             {
+               field: 'statusnum',
+               title: '状态',
+               align: 'center',
+               width: 100
              },
              {
                fixed: 'right',
@@ -276,15 +348,17 @@
           console.log(data)
           //对表单赋值
           form.val("addsection", {
-            "name": data.name,
-            "isarea": data.isarea,
+            "dptName": data.dptName,
+            "companyName": data.companyName,
+            "status": data.status,
+            "weight": data.weight,
           })
           //显示弹框
           layer.open({
             title: '编辑部门',
             type: 1,
             content: $('.add-section'),
-            area: ['800px', '500px']
+            area: ['700px', '450px']
           })
           
         }

@@ -136,7 +136,7 @@ function showOption(arr, id) {
     html += '<option value="' + arr[i] + '">' + arr[i] + '</option>';
   }
   // $(id).html(html);
-  $(id).html(''); //先制空
+  $(id).html('<option value="">请输入</option>');
   $(id).append(html);
   //重新渲染from
   form.render(); //更新全部
@@ -148,8 +148,22 @@ function showOption(arr, id) {
 function showOption2(data, id) {
   var html = '';
   for (var i = 0; i < data.length; i++) {
-    html += '<option data-data="' + data[i].child + '" value="' + data[i].name + '">' + data[i].name + '</option>';
+    html += '<option value="' + data[i].name + '">' + data[i].name + '</option>';
   }
+
+  // $(id).html(html);
+  // $(id).html(''); //先制空
+  $(id).append(html);
+  //重新渲染from
+  form.render(); //更新全部
+
+}
+function showOption3(data, id,roleId,roleName) {
+  var html = '';
+  for (var i = 0; i < data.length; i++) {
+    html += '<option value="' + data[i].roleId + '">' + data[i].roleName + '</option>';
+  }
+
   // $(id).html(html);
   // $(id).html(''); //先制空
   $(id).append(html);
@@ -158,9 +172,19 @@ function showOption2(data, id) {
 
 }
 
+//渲染权限函数
 
-
-
+function showResourceId(data, id) {
+  var html = '';
+  for (var i = 0; i < data.length; i++) {
+    html += '<input type="checkbox" name="resourceId" value="' + data[i].id + '" lay-skin="primary" title="' + data[i].resourceName +
+      '">';
+  }
+  $(id).html('');
+  $(id).append(html);
+  //重新渲染from
+  form.render(); //更新全部
+}
 
 
 //getdata 获取数据
@@ -174,4 +198,46 @@ function getdata(url, data, fn) {
       fn(data)
     }
   })
+}
+
+//获取校区数据option
+function getcompanyId() {
+  $.ajax({
+    type: 'get',
+    url: baseUrl + '/getcompanyId',
+    success: function(data) {
+
+      var data = data.data;
+      var arr = [];
+
+      for (var i = 0; i < data.length; i++) {
+        arr.push(data[i].companyName);
+      }
+      console.log(data, arr);
+      //渲染校区 option
+      showOption(arr, '#companyId');
+
+    }
+  });
+
+}
+//获取部门数据option
+function getdptId() {
+  $.ajax({
+    type: 'get',
+    url: baseUrl + '/section',
+    success: function(data) {
+
+      var data = data.data;
+      var arr = [];
+
+      for (var i = 0; i < data.length; i++) {
+        arr.push(data[i].dptName);
+      }
+      console.log(data, arr);
+      //渲染校区 option
+      showOption(arr, '#dptId');
+
+    }
+  });
 }
