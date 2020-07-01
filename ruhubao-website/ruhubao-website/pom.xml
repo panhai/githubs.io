@@ -30,7 +30,7 @@
 		<mapper.version>3.3.9</mapper.version>
 		<jsqlparser.version>0.9.6</jsqlparser.version>
 		<jedis.version>2.9.0</jedis.version>
-		<quartz.version>2.2.2</quartz.version>
+		<quartz.version>2.3.2</quartz.version>
 		<!-- <shiro.version>1.2.1</shiro.version> -->
 		<springfox.version>2.4.0</springfox.version>
 		<!-- <swagger2.version>2.2.2</swagger2.version> <swagger-springmvc.version>1.0.2</swagger-springmvc.version> -->
