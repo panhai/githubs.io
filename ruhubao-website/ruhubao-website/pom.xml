@@ -35,7 +35,7 @@
 		<springfox.version>2.4.0</springfox.version>
 		<!-- <swagger2.version>2.2.2</swagger2.version> <swagger-springmvc.version>1.0.2</swagger-springmvc.version> -->
 		<!-- 文件上传包版本 -->
-		<poi.version>3.9</poi.version>
+		<poi.version>4.1.2</poi.version>
 		<freemarker.version>2.3.23</freemarker.version>
 
 	</properties>
